@@ -54,8 +54,8 @@ export default function Header() {
       <div
         className={
           isOpen
-            ? "mobile fixed left-0 top-18 z-20 flex w-full  flex-col items-center justify-between gap-4 bg-zinc-50  duration-200 ease-in-out dark:bg-dark-primary md:hidden"
-            : "mobile fixed -left-full top-18 z-20 w-full bg-zinc-50 pb-10 duration-200 ease-in-out dark:bg-dark-primary md:hidden"
+            ? "mobile justify-arround fixed left-0 top-18 z-20 flex  w-full flex-col items-center gap-5 bg-zinc-50  duration-200 ease-in-out dark:bg-dark-primary md:hidden"
+            : "mobile fixed -left-full top-18 z-20 w-full bg-zinc-50 duration-200 ease-in-out dark:bg-dark-primary md:hidden"
         }
       >
         <ul className="flex w-full flex-col">
@@ -83,7 +83,7 @@ export default function Header() {
             <ThemeChanger /> Tema Değiştir
           </li>
         </ul>
-        <ul className="flex w-full flex-col gap-4 pb-10">
+        <ul className="flex w-full flex-col gap-5">
           <li>
             <Link to={"/signIn"} className="flex items-center justify-center">
               <button
