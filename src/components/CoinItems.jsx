@@ -42,7 +42,7 @@ export default function CoinItems({ coin }) {
       </td>
       <td className="hidden sm:table-cell">{coin.total_volume.toLocaleString()}$</td>
 
-      <td className="hidden max-w-[70px] lg:table-cell">
+      <td className="hidden max-w-[80px] overflow-hidden lg:table-cell">
         {coin.total_supply ? coin.total_supply : "-"}
       </td>
       <td className="hidden max-w-[70px] lg:table-cell">{coin.market_cap.toLocaleString()}$</td>
