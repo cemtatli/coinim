@@ -9,3 +9,7 @@ body {
   font-family: "Inter", sans-serif;
   @apply antialiased scroll-smooth bg-zinc-50 dark:bg-dark-primary h-full w-full;
 }
+
+.mobile {
+  @apply h-[calc(100vh-72px)];
+}
