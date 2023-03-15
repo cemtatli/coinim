@@ -12,3 +12,8 @@ body {
 .mobile {
   @apply h-[calc(100vh-72px)];
 }
+
+header {
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+}

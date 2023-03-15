@@ -15,7 +15,7 @@ export default function TrendCoins() {
   return (
     <div className=" mx-auto mt-10 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
       <h2 className="w-full text-start text-lg font-bold text-black dark:text-white md:text-xl">
-        Popular Coinler
+        Trend Olan Coinler
       </h2>
       <div className="flex w-full items-center justify-between ">
         <div className="my-5 flex w-full flex-wrap items-center justify-center px-4 py-2 2xl:px-0.5">
@@ -40,7 +40,7 @@ export default function TrendCoins() {
                   </p>
                   <div className="flex items-center gap-2">
                     <p className="text-sm text-black dark:text-white">
-                      {coin.item.price_btc.toFixed(7)}
+                      {coin.item.price_btc.toFixed(7).toLocaleString("tr-TR")}
                     </p>
                     <img
                       aria-hidden="true"

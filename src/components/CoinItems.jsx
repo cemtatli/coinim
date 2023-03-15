@@ -32,7 +32,7 @@ export default function CoinItems({ coin }) {
         {" "}
         {coin.price_change_percentage_24h > 0 ? (
           <p className="  text-green-500 dark:text-green-400">
-            {coin.price_change_percentage_24h.toFixed(2)}%
+            {coin.price_change_percentage_24h.toFixed(2).toLocaleString("tr-TR")}%
           </p>
         ) : (
           <p className="text-red-500  dark:text-red-500">
@@ -41,12 +41,12 @@ export default function CoinItems({ coin }) {
         )}
       </td>
 
-      <td className="hidden sm:table-cell">{coin.total_volume.toLocaleString()}$</td>
+      <td className="hidden sm:table-cell">{coin.total_volume.toLocaleString("tr-TR")}$</td>
 
       <td className="hidden max-w-[80px] xl:table-cell">
         {coin.total_supply ? coin.total_supply : "N/A"}
       </td>
-      <td className="hidden xl:table-cell">{coin.market_cap.toLocaleString()}$</td>
+      <td className="hidden xl:table-cell">{coin.market_cap.toLocaleString("tr-TR")}$</td>
       <td className="hidden 2xl:table-cell">{coin.atl}$</td>
       <td className="hidden 2xl:table-cell">{coin.ath}$</td>
       <td className="hidden lg:table-cell lg:w-44 ">
