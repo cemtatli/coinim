@@ -83,7 +83,7 @@ export default function Header() {
             <ThemeChanger /> Tema Değiştir
           </li>
         </ul>
-        <ul className="flex w-full flex-col gap-5">
+        <ul className="flex w-full flex-col gap-2.5">
           <li>
             <Link to={"/signIn"} className="flex items-center justify-center">
               <button
