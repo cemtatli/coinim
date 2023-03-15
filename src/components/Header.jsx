@@ -54,7 +54,7 @@ export default function Header() {
       <div
         className={
           isOpen
-            ? "mobile justify-arround fixed left-0 top-18 z-20 flex  w-full flex-col items-center gap-5 bg-zinc-50  duration-200 ease-in-out dark:bg-dark-primary md:hidden"
+            ? "mobile fixed left-0 top-18 z-20 flex w-full flex-col items-center gap-5 bg-zinc-50  duration-200 ease-in-out dark:bg-dark-primary md:hidden"
             : "mobile fixed -left-full top-18 z-20 w-full bg-zinc-50 duration-200 ease-in-out dark:bg-dark-primary md:hidden"
         }
       >

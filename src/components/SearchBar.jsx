@@ -5,10 +5,10 @@ import CoinItems from "./CoinItems";
 export default function SearchBar({ coins }) {
   const [SearchValue, setSearchValue] = React.useState("");
   return (
-    <div className=" mx-auto flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 lg:px-0">
+    <div className=" mx-auto flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
       {/* Search Bar */}
       <div className="flex w-full">
-        <form className="my-5 flex w-full items-center justify-center px-4 py-2 lg:px-0">
+        <form className="my-5 flex w-full items-center justify-center px-4 py-2 2xl:px-0">
           <input
             type="text"
             onChange={(e) => setSearchValue(e.target.value)}
