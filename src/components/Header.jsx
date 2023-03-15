@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CoinimLogo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import ThemeChanger from "./ThemeChanger";
-import { CloseCircle, HambergerMenu, Home, User } from "iconsax-react";
+import { CloseCircle, HambergerMenu, Home, User, Link21 } from "iconsax-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,12 +62,24 @@ export default function Header() {
       >
         <ul className="flex flex-col w-full">
           <li className="font-medium flex items-center gap-2 border-b border-dark-primary border-opacity-10 dark:text-white dark:border-white dark:border-opacity-10 p-2 text-sm hover:bg-dark-primary/5 transition-colors cursor-pointer dark:hover:bg-blue-100/5 dark:hover:transition-colors">
-            <Home size="16" className="text-black dark:text-white" variant="Bold" />
+            {/*             <Home size="16" className="text-black dark:text-white" variant="Bold" /> */}
             <Link to={"/"}>Anasayfa</Link>
           </li>
           <li className="font-medium border-b flex items-center gap-2 border-dark-primary border-opacity-10 dark:text-white dark:border-white dark:border-opacity-10 p-2 text-sm hover:bg-dark-primary/5 transition-colors cursor-pointer dark:hover:bg-blue-100/5 dark:hover:transition-colors">
-            <User size="16" className="text-black dark:text-white" variant="Bold" />
+            {/*             <User size="16" className="text-black dark:text-white" variant="Bold" /> */}
             <Link to={"/"}>Profil</Link>
+          </li>
+          <li className="font-medium border-b flex items-center gap-2 border-dark-primary border-opacity-10 dark:text-white dark:border-white dark:border-opacity-10 p-2 text-sm hover:bg-dark-primary/5 transition-colors cursor-pointer dark:hover:bg-blue-100/5 dark:hover:transition-colors">
+            {/*             <Link21 size="16" className="text-black dark:text-white" variant="Bold" /> */}
+            <Link to={"https://twitter.com/vaycem"} target={"_blank"}>
+              Twitter'da Biz
+            </Link>
+          </li>
+          <li className="font-medium border-b flex items-center gap-2 border-dark-primary border-opacity-10 dark:text-white dark:border-white dark:border-opacity-10 p-2 text-sm hover:bg-dark-primary/5 transition-colors cursor-pointer dark:hover:bg-blue-100/5 dark:hover:transition-colors">
+            {/*             <Link21 size="16" className="text-black dark:text-white" variant="Bold" /> */}
+            <Link to={"https://github.com/cemtatli"} target={"_blank"}>
+              GitHub'da Biz
+            </Link>
           </li>
           <li className="font-medium border-b flex items-center gap-2 border-dark-primary border-opacity-10 dark:text-white dark:border-white dark:border-opacity-10 p-2 text-sm hover:bg-dark-primary/5 transition-colors cursor-pointer dark:hover:bg-blue-100/5 dark:hover:transition-colors">
             <ThemeChanger /> Tema Değiştir

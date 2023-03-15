@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.16",
+    "@material-tailwind/react": "^1.4.2",
     "caniuse-lite": "^1.0.30001397",
     "flowbite": "^1.6.4",
     "flowbite-react": "^0.4.2",

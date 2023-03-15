@@ -1,11 +1,14 @@
 import { ThemeProvider } from "./context/ThemeContext";
 import Header from "./components/Header";
+import { ThemeProvider as MTProvider } from "@material-tailwind/react";
 
 function App() {
   return (
-    <ThemeProvider>
-      <Header />
-    </ThemeProvider>
+    <MTProvider>
+      <ThemeProvider>
+        <Header />
+      </ThemeProvider>
+    </MTProvider>
   );
 }
 
