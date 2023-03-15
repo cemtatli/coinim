@@ -34,9 +34,11 @@ export default function SearchBar({ coins }) {
             <th className="hidden sm:table-cell">
               Hacim<span className="text-sm">(24sa)</span>
             </th>
-            <th className="hidden  lg:table-cell">Toplam Arz</th>
-            <th className="hidden  lg:table-cell">Toplam Market Hacmi</th>
-            <th className="hidden xl:table-cell">ATH</th>
+            <th className="hidden lg:table-cell">Toplam Arz</th>
+            <th className="hidden lg:table-cell">Toplam Market Hacmi</th>
+            <th className="hidden xl:table-cell">
+              Grafik <span className="text-sm">(7d)</span>
+            </th>
           </tr>
         </thead>
         <tbody className="dark:text-white">
