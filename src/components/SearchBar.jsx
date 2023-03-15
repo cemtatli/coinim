@@ -20,12 +20,12 @@ export default function SearchBar({ coins }) {
       {/* Liste */}
       <table className="w-full border-collapse text-center">
         <thead className="h-10 text-sm dark:text-white sm:text-base">
-          <tr className="border-b dark:border-white dark:border-opacity-10">
+          <tr className="border-b px-4 dark:border-white dark:border-opacity-10">
             <th></th> {/* Yildiz icin bosluk */}
             <th>#</th>
             <th>Ad</th>
             <th>Fiyat</th>
-            <th>
+            <th className="hidden xxs:table-cell">
               K/K<span className="text-sm">($)</span>
             </th>
             <th>

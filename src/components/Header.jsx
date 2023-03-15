@@ -11,7 +11,7 @@ export default function Header() {
   };
 
   return (
-    <header className="flex h-18 w-full items-center justify-center border-b border-dark-primary border-opacity-10 bg-zinc-50 px-4  py-2 dark:border-white dark:border-opacity-10 dark:bg-dark-primary">
+    <header className="sticky top-0 flex h-18 w-full items-center justify-center border-b border-dark-primary border-opacity-10 bg-zinc-50 px-4  py-2 dark:border-white dark:border-opacity-10 dark:bg-dark-primary">
       {/* Desktop Gorunum */}
       <nav className="flex w-full max-w-[1440px] items-center justify-between ">
         <Link to={"/"} className="flex items-center gap-2">

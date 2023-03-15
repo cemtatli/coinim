@@ -25,7 +25,7 @@ export default function CoinItems({ coin }) {
       <td className="text-xs font-medium xs:text-sm sm:text-base">
         ${coin.current_price.toFixed(2)}
       </td>
-      <td className="text-xs font-medium xs:text-sm sm:text-base">
+      <td className="hidden text-xs font-medium xxs:table-cell xs:text-sm sm:text-base">
         {coin.price_change_24h.toFixed(2)}$
       </td>
       <td className="text-xs font-medium xs:text-sm sm:text-base">
