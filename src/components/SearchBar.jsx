@@ -5,9 +5,9 @@ import CoinItems from "./CoinItems";
 export default function SearchBar({ coins }) {
   const [SearchValue, setSearchValue] = React.useState("");
   return (
-    <div>
-      {/* Search  */}
-      <div className="flex w-full items-center justify-center">
+    <div className="overscroll-hidden my-5 mx-auto flex w-full max-w-7xl flex-col items-center justify-center px-2">
+      {/* Search Bar */}
+      <div className="flex w-full">
         <form className="flex w-full items-center justify-center px-4 py-2">
           <input
             type="text"
@@ -18,20 +18,21 @@ export default function SearchBar({ coins }) {
         </form>
       </div>
       {/* Table */}
-      <table>
-        <thead>
-          <tr>
-            <th></th>
+      <table className="w-full border-collapse text-center">
+        <thead className="h-10 text-sm dark:text-white sm:text-base">
+          <tr className="border-b dark:border-white dark:border-opacity-10">
+            <th></th> {/* Yildiz icin bosluk */}
             <th>#</th>
-            <th>Coin</th>
+            <th>Ad</th>
             <th>Fiyat</th>
-            <th>24h</th>
-            <th>24h volume</th>
-            <th>mkt</th>
-            <th>last7d</th>
+            <th>K/K($)</th>
+            <th>24h%</th>
+            <th className="hidden sm:table-cell">Hacim(24sa)</th>
+            <th className="hidden lg:table-cell">Toplam Market Hacmi</th>
+            <th className="hidden lg:table-cell">ATH</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="dark:text-white">
           {coins
             .filter((value) => {
               if (SearchValue === "") {

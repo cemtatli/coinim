@@ -4,27 +4,41 @@ import { Star, Star1 } from "iconsax-react";
 
 export default function CoinItems({ coin }) {
   return (
-    <tr key={coin.id}>
+    <tr
+      key={coin.id}
+      className="h-18 overflow-hidden border-b text-center dark:border-white dark:border-opacity-10"
+    >
       <td>
-        <Star1 size={16} />
+        <Star1 size={14} className={"cursor-pointer"} />
       </td>
       <td>{coin.market_cap_rank}</td>
       <td>
-        <div>
-          <img src={coin.image} alt={coin.id} />
-          <span className="ml-2">{coin.name}</span>
+        <div className="mx-auto flex max-w-[150px] flex-col items-center justify-center gap-1 md:flex-row  md:gap-2">
+          <img src={coin.image} className={"h-6 w-6 xs:h-8 xs:w-8 sm:h-10 sm:w-10"} alt={coin.id} />
+          <span className="hidden text-xs font-medium xs:block sm:text-sm md:text-base">
+            {coin.name}
+            <span className="text-xs uppercase text-black dark:text-white"> ({coin.symbol})</span>
+          </span>
         </div>
       </td>
-      <td>{coin.symbol}</td>
-      <td>{coin.current_price}</td>
-      <td>%{coin.price_change_percentage_24h}</td>
-      <td>{coin.total_volume}</td>
-      <td>{coin.market_cap}</td>
-      <td>
-        <Sparklines data={coin.sparkline_in_7d.price}>
-          <SparklinesLine color="blue" />
-        </Sparklines>
+
+      <td className="text-sm font-medium sm:text-base">${coin.current_price.toFixed(2)}</td>
+      <td className="text-sm font-medium sm:text-base">{coin.price_change_24h.toFixed(2)}$</td>
+      <td className="text-sm font-medium sm:text-base">
+        {" "}
+        {coin.price_change_percentage_24h > 0 ? (
+          <p className=" text-green-600 dark:text-green-400">
+            {coin.price_change_percentage_24h.toFixed(2)}%
+          </p>
+        ) : (
+          <p className="text-red-600  dark:text-red-500">
+            {coin.price_change_percentage_24h.toFixed(2)}%
+          </p>
+        )}
       </td>
+      <td className="hidden sm:table-cell">{coin.total_volume}</td>
+      <td className="hidden lg:table-cell">{coin.market_cap}</td>
+      <td className="hidden lg:table-cell">{coin.ath}</td>
     </tr>
   );
 }
