@@ -13,7 +13,7 @@ export default function CoinItems({ coin }) {
       </td>
       <td>{coin.market_cap_rank}</td>
       <td>
-        <div className="mx-auto flex max-w-[150px] flex-col items-center justify-center gap-1 md:flex-row  md:gap-2">
+        <div className="mx-auto flex max-w-[125px]  flex-col items-center justify-center gap-1 md:max-w-[250] md:flex-row md:gap-2 lg:max-w-[200px] lg:justify-start lg:pl-5">
           <img src={coin.image} className={"h-6 w-6 xs:h-8 xs:w-8 sm:h-10 sm:w-10"} alt={coin.id} />
           <span className="hidden text-xs font-medium xs:block sm:text-sm md:text-base">
             {coin.name}
@@ -22,12 +22,16 @@ export default function CoinItems({ coin }) {
         </div>
       </td>
 
-      <td className="text-sm font-medium sm:text-base">${coin.current_price.toFixed(2)}</td>
-      <td className="text-sm font-medium sm:text-base">{coin.price_change_24h.toFixed(2)}$</td>
-      <td className="text-sm font-medium sm:text-base">
+      <td className="text-xs font-medium xs:text-sm sm:text-base">
+        ${coin.current_price.toFixed(2)}
+      </td>
+      <td className="text-xs font-medium xs:text-sm sm:text-base">
+        {coin.price_change_24h.toFixed(2)}$
+      </td>
+      <td className="text-xs font-medium xs:text-sm sm:text-base">
         {" "}
         {coin.price_change_percentage_24h > 0 ? (
-          <p className=" text-green-600 dark:text-green-400">
+          <p className="  text-green-600 dark:text-green-400">
             {coin.price_change_percentage_24h.toFixed(2)}%
           </p>
         ) : (
@@ -36,9 +40,13 @@ export default function CoinItems({ coin }) {
           </p>
         )}
       </td>
-      <td className="hidden sm:table-cell">{coin.total_volume}</td>
-      <td className="hidden lg:table-cell">{coin.market_cap}</td>
-      <td className="hidden lg:table-cell">{coin.ath}</td>
+      <td className="hidden sm:table-cell">{coin.total_volume.toLocaleString()}$</td>
+
+      <td className="hidden max-w-[70px] lg:table-cell">
+        {coin.total_supply ? coin.total_supply : "-"}
+      </td>
+      <td className="hidden max-w-[70px] lg:table-cell">{coin.market_cap.toLocaleString()}$</td>
+      <td className="hidden max-w-[70px] xl:table-cell">{coin.ath}</td>
     </tr>
   );
 }

@@ -17,7 +17,9 @@ export default function Header() {
         <Link to={"/"} className="flex items-center gap-2">
           {/* Link to="/" eklenecek */}
           <img src={CoinimLogo} alt="coinim" width={36} height={36} />
-          <span className="font-semibold text-blue-500 dark:text-white ">Coinim.com</span>
+          <span className="font-semibold text-blue-500 dark:text-white md:text-lg md:font-bold ">
+            Coinim.com
+          </span>
         </Link>
         {/* Oturum Aç & Kayıt Ol  */}
         <div className="hidden items-center gap-4 md:flex">
