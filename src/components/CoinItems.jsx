@@ -6,16 +6,16 @@ export default function CoinItems({ coin }) {
   return (
     <tr
       key={coin.id}
-      className="h-18 overflow-hidden border-b text-center dark:border-white dark:border-opacity-10"
+      className="h-20 overflow-hidden border-b text-center dark:border-white dark:border-opacity-10"
     >
       <td>
         <Star1 size={16} className={"cursor-pointer"} />
       </td>
       <td>{coin.market_cap_rank}</td>
       <td>
-        <div className="mx-auto flex w-full max-w-[125px] flex-col items-center justify-center gap-1  md:max-w-[250px] md:flex-row md:gap-2  lg:justify-start lg:pl-5">
+        <div className="mx-auto flex w-full max-w-[125px] flex-col items-center justify-center gap-1  md:max-w-[250px] md:flex-row md:gap-5  lg:justify-start lg:pl-5">
           <img src={coin.image} className={"h-6 w-6 xs:h-8 xs:w-8 sm:h-10 sm:w-10"} alt={coin.id} />
-          <span className="hidden text-xs font-medium xs:block sm:text-sm md:text-base">
+          <span className="hidden overflow-hidden text-xs  font-medium xs:block sm:text-sm md:w-24 md:text-base">
             {coin.name}
             <span className="text-xs uppercase text-black dark:text-white"> ({coin.symbol})</span>
           </span>
@@ -31,22 +31,25 @@ export default function CoinItems({ coin }) {
       <td className="text-xs font-medium xs:text-sm sm:text-base">
         {" "}
         {coin.price_change_percentage_24h > 0 ? (
-          <p className="  text-green-600 dark:text-green-400">
+          <p className="  text-green-500 dark:text-green-400">
             {coin.price_change_percentage_24h.toFixed(2)}%
           </p>
         ) : (
-          <p className="text-red-600  dark:text-red-500">
+          <p className="text-red-500  dark:text-red-500">
             {coin.price_change_percentage_24h.toFixed(2)}%
           </p>
         )}
       </td>
+
       <td className="hidden sm:table-cell">{coin.total_volume.toLocaleString()}$</td>
 
-      <td className="hidden max-w-[80px] overflow-hidden lg:table-cell">
-        {coin.total_supply ? coin.total_supply : "-"}
+      <td className="hidden max-w-[80px] xl:table-cell">
+        {coin.total_supply ? coin.total_supply : "N/A"}
       </td>
-      <td className="hidden lg:table-cell">{coin.market_cap.toLocaleString()}$</td>
-      <td className="hidden xl:table-cell xl:w-44 ">
+      <td className="hidden xl:table-cell">{coin.market_cap.toLocaleString()}$</td>
+      <td className="hidden 2xl:table-cell">{coin.atl}$</td>
+      <td className="hidden 2xl:table-cell">{coin.ath}$</td>
+      <td className="hidden lg:table-cell lg:w-44 ">
         <Sparklines data={coin.sparkline_in_7d.price}>
           <SparklinesLine color="#3B82F6" />
         </Sparklines>
