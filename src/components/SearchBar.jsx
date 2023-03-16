@@ -16,7 +16,7 @@ export default function SearchBar({ coins }) {
             className="  mx-auto h-10 w-full  max-w-[1440px] rounded-lg border border-blue-500 px-4 py-2 pl-10 text-sm outline-none placeholder:text-xs focus:ring-2 dark:bg-transparent dark:text-white md:placeholder:text-sm"
             placeholder="Kripto ara..."
           />{" "}
-          <SearchNormal1 className="absolute  left-0 top-5 ml-2 h-4 w-4 translate-x-1/2  font-semibold  text-blue-500 dark:text-white" />
+          <SearchNormal1 className="absolute  left-2 top-5 ml-2 h-4 w-4 translate-x-1/2  font-semibold  text-blue-500 dark:text-white" />
         </form>
       </div>
       {/* Liste */}
