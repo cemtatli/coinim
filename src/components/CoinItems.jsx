@@ -9,9 +9,9 @@ export default function CoinItems({ coin }) {
       className="h-20 overflow-hidden border-b text-center dark:border-white dark:border-opacity-10"
     >
       <td>
-        <Star1 size={16} className={"cursor-pointer"} />
+        <Star1 className={"h-3.5 w-3.5 cursor-pointer md:h-4 md:w-4"} />
       </td>
-      <td>{coin.market_cap_rank}</td>
+      <td className="text-xs font-medium xs:text-sm sm:text-base">{coin.market_cap_rank}</td>
       <td>
         <div className="mx-auto flex w-full max-w-[125px] flex-col items-center justify-center gap-1  md:max-w-[250px] md:flex-row md:gap-5  lg:justify-start lg:pl-5">
           <img src={coin.image} className={"h-6 w-6 xs:h-8 xs:w-8 sm:h-10 sm:w-10"} alt={coin.id} />
@@ -31,7 +31,7 @@ export default function CoinItems({ coin }) {
             {coin.price_change_24h.toFixed(2).toLocaleString("tr-TR")}%
           </p>
         ) : (
-          <p className="text-red-500 dark:text-red-500">{coin.price_change_24h.toFixed(2)}%</p>
+          <p className="text-red-500 dark:text-red-500">{coin.price_change_24h.toFixed(2)}$</p>
         )}
       </td>
       <td className="text-xs font-medium xs:text-sm sm:text-base">
@@ -55,9 +55,9 @@ export default function CoinItems({ coin }) {
       <td className="hidden xl:table-cell">{coin.market_cap.toLocaleString("tr-TR")}$</td>
       <td className="hidden 2xl:table-cell">{coin.atl}$</td>
       <td className="hidden 2xl:table-cell">{coin.ath}$</td>
-      <td className="hidden lg:table-cell lg:w-44 ">
+      <td className="hidden lg:table-cell lg:w-44">
         <Sparklines data={coin.sparkline_in_7d.price}>
-          <SparklinesLine color="#3B82F6" />
+          <SparklinesLine color="#3B82F5" />
         </Sparklines>
       </td>
     </tr>

@@ -18,7 +18,7 @@ export default function Header() {
           {/* Link to="/" eklenecek */}
           <img src={CoinimLogo} alt="coinim" width={36} height={36} />
           <span className="font-semibold text-blue-500 dark:text-white md:text-lg md:font-bold ">
-            Coinim.com
+            Coinim
           </span>
         </Link>
         {/* Oturum Aç & Kayıt Ol  */}
