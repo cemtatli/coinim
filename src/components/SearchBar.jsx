@@ -20,7 +20,7 @@ export default function SearchBar({ coins }) {
         </form>
       </div>
       {/* Liste */}
-      <table className="w-full border-collapse text-center">
+      <table className="w-full border-collapse text-center ">
         <thead className="h-10 text-sm dark:text-white sm:text-base">
           <tr className="border-b px-4 dark:border-white dark:border-opacity-10">
             <th></th> {/* Yildiz icin bosluk */}

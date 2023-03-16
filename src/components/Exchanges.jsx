@@ -30,18 +30,18 @@ export default function Exchanges() {
                     alt={exchange.name}
                     className="h-8 w-8 rounded-full md:h-10 md:w-10"
                   />
-                  <p className=" text-xs font-semibold text-black dark:text-white md:text-sm">
+                  <p className=" text-sm font-semibold text-black dark:text-white ">
                     {exchange.name}
                   </p>
-                  <p className=" text-xs text-black dark:text-white md:text-sm">
+                  <p className=" text-sm text-black dark:text-white ">
                     <span> Kuruluş Yılı: </span>
                     {exchange.year_established}
                   </p>
-                  <p className=" text-xs  text-black dark:text-white md:text-sm">
+                  <p className=" text-sm  text-black dark:text-white ">
                     <span>Güven Puanı: </span>
                     {exchange.trust_score}
                   </p>
-                  <p className=" text-xs  text-black dark:text-white md:text-sm">
+                  <p className=" text-sm  text-black dark:text-white ">
                     <span>Güven Sıralaması: </span>
                     {exchange.trust_score_rank}
                   </p>
