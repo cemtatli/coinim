@@ -9,7 +9,6 @@ export default function Exchanges() {
   useEffect(() => {
     axios.get(url).then((res) => {
       setExchange(res.data);
-      console.log(res.data);
     });
   }, []);
   return (
@@ -17,7 +16,7 @@ export default function Exchanges() {
       <h2 className="w-full text-start text-lg font-bold text-black dark:text-white md:text-xl">
         Borsalar
       </h2>
-      <div className="flex w-full items-center justify-between  ">
+      <div className="flex w-full items-center justify-between">
         <div className="my-5 flex w-full flex-wrap items-center  px-4 py-2 2xl:px-0.5">
           <div className="flex w-full flex-auto  shrink-0 flex-col items-center justify-center gap-5  overflow-auto px-2 lg:flex-row ">
             {Exchange.map((exchange) => {
