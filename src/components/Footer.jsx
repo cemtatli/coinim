@@ -16,7 +16,7 @@ export default function Footer() {
         </div>
         {/* Bilgi */}
         <div className="flex items-center justify-center gap-4">
-          <div className="flex h-8 w-8 items-center justify-center rounded-xl border border-blue-500 border-opacity-10 dark:border-white dark:border-opacity-5">
+          <div className="flex h-10 w-10 items-center justify-center">
             <ThemeChanger />
           </div>
 
@@ -32,8 +32,8 @@ export default function Footer() {
         </div>
       </div>
       {/* Linkler */}
-      <div className="flex items-center justify-center gap-4">
-        <div className="mt-4 flex flex-wrap items-center justify-center gap-5">
+      <div className=" mt-4 flex items-center justify-center gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-5">
           <p className="text-sm text-dark-primary dark:text-white">Ürünler</p>
           <Link to="/">
             <p className="text-sm text-dark-primary dark:text-white">Blockchain Gezgini</p>
@@ -90,27 +90,27 @@ export default function Footer() {
       <div className="mt-4 flex items-center justify-center gap-4">
         <div className="flex items-center justify-center gap-4">
           <Link to="https://cemtatli.dev/" target={"_blank"}>
-            <div className="flex h-8 w-8 items-center justify-center rounded-xl border border-blue-500 border-opacity-10 dark:border-white dark:border-opacity-5 dark:hover:bg-blue-600/10">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-blue-500 border-opacity-10 hover:bg-blue-50 dark:border-white dark:border-opacity-5 dark:hover:bg-blue-600/10">
               <FaLinkedinIn size={16} className={"dark:text-white"} target={"_blank"} />
             </div>
           </Link>
           <Link to="https://cemtatli.dev/" target={"_blank"}>
-            <div className="flex h-8 w-8 items-center justify-center rounded-xl border border-blue-500 border-opacity-10 dark:border-white dark:border-opacity-5 dark:hover:bg-blue-600/10">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-blue-500 border-opacity-10 hover:bg-blue-50 dark:border-white dark:border-opacity-5 dark:hover:bg-blue-600/10">
               <FaFacebookF size={16} className={"dark:text-white"} />
             </div>
           </Link>
           <Link to="https://cemtatli.dev/" target={"_blank"}>
-            <div className="flex h-8 w-8 items-center justify-center rounded-xl border border-blue-500 border-opacity-10 dark:border-white dark:border-opacity-5 dark:hover:bg-blue-600/10">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-blue-500 border-opacity-10 hover:bg-blue-50 dark:border-white dark:border-opacity-5 dark:hover:bg-blue-600/10">
               <FaGithub size={16} className={"dark:text-white"} />
             </div>
           </Link>
           <Link to="https://cemtatli.dev/" target={"_blank"}>
-            <div className="flex h-8 w-8 items-center justify-center rounded-xl border border-blue-500 border-opacity-10 dark:border-white dark:border-opacity-5 dark:hover:bg-blue-600/10">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-blue-500 border-opacity-10 hover:bg-blue-50 dark:border-white dark:border-opacity-5 dark:hover:bg-blue-600/10">
               <FaTwitter size={16} className={"dark:text-white"} />
             </div>
           </Link>
           <Link to="https://cemtatli.dev/" target={"_blank"}>
-            <div className="flex h-8 w-8 items-center justify-center rounded-xl border border-blue-500 border-opacity-10 dark:border-white dark:border-opacity-5 dark:hover:bg-blue-600/10">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-blue-500 border-opacity-10 hover:bg-blue-50 dark:border-white dark:border-opacity-5 dark:hover:bg-blue-600/10">
               <FaLink size={16} className={"dark:text-white"} />
             </div>
           </Link>
