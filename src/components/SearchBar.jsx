@@ -28,10 +28,10 @@ export default function SearchBar({ coins }) {
             <th>Ad</th>
             <th>Fiyat</th>
             <th className="hidden xxs:table-cell">
-              K/K<span className="text-sm">($)</span>
+              K/K<span className="text-sm">(24sa)</span>
             </th>
             <th>
-              24h<span className="text-sm">(%)</span>
+              24saat <span className="text-sm">(%)</span>
             </th>
             <th className="hidden sm:table-cell">
               Hacim<span className="text-sm">(24sa)</span>
@@ -39,9 +39,9 @@ export default function SearchBar({ coins }) {
             <th className="w-50 hidden overflow-hidden px-4 xl:table-cell">Toplam Arz</th>
             <th className="hidden xl:table-cell">Toplam Market Hacmi</th>
             <th className="hidden 2xl:table-cell"> ATL</th>
-            <th className="hidden 2xl:table-cell"> ATH</th>
+            <th className="hidden 2xl:table-cell">ATH</th>
             <th className="hidden lg:table-cell">
-              Grafik <span className="text-sm">(7d)</span>
+              Grafik <span className="text-sm">(7 gün)</span>
             </th>
           </tr>
         </thead>
