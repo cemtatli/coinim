@@ -7,8 +7,8 @@ export default function Home({ coins }) {
   return (
     <>
       <SearchBar coins={coins} />
-      <TrendCoins coins={coins} />
-      <Exchanges coins={coins} />
+      <TrendCoins />
+      <Exchanges />
     </>
   );
 }

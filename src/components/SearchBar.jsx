@@ -1,5 +1,4 @@
 import React from "react";
-
 import CoinItems from "./CoinItems";
 import { SearchNormal1 } from "iconsax-react";
 
