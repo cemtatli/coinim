@@ -117,7 +117,7 @@ export default function CoinPage() {
         </div>
         {/* Description */}
         <div className="py-4">
-          <p className="mb-2 text-xl font-bold"> {coin.name} nedir ?</p>
+          <p className="mb-2 text-xl font-bold dark:text-white"> {coin.name} nedir ?</p>
           <p
             className="text-sm  dark:text-white"
             dangerouslySetInnerHTML={{

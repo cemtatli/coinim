@@ -6,6 +6,7 @@ import SignIn from "./routes/SignIn";
 import SignUp from "./routes/SignUp";
 import Account from "./routes/Account";
 import CoinPage from "./routes/CoinPage";
+import Footer from "./components/Footer";
 
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -45,6 +46,7 @@ function App() {
           <Route path=":coinId" />
         </Route>
       </Routes>
+      <Footer />
     </ThemeProvider>
   );
 }
