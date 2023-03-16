@@ -38,7 +38,7 @@ export default function TrendCoins() {
                   <p className="text-sm font-semibold text-black dark:text-white">
                     {coin.item.symbol.toUpperCase()}
                   </p>
-                  <div className="flex items-center gap-2">
+                  {/*                   <div className="flex items-center gap-2">
                     <p className="text-sm text-black dark:text-white">
                       {coin.item.price_btc.toFixed(7).toLocaleString("tr-TR")}
                     </p>
@@ -49,7 +49,7 @@ export default function TrendCoins() {
                       src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579"
                       alt="/"
                     />
-                  </div>
+                  </div> */}
                   <p className="text-sm text-black dark:text-white">
                     <span className="mr-2"> Sıralama:</span>
                     {coin.item.market_cap_rank}
