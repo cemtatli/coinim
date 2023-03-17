@@ -1,9 +1,10 @@
 import React from "react";
-import { Sparklines, SparklinesLine } from "react-sparklines";
-import { Star, Star1 } from "iconsax-react";
 import { Link } from "react-router-dom";
 
-export default function CoinItems({ coin }) {
+import { Sparklines, SparklinesLine } from "react-sparklines";
+import { Star, Star1 } from "iconsax-react";
+
+export default function CoinItem({ coin }) {
   return (
     <tr
       key={coin.id}

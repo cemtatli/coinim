@@ -1,14 +1,12 @@
-import React from "react";
-import DOMPurify from "dompurify";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import DOMPurify from "dompurify";
 import { Sparklines, SparklinesLine } from "react-sparklines";
 
 export default function CoinPage() {
   const [coin, setCoin] = useState({});
   const params = useParams();
-
   const url = `https://api.coingecko.com/api/v3/coins/${params.coinId}?localization=false&sparkline=true`;
 
   useEffect(() => {
@@ -19,8 +17,9 @@ export default function CoinPage() {
 
   return (
     <div className="mx-auto mb-5 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
+      {/* WRAPPER */}
       <div className="mt-5 mb-5 flex h-full w-full flex-col items-center justify-center gap-10 lg:gap-5">
-        {/* Coin Photo Symbol ve Adi */}
+        {/* IMG, SYMBOL & NAME */}
         <div className="flex w-full flex-col items-center gap-2 border-b border-blue-500 border-opacity-10 pb-5 dark:border-white dark:border-opacity-10">
           <img src={coin.image?.large} alt={coin.name} className="h-24 w-24 md:h-32 md:w-32" />
           <div className="flex items-center justify-center gap-2">
@@ -46,7 +45,7 @@ export default function CoinPage() {
             </p>
           </div>
         </div>
-        {/* Coin Stat */}
+        {/* COIN STATS */}
         <div className="flex w-full flex-col items-center justify-center gap-2">
           <div className="flex w-full flex-col items-center justify-center gap-2">
             <div className="flex w-full items-center justify-between">
@@ -109,13 +108,13 @@ export default function CoinPage() {
             </div>
           </div>
         </div>
-        {/* Coin Chart */}
+        {/* COIN CHART */}
         <div className="flex w-full flex-1 items-center justify-center">
           <Sparklines data={coin.market_data?.sparkline_7d.price}>
             <SparklinesLine color="#3B82F6" />
           </Sparklines>
         </div>
-        {/* Description */}
+        {/* COIN DESC */}
         <div className="py-4">
           <p className="mb-2 text-xl font-bold dark:text-white"> {coin.name} nedir ?</p>
           <p

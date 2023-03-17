@@ -1,4 +1,5 @@
 import React from "react";
+
 import SearchBar from "../components/SearchBar";
 import TrendCoins from "../components/TrendCoins";
 import Exchanges from "../components/Exchanges";

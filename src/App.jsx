@@ -1,15 +1,17 @@
-import { ThemeProvider } from "./context/ThemeContext";
-import Header from "./components/Header";
+import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
+import axios from "axios";
+
+import { ThemeProvider } from "./context/ThemeContext";
+
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+
 import Home from "./routes/Home";
 import SignIn from "./routes/SignIn";
 import SignUp from "./routes/SignUp";
 import Account from "./routes/Account";
 import CoinPage from "./routes/CoinPage";
-import Footer from "./components/Footer";
-
-import axios from "axios";
-import { useEffect, useState } from "react";
 
 function App() {
   const [coins, setCoins] = useState([]);
@@ -18,7 +20,7 @@ function App() {
 
   useEffect(() => {
     axios.get(url).then((res) => {
-      setCoins(res.data); // datayi set ediyoruz coins state'ine
+      setCoins(res.data);
     });
   }, [url]);
 

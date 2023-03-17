@@ -1,5 +1,6 @@
 import React from "react";
-import CoinItems from "./CoinItems";
+import CoinItem from "./CoinItem";
+
 import { SearchNormal1 } from "iconsax-react";
 
 export default function SearchBar({ coins }) {
@@ -54,7 +55,7 @@ export default function SearchBar({ coins }) {
               }
             })
             .map((coin) => {
-              return <CoinItems coin={coin} key={coin.id} />;
+              return <CoinItem coin={coin} key={coin.id} />;
             })}
         </tbody>
       </table>

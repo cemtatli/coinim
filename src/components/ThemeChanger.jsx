@@ -1,7 +1,7 @@
-import React from "react";
-import { Moon, Sun1 } from "iconsax-react";
-import { useContext } from "react";
+import React, { useContext } from "react";
+
 import { ThemeContext } from "../context/ThemeContext";
+import { Moon, Sun1 } from "iconsax-react";
 
 export default function ThemeChanger() {
   const { theme, setTheme } = useContext(ThemeContext);
