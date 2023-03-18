@@ -12,11 +12,11 @@ export default function TrendCoins() {
   }, []);
 
   return (
-    <div className=" mx-auto mt-10 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
+    <div className="mx-auto mt-10 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
       <h2 className="w-full text-start text-lg font-bold text-black dark:text-white md:text-xl">
         Trend Coinler
       </h2>
-      <div className="flex w-full items-center justify-between ">
+      <div className="flex w-full items-center justify-between text-center ">
         <div className="my-5 flex w-full flex-wrap items-center justify-center px-4 py-2 2xl:px-0.5">
           <div className="flex w-full flex-col  items-center justify-center gap-4  px-2 lg:flex-row">
             {trending.map((coin) => {
@@ -26,20 +26,20 @@ export default function TrendCoins() {
                   className="flex w-full cursor-pointer flex-col items-center justify-center gap-2 rounded-lg bg-slate-100 p-4 dark:bg-gray-800/30"
                 >
                   <img
-                    src={coin.item.large}
-                    alt={coin.item.name}
+                    src={coin?.item.large}
+                    alt={coin?.item.name}
                     className="h-6 w-6 rounded-full md:h-10 md:w-10"
                   />
                   <p className="text-sm font-semibold text-black dark:text-white">
-                    {coin.item.name}
+                    {coin.item?.name}
                   </p>
 
                   <p className="text-sm font-semibold text-black dark:text-white">
-                    {coin.item.symbol.toUpperCase()}
+                    {coin.item.symbol?.toUpperCase()}
                   </p>
                   <div className="flex items-center gap-2">
                     <p className="text-sm text-black dark:text-white">
-                      {coin.item.price_btc?.toFixed(7).toLocaleString("tr-TR")}
+                      {coin.item.price_btc?.toFixed(5).toLocaleString("tr-TR")}
                     </p>
                     <img
                       aria-hidden="true"
@@ -51,7 +51,7 @@ export default function TrendCoins() {
                   </div>
                   <p className="text-sm text-black dark:text-white">
                     <span className="mr-2"> Sıralama:</span>
-                    {coin.item.market_cap_rank}
+                    {coin.item?.market_cap_rank}
                   </p>
                 </div>
               );

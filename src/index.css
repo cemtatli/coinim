@@ -16,5 +16,5 @@ body {
 header {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  @apply bg-zinc-50/10 dark:bg-dark-primary/10;
+  @apply bg-zinc-50/20 dark:bg-dark-primary/20;
 }

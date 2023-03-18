@@ -8,7 +8,7 @@ import CoinimLogo from "../assets/logo.png";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-10 flex h-18 w-full items-center justify-center border-b border-dark-primary border-opacity-10   px-4 py-2 dark:border-white dark:border-opacity-10  ">
+    <header className="sticky top-0 z-10 flex h-18 w-full items-center justify-center border-b border-dark-primary border-opacity-10 px-4 py-2 dark:border-white dark:border-opacity-10  ">
       <nav className="flex w-full max-w-[1440px] items-center justify-between ">
         <Link to={"/"} className="flex items-center gap-2">
           <img src={CoinimLogo} alt="coinim" width={36} height={36} />

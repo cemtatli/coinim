@@ -31,7 +31,7 @@ export default function SearchBar({ coins }) {
               K/K<span className="text-sm">(24sa)</span>
             </th>
             <th>
-              24saat <span className="text-sm">(%)</span>
+              24saat <span className="text-sm">(#)</span>
             </th>
             <th className="hidden sm:table-cell">
               Hacim<span className="text-sm">(24sa)</span>
