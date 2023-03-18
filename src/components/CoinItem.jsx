@@ -63,7 +63,7 @@ export default function CoinItem({ coin }) {
       <td className="hidden text-sm font-medium xl:table-cell">
         {coin.market_cap.toLocaleString("tr-TR")}$
       </td>
-      <td className="hidden text-sm font-medium 2xl:table-cell">${coin.atl.toFixed(2)}$</td>
+      <td className="hidden text-sm font-medium 2xl:table-cell">${coin.atl.toFixed(2)}</td>
       <td className="hidden text-sm font-medium 2xl:table-cell">${coin.ath.toFixed(2)}</td>
       <td className="hidden text-sm font-medium lg:table-cell lg:w-44">
         <Sparklines data={coin.sparkline_in_7d.price}>
