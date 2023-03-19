@@ -1,13 +1,13 @@
 import React from "react";
 
-import SearchBar from "../components/SearchBar";
+import CoinList from "../components/CoinList";
 import TrendCoins from "../components/TrendCoins";
 import Exchanges from "../components/Exchanges";
 
 export default function Home({ coins }) {
   return (
     <>
-      <SearchBar coins={coins} />
+      <CoinList coins={coins} />
       <TrendCoins />
       <Exchanges />
     </>
