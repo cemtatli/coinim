@@ -16,7 +16,7 @@ export default function CoinItem({ coin }) {
       <td className="text-xs font-medium xs:text-sm sm:text-base">{coin.market_cap_rank}</td>
       <td>
         <Link to={`/coin/${coin.id}`}>
-          <div className="mx-auto flex w-full max-w-[125px] flex-col items-center justify-center gap-2 md:max-w-[225px] md:flex-row md:gap-5 lg:justify-start  lg:gap-0 lg:pl-5">
+          <div className="mx-auto flex w-full max-w-[125px] flex-col items-center justify-center gap-2 md:max-w-[200px] md:flex-row md:gap-5 lg:justify-start  lg:gap-0 lg:pl-5">
             <img
               src={coin.image}
               className={"h-6 w-6 xs:h-8 xs:w-8 sm:h-10 sm:w-10"}
