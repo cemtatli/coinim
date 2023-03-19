@@ -10,23 +10,17 @@ export default function Footer() {
   return (
     <footer className="flex w-full flex-col items-center justify-center border-t border-dark-primary border-opacity-10 px-4  py-2 dark:border-white dark:border-opacity-5">
       {/* Bilgi */}
-      <div className="mt-5 flex w-full items-center justify-center gap-4">
-        <Link to="/">
+      <div className="mt-5 flex w-full items-center justify-center ">
+        <Link to="/" className="flex items-center gap-2">
           <img src={CoinimLogo} alt="Coinim Logo" className="h-8 w-8 " />
+          <span className="font-semibold text-blue-500 dark:text-white md:text-lg md:font-bold ">
+            Coinim
+          </span>
         </Link>
-        <Link to="/">
-          {" "}
-          <button
-            type="button"
-            className="rounded-xl border border-blue-700 px-4 py-1.5 text-center text-xs font-semibold text-blue-700  transition-colors duration-200 ease-in-out  focus:outline-none focus:ring-2 focus:ring-blue-50 dark:text-white dark:hover:bg-blue-600/10 dark:focus:ring-blue-700 "
-          >
-            Bültenimize Abone Olun
-          </button>
-        </Link>{" "}
       </div>
 
       {/* LINKS */}
-      <div className=" mt-4 flex items-center justify-center gap-4 ">
+      <div className=" mt-8 flex items-center justify-center gap-4 border-y border-white border-opacity-10 py-8 ">
         <div className="flex flex-wrap items-center justify-center gap-5 ">
           <Link to="/">
             <p className="text-sm text-dark-primary hover:underline dark:text-white">Ürünler</p>
@@ -132,7 +126,7 @@ export default function Footer() {
         </div>
       </div>
       {/* HAKLARIMIZ SAKLIDIR */}
-      <div className="my-4 flex w-full items-center justify-center border-t border-dark-primary border-opacity-10 text-xs font-medium dark:border-white dark:border-opacity-5 ">
+      <div className=" flex w-full items-center justify-center border-t border-dark-primary border-opacity-10 py-4 text-xs font-medium dark:border-white dark:border-opacity-5 ">
         <p className="mt-4 text-sm text-dark-primary dark:text-white">
           © 2023 Coinim. Tüm hakları saklıdır.
         </p>

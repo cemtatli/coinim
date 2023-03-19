@@ -1,15 +1,14 @@
 import React from "react";
+
 import CoinItem from "./CoinItem";
 import SearchBox from "./SearchBox";
 
-export default function SearchBar({ coins }) {
+export default function CoinList({ coins }) {
   const [SearchValue, setSearchValue] = React.useState("");
   return (
     <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
       {/* Search Bar */}
-      <div className="flex w-full">
-        <SearchBox />
-      </div>
+      <SearchBox setSearchValue={setSearchValue} />
       {/* Liste */}
       <table className="w-full border-collapse text-center ">
         <thead className="h-10 text-sm dark:text-white sm:text-base">

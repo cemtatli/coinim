@@ -18,3 +18,29 @@ header {
   backdrop-filter: blur(10px);
   @apply bg-zinc-50/20 dark:bg-dark-primary/20;
 }
+
+* {
+  --sb-track-color: transparent;
+  --sb-thumb-color: #014aa9;
+  --sb-size: 4px;
+
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 4px;
+}
+
+.section {
+  scrollbar-width: thin;
+}
