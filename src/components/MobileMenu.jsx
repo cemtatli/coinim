@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import ThemeChanger from "./ThemeChanger";
-import { CloseCircle, HambergerMenu, Home, User, Link21 } from "iconsax-react";
+import { CloseCircle, HambergerMenu } from "iconsax-react";
+import { RiCloseFill } from "react-icons/ri";
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,7 @@ export default function MobileMenu() {
       {/* Mobile Gorunum */}
       <button onClick={handleMenu} className="block md:hidden">
         {isOpen ? (
-          <CloseCircle size="24" className="text-black focus:animate-pulse dark:text-white" />
+          <RiCloseFill size="20" className="text-black focus:animate-pulse dark:text-white" />
         ) : (
           <HambergerMenu size="24" className="text-black dark:text-white" />
         )}
@@ -50,7 +51,8 @@ export default function MobileMenu() {
             </Link>
           </li>
           <li className="flex cursor-pointer items-center gap-2 border-b border-dark-primary border-opacity-10 px-4 py-2.5 text-sm font-medium transition-colors hover:bg-dark-primary/5 dark:border-white dark:border-opacity-10 dark:text-white dark:hover:bg-blue-100/5 dark:hover:transition-colors">
-            <ThemeChanger /> Tema Değiştir
+            <ThemeChanger />
+            Tema Değiştir
           </li>
         </ul>
         <ul className="flex w-full flex-col gap-2.5">
