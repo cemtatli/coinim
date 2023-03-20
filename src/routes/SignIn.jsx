@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function SignIn() {
   return (
-    <div className="mx-auto my-15 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
+    <div className="mx-auto my-20 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
       <div className="flex w-full max-w-[500px] flex-col items-center justify-center gap-2">
         <h3 className="text-center text-3xl font-bold text-gray-800 dark:text-white">Oturum Aç</h3>
         <p className="mt-2 text-center text-sm text-gray-500 dark:text-gray-400">

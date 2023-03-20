@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="flex w-full flex-col items-center justify-center border-t border-dark-primary border-opacity-10 px-4  py-2 dark:border-white dark:border-opacity-5">
       {/* Bilgi */}
-      <div className="mt-5 flex w-full items-center justify-center ">
+      <div className="flex w-full items-center justify-center py-5 ">
         <Link to="/" className="flex items-center gap-2">
           <img src={CoinimLogo} alt="Coinim Logo" className="h-8 w-8 " />
           <span className="font-semibold text-blue-500 dark:text-white md:text-lg md:font-bold ">
@@ -20,7 +20,7 @@ export default function Footer() {
       </div>
 
       {/* LINKS */}
-      <div className=" mt-8 flex items-center justify-center gap-4 border-y border-white border-opacity-10 py-8 ">
+      <div className="  flex items-center justify-center gap-4 border-y border-white border-opacity-10 py-8 ">
         <div className="flex flex-wrap items-center justify-center gap-5 ">
           <Link to="/">
             <p className="text-sm text-dark-primary hover:underline dark:text-white">Ürünler</p>
@@ -98,22 +98,22 @@ export default function Footer() {
       {/* SOCIAL MEDIA */}
       <div className="my-4 flex items-center justify-center gap-4">
         <div className="flex items-center justify-center gap-4 ">
-          <Link to="https://cemtatli.dev/" target={"_blank"}>
+          <Link to="https://www.linkedin.com/in/cemtatli/" target={"_blank"}>
             <div className="flex h-10 w-10 items-center justify-center rounded-full border border-blue-500 border-opacity-10 hover:bg-blue-50 dark:border-white dark:border-opacity-5 dark:hover:bg-blue-600/10">
               <FaLinkedinIn size={16} className={"dark:text-white"} target={"_blank"} />
             </div>
           </Link>
-          <Link to="https://cemtatli.dev/" target={"_blank"}>
+          <Link to="https://www.linkedin.com/in/cemtatli/" target={"_blank"}>
             <div className="flex h-10 w-10 items-center justify-center rounded-full border border-blue-500 border-opacity-10 hover:bg-blue-50 dark:border-white dark:border-opacity-5 dark:hover:bg-blue-600/10">
               <FaFacebookF size={16} className={"dark:text-white"} />
             </div>
           </Link>
-          <Link to="https://cemtatli.dev/" target={"_blank"}>
+          <Link to="https://github.com/cemtatli" target={"_blank"}>
             <div className="flex h-10 w-10 items-center justify-center rounded-full border border-blue-500 border-opacity-10 hover:bg-blue-50 dark:border-white dark:border-opacity-5 dark:hover:bg-blue-600/10">
               <FaGithub size={16} className={"dark:text-white"} />
             </div>
           </Link>
-          <Link to="https://cemtatli.dev/" target={"_blank"}>
+          <Link to="https://twitter.com/vaycem" target={"_blank"}>
             <div className="flex h-10 w-10 items-center justify-center rounded-full border border-blue-500 border-opacity-10 hover:bg-blue-50 dark:border-white dark:border-opacity-5 dark:hover:bg-blue-600/10">
               <FaTwitter size={16} className={"dark:text-white"} />
             </div>
@@ -126,8 +126,8 @@ export default function Footer() {
         </div>
       </div>
       {/* HAKLARIMIZ SAKLIDIR */}
-      <div className=" flex w-full items-center justify-center border-t border-dark-primary border-opacity-10 py-4 text-xs font-medium dark:border-white dark:border-opacity-5 ">
-        <p className="mt-4 text-sm text-dark-primary dark:text-white">
+      <div className=" flex w-full items-center justify-center border-t border-dark-primary border-opacity-10 text-xs font-medium dark:border-white dark:border-opacity-5 ">
+        <p className="py-4 text-sm text-dark-primary dark:text-white">
           © 2023 Coinim. Tüm hakları saklıdır.
         </p>
       </div>
