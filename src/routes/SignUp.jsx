@@ -51,7 +51,7 @@ export default function SignUp() {
               type={"checkbox"}
               id={"checkbox"}
               name={"checkbox"}
-              className="mr-2 cursor-pointer  "
+              className="mr-2 w-full cursor-pointer "
             />
             Üyelik sözleşmesini okudum ve kabul ediyorum.
           </label>
