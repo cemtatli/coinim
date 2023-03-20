@@ -18,12 +18,12 @@ export default function TrendCoins() {
       </h2>
       <div className="flex w-full items-center justify-between text-center ">
         <div className="my-5 flex w-full flex-wrap items-center justify-center px-4 py-2 2xl:px-0.5">
-          <div className="section flex w-full  flex-col items-center justify-center gap-4 overflow-auto lg:flex-row ">
+          <div className=" flex w-full flex-col items-center justify-center gap-4  lg:flex-row ">
             {trending.map((coin) => {
               return (
                 <div
                   key={coin.item.id}
-                  className="flex w-full shrink-0 cursor-pointer flex-col items-center justify-center gap-2 rounded-lg bg-slate-100 p-4 dark:bg-gray-800/30"
+                  className="flex w-full cursor-pointer flex-col items-center justify-center gap-2 rounded-lg bg-slate-100 p-4 dark:bg-gray-800/30"
                 >
                   <img
                     src={coin?.item.large}
