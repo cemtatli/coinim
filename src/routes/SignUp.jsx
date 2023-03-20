@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SignUp() {
   return (
-    <div className="h- mx-auto my-20 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
+    <div className=" mx-auto my-14 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
       <div className="flex w-full max-w-[500px] flex-col items-center justify-center gap-2">
         <h3 className="text-center text-3xl font-bold text-gray-800 dark:text-white">
           Hesap Oluştur
@@ -51,7 +51,7 @@ export default function SignUp() {
               type={"checkbox"}
               id={"checkbox"}
               name={"checkbox"}
-              className="mr-2 w-full cursor-pointer "
+              className="mr-2  cursor-pointer "
             />
             Üyelik sözleşmesini okudum ve kabul ediyorum.
           </label>
