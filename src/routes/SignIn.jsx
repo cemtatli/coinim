@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function SignIn() {
   return (
-    <div className="mx-auto my-[90px] flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
+    <div className="mx-auto my-24 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
       <div className="flex w-full max-w-[500px] flex-col items-center justify-center gap-2">
         <h3 className="text-center text-3xl font-bold text-gray-800 dark:text-white">Oturum Aç</h3>
         <p className="mt-2 text-center text-sm text-gray-500 dark:text-gray-400">
@@ -35,23 +35,7 @@ export default function SignIn() {
           />
 
           <div className="mt-4 flex flex-col items-center justify-between">
-            <div className="flex items-center gap-4">
-              <label
-                htmlFor="remember"
-                className="flex items-center text-sm text-gray-600 dark:text-gray-400"
-              >
-                <input
-                  type="checkbox"
-                  id="remember"
-                  name="remember"
-                  className="mr-2 cursor-pointer rounded-lg  border border-gray-300 outline-none focus:border-blue-500 focus:outline-none  dark:border-gray-700 dark:bg-gray-800 dark:text-white"
-                />
-                Beni hatırla
-              </label>
-              <a href="#" className="text-sm text-blue-500 hover:underline dark:text-blue-400">
-                Şifremi unuttum
-              </a>
-            </div>
+
 
             <button
               type="submit"

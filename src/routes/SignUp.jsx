@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SignUp() {
   return (
-    <div className=" mx-auto my-18 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
+    <div className=" mx-auto my-20 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
       <div className="flex w-full max-w-[500px] flex-col items-center justify-center gap-2">
         <h3 className="text-center text-3xl font-bold text-gray-800 dark:text-white">
           Hesap Oluştur
@@ -17,6 +17,7 @@ export default function SignUp() {
             E-posta
           </label>
           <input
+            required
             type="email"
             id="email"
             name="email"
@@ -28,6 +29,7 @@ export default function SignUp() {
             Şifre
           </label>
           <input
+            required
             type="password"
             id="password"
             name="password"
@@ -44,6 +46,7 @@ export default function SignUp() {
             placeholder="Var ise giriniz"
             className="mt-2 rounded-lg border border-gray-300 px-4 py-2 placeholder:text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
           />
+          
         </div>
 
 
