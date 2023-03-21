@@ -18,7 +18,6 @@ export default function CoinPage() {
 
   return (
     <div className="mx-auto mb-5 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
-      {/* WRAPPER */}
       <div className="mt-5 mb-5 flex h-full w-full flex-col items-center justify-center gap-10 lg:gap-5">
         {/* IMG, SYMBOL & NAME */}
         <div className="flex w-full flex-col items-center gap-2 border-b border-blue-500 border-opacity-10 pb-5 dark:border-white dark:border-opacity-10">
@@ -111,11 +110,54 @@ export default function CoinPage() {
                 )}
               </p>
             </div>
+            <div className="flex w-full items-center justify-between">
+              <p className="text-sm font-medium dark:text-white">Değişim (7g)</p>
+              <p className="text-sm font-medium dark:text-white">
+                {coin.market_data?.price_change_percentage_7d > 0 ? (
+                  <p className="  text-green-500 dark:text-green-400">
+                    %{coin.market_data?.price_change_percentage_7d.toLocaleString("tr-TR")}
+                  </p>
+                ) : (
+                  <p className="text-red-500 dark:text-red-500">
+                    %{coin.market_data?.price_change_percentage_7d.toLocaleString("tr-TR")}
+                  </p>
+                )}
+              </p>
+            </div>
+            <div className="flex w-full items-center justify-between">
+              <p className="text-sm font-medium dark:text-white">Değişim (30d)</p>
+              <p className="text-sm font-medium dark:text-white">
+                {coin.market_data?.price_change_percentage_30d > 0 ? (
+                  <p className="  text-green-500 dark:text-green-400">
+                    %{coin.market_data?.price_change_percentage_30d.toLocaleString("tr-TR")}
+                  </p>
+                ) : (
+                  <p className="text-red-500 dark:text-red-500">
+                    %{coin.market_data?.price_change_percentage_30d.toLocaleString("tr-TR")}
+                  </p>
+                )}
+              </p>
+            </div>
+            <div className="flex w-full items-center justify-between">
+              <p className="text-sm font-medium dark:text-white">Değişim (1y)</p>
+              <p className="text-sm font-medium dark:text-white">
+                {coin.market_data?.price_change_percentage_1y > 0 ? (
+                  <p className="  text-green-500 dark:text-green-400">
+                    %{coin.market_data?.price_change_percentage_1y.toLocaleString("tr-TR")}
+                  </p>
+                ) : (
+                  <p className="text-red-500 dark:text-red-500">
+                    %{coin.market_data?.price_change_percentage_1y.toLocaleString("tr-TR")}
+                  </p>
+                )}
+              </p>
+            </div>
+            <div className="flex w-full items-center justify-between"></div>
           </div>
         </div>
         {/* COIN CHART */}
         <div className="flex w-full flex-1 items-center justify-center">
-          <Sparklines data={coin.market_data?.sparkline_7d.price}>
+          <Sparklines data={coin.market_data?.sparkline_7d?.price}>
             <SparklinesLine color="#3B82F6" />
           </Sparklines>
         </div>

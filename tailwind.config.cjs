@@ -7,7 +7,6 @@ module.exports = {
     extend: {
       colors: {
         "dark-primary": "#101926",
-        "dark-secondary": "#1f1f23",
       },
       spacing: {
         15: "3.75rem",

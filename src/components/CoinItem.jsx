@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { Sparklines, SparklinesLine } from "react-sparklines";
-import { Star, Star1 } from "iconsax-react";
+import { Star1 } from "iconsax-react";
 
 export default function CoinItem({ coin }) {
   return (
@@ -24,7 +24,9 @@ export default function CoinItem({ coin }) {
             />
             <span className="hidden overflow-hidden text-xs font-medium xs:block sm:text-sm md:w-full md:text-base">
               {coin.name}
-              <span className="text-xs uppercase text-black dark:text-white"> ({coin.symbol})</span>
+              <span className="ml-1 text-xs uppercase text-black dark:text-white">
+                ({coin.symbol})
+              </span>
             </span>
           </div>
         </Link>
@@ -40,7 +42,7 @@ export default function CoinItem({ coin }) {
           <p className="text-red-500 dark:text-red-500">{coin.price_change_24h.toFixed(2)}$</p>
         )}
       </td>
-      <td className="text-xs font-medium font-medium xs:text-sm ">
+      <td className="text-xs font-medium  xs:text-sm ">
         {" "}
         {coin.price_change_percentage_24h > 0 ? (
           <p className="  text-green-500 dark:text-green-400">
@@ -58,14 +60,14 @@ export default function CoinItem({ coin }) {
       </td>
 
       <td className="hidden max-w-[80px] text-sm font-medium xl:table-cell">
-        {coin.total_supply ? coin.total_supply : "N/A"}
+        {coin.total_supply ? coin.total_supply : "-"}
       </td>
       <td className="hidden text-sm font-medium xl:table-cell">
         {coin.market_cap.toLocaleString("tr-TR")}$
       </td>
       <td className="hidden text-sm font-medium 2xl:table-cell">${coin.atl.toFixed(2)}</td>
       <td className="hidden text-sm font-medium 2xl:table-cell">${coin.ath.toFixed(2)}</td>
-      <td className="hidden text-sm font-medium lg:table-cell lg:w-[200px] pl-2">
+      <td className="hidden pl-2 text-sm font-medium lg:table-cell lg:w-[200px]">
         <Sparklines data={coin.sparkline_in_7d.price}>
           <SparklinesLine color="#3B82F5" />
         </Sparklines>

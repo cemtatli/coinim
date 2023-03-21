@@ -18,13 +18,13 @@ export default function CoinList({ coins }) {
             <th>Ad</th>
             <th>Fiyat</th>
             <th className="hidden xxs:table-cell">
-              K/K<span className="text-sm">(24sa)</span>
+              K/K<span className="text-sm"> (24sa)</span>
             </th>
             <th>
               24saat <span className="text-sm">($)</span>
             </th>
             <th className="hidden sm:table-cell">
-              Hacim<span className="text-sm">(24sa)</span>
+              Hacim<span className="text-sm"> (24sa)</span>
             </th>
             <th className="w-50 hidden overflow-hidden px-4 xl:table-cell">Toplam Arz</th>
             <th className="hidden xl:table-cell">Toplam Market Hacmi</th>
