@@ -45,23 +45,7 @@ export default function SignUp() {
             className="mt-2 rounded-lg border border-gray-300 px-4 py-2 placeholder:text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
           />
         </div>
-        <div className="flex w-full items-center justify-center">
-          <label
-            htmlFor={"checkbox"}
-            className="w-full cursor-pointer text-sm text-gray-600 dark:text-white"
-          >
-            <input
-              type={"checkbox"}
-              id={"checkbox"}
-              name={"checkbox"}
-              className="mr-2  cursor-pointer"
-            />
-            Üyelik sözleşmesini okudum ve kabul ediyorum.{" "}
-            <a href="#" className="ml-2 text-blue-700 hover:underline dark:text-white/70">
-              Sözleşmeyi oku
-            </a>
-          </label>
-        </div>
+
 
         <button
           type="submit"
