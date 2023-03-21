@@ -8,7 +8,7 @@ export default function SignUp() {
           Hesap Oluştur
         </h3>
         <p className="mt-2 text-center text-sm text-gray-500 dark:text-gray-400">
-          Coinim'e hoşgeldin! Lütfen kayıt olmak için aşağıdaki bilgileri giriniz.
+          Coinim'e hoşgeldin 👋  <br /> Lütfen kayıt olmak için aşağıdaki bilgileri giriniz.
         </p>
       </div>
       <form className="mt-8 flex w-full max-w-[500px] flex-col">

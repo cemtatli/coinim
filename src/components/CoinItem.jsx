@@ -16,7 +16,7 @@ export default function CoinItem({ coin }) {
       <td className="text-xs font-medium xs:text-sm sm:text-base">{coin.market_cap_rank}</td>
       <td>
         <Link to={`/coin/${coin.id}`}>
-          <div className="mx-auto flex w-full max-w-[125px] flex-col items-center justify-center gap-2 md:max-w-[200px] md:flex-row md:gap-5 lg:justify-start lg:gap-2.5 lg:pl-5">
+          <div className="mx-auto flex w-full max-w-[125px] flex-col items-center justify-center gap-2 md:max-w-[200px] md:flex-row md:gap-5 lg:justify-start lg:gap-2.5 ">
             <img
               src={coin.image}
               className={"h-6 w-6 xs:h-8 xs:w-8 sm:h-10 sm:w-10"}
@@ -30,7 +30,7 @@ export default function CoinItem({ coin }) {
         </Link>
       </td>
 
-      <td className="text-xs font-medium xs:text-sm ">${coin.current_price.toFixed(2)}</td>
+      <td className="text-xs font-medium xs:text-sm">${coin.current_price.toFixed(2)}</td>
       <td className="hidden text-xs font-medium xxs:table-cell xs:text-sm ">
         {coin.price_change_percentage_24h > 0 ? (
           <p className="  text-green-500 dark:text-green-400">
@@ -65,7 +65,7 @@ export default function CoinItem({ coin }) {
       </td>
       <td className="hidden text-sm font-medium 2xl:table-cell">${coin.atl.toFixed(2)}</td>
       <td className="hidden text-sm font-medium 2xl:table-cell">${coin.ath.toFixed(2)}</td>
-      <td className="hidden text-sm font-medium lg:table-cell lg:w-44">
+      <td className="hidden text-sm font-medium lg:table-cell lg:w-[200px] pl-2">
         <Sparklines data={coin.sparkline_in_7d.price}>
           <SparklinesLine color="#3B82F5" />
         </Sparklines>

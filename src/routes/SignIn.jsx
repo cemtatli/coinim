@@ -7,7 +7,7 @@ export default function SignIn() {
       <div className="flex w-full max-w-[500px] flex-col items-center justify-center gap-2">
         <h3 className="text-center text-3xl font-bold text-gray-800 dark:text-white">Oturum Aç</h3>
         <p className="mt-2 text-center text-sm text-gray-500 dark:text-gray-400">
-          Coinim'e hoşgeldin! Lütfen giriş yapmak için aşağıdaki bilgileri giriniz.
+          Coinim'e hoşgeldin 👋 <br /> Lütfen giriş yapmak için aşağıdaki bilgileri giriniz.
         </p>
       </div>
       <form className="mt-8 flex w-full max-w-[500px] flex-col">
