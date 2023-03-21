@@ -20,7 +20,7 @@ Coinim, kripto para birimi piyasası verileri ve portföy takibi için bir araç
 ## 🧰 Kullanılan Teknolojiler
 Coinim, React, React-Router, Tailwind CSS, Axios, Firebase gibi teknolojileri kullanır. Bunların hepsi açık kaynak kodlu ve ücretsizdir. 
 
-## Çalıştırmak İçin 
+## 🚀 Çalıştırmak İçin 
 Coinim'i çalıştırmak için bilgisayarınızda Node.js ve Git kurulu olmalıdır.
   
   ```bash
