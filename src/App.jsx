@@ -29,27 +29,17 @@ function App() {
     <ThemeProvider>
       <AuthContextProvider>
         <Header />
-        <Routes>
-          <Route path="/" element={<Home coins={coins} />} />
-          <Route path="/SignIn" element={<SignIn />} />
-          <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/Account" element={<Account />} />
-          <Route
-            path="*"
-            element={
-              <div className="my-15 flex flex-col items-center justify-center px-10 font-semibold text-black  dark:text-white">
-                <div className="flex flex-col items-center text-xl">
-                  {" "}
-                  Böyle bir sayfa bulunamadı. <br />
-                  <span className="text-base"> Ana sayfaya dönebilirsiniz.</span>
-                </div>
-              </div>
-            }
-          />
-          <Route path="/coin/:coinId" element={<CoinPage />}>
-            <Route path=":coinId" />
-          </Route>
-        </Routes>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home coins={coins} />} />
+            <Route path="/SignIn" element={<SignIn />} />
+            <Route path="/SignUp" element={<SignUp />} />
+            <Route path="/Account" element={<Account />} />
+            <Route path="/coin/:coinId" element={<CoinPage />}>
+              <Route path=":coinId" />
+            </Route>
+          </Routes>
+        </main>
         <Footer />
       </AuthContextProvider>
     </ThemeProvider>

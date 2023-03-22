@@ -40,12 +40,11 @@ export default function CoinItem({ coin }) {
     >
       <td className="cursor-pointer" onClick={saveCoin}>
         {savedCoin ? (
-          <AiFillStar className={"h-3.5 w-3.5 cursor-pointer text-blue-500 md:h-4 md:w-4"} />
-        ) : (
-          <AiOutlineStar
-            onClick={() => deleteCoin(coin.id)}
-            className={"h-3.5 w-3.5 cursor-pointer md:h-4 md:w-4"}
+          <AiFillStar
+            className={"h-3.5 w-3.5 cursor-pointer text-blue-500 md:h-[18px] md:w-[18px]"}
           />
+        ) : (
+          <AiOutlineStar className={"h-3.5 w-3.5 cursor-pointer md:h-[18px] md:w-[18px]"} />
         )}
       </td>
       <td className="text-xs font-medium xs:text-sm sm:text-base">{coin.market_cap_rank}</td>

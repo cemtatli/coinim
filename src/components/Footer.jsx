@@ -8,7 +8,7 @@ import { FaFacebookF, FaGithub, FaLink, FaLinkedinIn, FaTwitter } from "react-ic
 
 export default function Footer() {
   return (
-    <footer className=" flex w-full flex-col items-center justify-center border-t border-dark-primary border-opacity-10 px-4  py-2 dark:border-white dark:border-opacity-5">
+    <footer className="flex w-full flex-col items-center justify-center border-t border-dark-primary border-opacity-10 px-4 py-2 dark:border-white dark:border-opacity-5">
       {/* Bilgi */}
       <div className="flex w-full items-center justify-center py-4">
         <Link to="/" className="flex items-center gap-2">

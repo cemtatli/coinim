@@ -27,7 +27,7 @@ export default function WatchList() {
     }
   };
   return (
-    <div className="mx-auto my-5 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden  2xl:px-0">
+    <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden 2xl:px-0">
       {coins.length === 0 ? (
         <div className=" flex w-full flex-col items-center justify-center gap-4 text-center">
           <p className=" w-full text-start text-sm md:text-base">
@@ -46,32 +46,42 @@ export default function WatchList() {
         </div>
       ) : (
         <table className="w-full border-collapse text-center">
-          <thead>
-            <tr className="border-b">
-              <th className="px-4">Sıralama #</th>
-              <th className="text-left">Coin</th>
-              <th className="text-left">Favorilerden Kaldır</th>
+          <thead className="h-10 text-sm dark:text-white sm:text-base">
+            <tr className="border-b px-4 dark:border-white dark:border-opacity-10">
+              <th className="text-center">Sıralama (#)</th>
+              <th className="text-center">Ad</th>
+              <th className="text-center">Favorilerden Kaldır</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="h-10 dark:text-white">
             {coins?.map((coin) => (
-              <tr key={coin.id} className="h-[60px] overflow-hidden">
+              <tr
+                key={coin.id}
+                className="h-20 overflow-hidden border-b text-center dark:border-white dark:border-opacity-10"
+              >
                 <td>{coin?.rank}</td>
                 <td>
                   <Link to={`/coin/${coin.id}`}>
-                    <div className="flex items-center">
-                      <img src={coin?.image} className="mr-4 w-8" alt="/" />
-                      <div>
-                        <p className="hidden sm:table-cell">{coin?.name}</p>
-                        <p className="text-left text-sm text-gray-500">
-                          {coin?.symbol.toUpperCase()}
-                        </p>
-                      </div>
+                    <div className="mx-auto flex w-full max-w-[300px]  flex-row items-center justify-center gap-2 md:gap-4 ">
+                      <img
+                        src={coin.image}
+                        className={"h-6 w-6 xs:h-8 xs:w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 "}
+                        alt={coin.id}
+                      />
+                      <span className="block overflow-hidden text-xs font-medium sm:text-sm  md:text-lg">
+                        {coin.name}
+                        <span className="ml-1 text-xs uppercase text-black dark:text-white">
+                          ({coin.symbol})
+                        </span>
+                      </span>
                     </div>
                   </Link>
                 </td>
-                <td className="pl-8">
-                  <AiOutlineClose onClick={() => deleteCoin(coin.id)} className="cursor-pointer" />
+                <td>
+                  <AiOutlineClose
+                    onClick={() => deleteCoin(coin.id)}
+                    className="mx-auto h-3.5 w-3.5 cursor-pointer md:h-4 md:w-4"
+                  />
                 </td>
               </tr>
             ))}
