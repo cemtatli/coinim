@@ -12,6 +12,7 @@ import SignIn from "./routes/SignIn";
 import SignUp from "./routes/SignUp";
 import Account from "./routes/Account";
 import CoinPage from "./routes/CoinPage";
+import { AuthContextProvider } from "./context/AuthContext";
 
 function App() {
   const [coins, setCoins] = useState([]);
@@ -26,29 +27,31 @@ function App() {
 
   return (
     <ThemeProvider>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home coins={coins} />} />
-        <Route path="/SignIn" element={<SignIn />} />
-        <Route path="/SignUp" element={<SignUp />} />
-        <Route path="/Account" element={<Account />} />
-        <Route
-          path="*"
-          element={
-            <div className="my-15 flex flex-col items-center justify-center px-10 font-semibold text-black  dark:text-white">
-              <div className="flex flex-col items-center text-xl">
-                {" "}
-                Böyle bir sayfa bulunamadı. <br />
-                <span className="text-base"> Ana sayfaya dönebilirsiniz.</span>
+      <AuthContextProvider>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home coins={coins} />} />
+          <Route path="/SignIn" element={<SignIn />} />
+          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/Account" element={<Account />} />
+          <Route
+            path="*"
+            element={
+              <div className="my-15 flex flex-col items-center justify-center px-10 font-semibold text-black  dark:text-white">
+                <div className="flex flex-col items-center text-xl">
+                  {" "}
+                  Böyle bir sayfa bulunamadı. <br />
+                  <span className="text-base"> Ana sayfaya dönebilirsiniz.</span>
+                </div>
               </div>
-            </div>
-          }
-        />
-        <Route path="/coin/:coinId" element={<CoinPage />}>
-          <Route path=":coinId" />
-        </Route>
-      </Routes>
-      <Footer />
+            }
+          />
+          <Route path="/coin/:coinId" element={<CoinPage />}>
+            <Route path=":coinId" />
+          </Route>
+        </Routes>
+        <Footer />
+      </AuthContextProvider>
     </ThemeProvider>
   );
 }

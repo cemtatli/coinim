@@ -1,6 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { UserAuth } from "../context/AuthContext";
 
 export default function SignUp() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const { signUp } = UserAuth();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    try {
+      await signUp(email, password);
+      navigate("/Account");
+    } catch (e) {
+      setError(e.message);
+      console.log(e.message);
+    }
+  };
+
   return (
     <div className=" mx-auto my-20 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
       <div className="flex w-full max-w-[500px] flex-col items-center justify-center gap-2">
@@ -8,15 +28,17 @@ export default function SignUp() {
           Hesap Oluştur
         </h3>
         <p className="mt-2 text-center text-sm text-gray-500 dark:text-gray-400">
-          Coinim'e hoşgeldin 👋  <br /> Lütfen kayıt olmak için aşağıdaki bilgileri giriniz.
+          Coinim'e hoşgeldin 👋 <br /> Lütfen kayıt olmak için aşağıdaki bilgileri giriniz.
         </p>
       </div>
-      <form className="mt-8 flex w-full max-w-[500px] flex-col">
+      {error ? <p className="my-2 bg-red-300 p-4 text-xs">{error}</p> : null}
+      <form onSubmit={handleSubmit} className="mt-8 flex w-full max-w-[500px] flex-col">
         <div className="mb-4 flex flex-col">
           <label htmlFor="email" className="text-sm text-gray-600 dark:text-gray-400">
             E-posta
           </label>
           <input
+            onChange={(e) => setEmail(e.target.value)}
             required
             type="email"
             id="email"
@@ -30,6 +52,7 @@ export default function SignUp() {
           </label>
           <input
             required
+            onChange={(e) => setPassword(e.target.value)}
             type="password"
             id="password"
             name="password"
@@ -46,10 +69,7 @@ export default function SignUp() {
             placeholder="Var ise giriniz"
             className="mt-2 rounded-lg border border-gray-300 px-4 py-2 placeholder:text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
           />
-          
         </div>
-
-
         <button
           type="submit"
           className="mt-4 h-12 w-full rounded-lg border border-transparent bg-blue-700 py-2 px-4 text-center text-sm font-medium leading-5 text-white transition-colors duration-200 ease-in-out hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-50 active:bg-blue-800"

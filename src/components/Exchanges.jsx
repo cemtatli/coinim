@@ -16,45 +16,38 @@ export default function Exchanges() {
         Borsalar
       </h2>
       <div className="flex w-full items-center justify-between">
-        <div className="my-5 flex w-full flex-wrap items-center  px-4 py-2 2xl:px-0.5">
-          <div className="my-5 grid w-full grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
-            {Exchange.map((exchange) => {
-              return (
-                <div
-                  key={exchange.id}
-                  className="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-lg bg-white p-5 font-medium shadow-md transition-colors dark:bg-gray-800 md:gap-1"
-                >
-                  <img
-                    src={exchange.image}
-                    alt={exchange.name}
-                    className="h-8 w-8 rounded-full md:h-10 md:w-10"
-                    aria-hidden="true"
-                    aria-disabled="true"
-                  />
-                  <p className=" my-0.5 text-center text-sm font-semibold  text-black dark:text-white ">
-                    {exchange.name.toLocaleUpperCase("tr-TR")}
-                  </p>
-                  <p className=" text-xs text-black dark:text-white ">
-                    <span> Kuruluş Yılı: </span>
-                    {exchange.year_established}
-                  </p>
-                  <p className=" text-center text-xs text-black dark:text-white ">
-                    <span>Merkez: </span>
-                    {exchange.country}
-                  </p>
+        <div className="my-5 grid w-full grid-cols-2 gap-5 text-center md:grid-cols-3 lg:grid-cols-4">
+          {Exchange.map((exchange) => {
+            return (
+              <div
+                key={exchange.id}
+                className="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-lg bg-white p-5 font-medium shadow-md transition-colors dark:bg-gray-800 md:gap-1"
+              >
+                <img
+                  src={exchange.image}
+                  alt={exchange.name}
+                  className="h-8 w-8 rounded-full md:h-10 md:w-10"
+                  aria-hidden="true"
+                  aria-disabled="true"
+                />
+                <p className=" my-0.5 text-center text-sm font-semibold  text-black dark:text-white ">
+                  {exchange.name.toLocaleUpperCase("tr-TR")}
+                </p>
+                <p className=" text-xs text-black dark:text-white ">
+                  {exchange.year_established}, {exchange.country}
+                </p>
 
-                  <p className=" text-xs  text-black dark:text-white ">
-                    <span>Güven Puanı: </span>
-                    {exchange.trust_score}
-                  </p>
-                  <p className=" text-xs  text-black dark:text-white ">
-                    <span>Güven Sıralaması: </span>
-                    {exchange.trust_score_rank}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
+                <p className=" text-xs  text-black dark:text-white ">
+                  <span>Güven Puanı: </span>
+                  {exchange.trust_score}
+                </p>
+                <p className=" text-xs  text-black dark:text-white ">
+                  <span>Güven Sıralaması: </span>
+                  {exchange.trust_score_rank}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
