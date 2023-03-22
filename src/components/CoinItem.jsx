@@ -1,17 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { Sparklines, SparklinesLine } from "react-sparklines";
-import { Star1 } from "iconsax-react";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+
+import { UserAuth } from "../context/AuthContext";
+import { db } from "../firebase";
+import { arrayUnion, doc, updateDoc } from "firebase/firestore";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function CoinItem({ coin }) {
+  const [savedCoin, setSavedCoin] = useState(false);
+  const { user } = UserAuth();
+
+  const coinPath = doc(db, "users", `${user?.email}`);
+  const saveCoin = async () => {
+    if (user?.email) {
+      setSavedCoin(true);
+      await updateDoc(coinPath, {
+        watchList: arrayUnion({
+          id: coin.id,
+          name: coin.name,
+          image: coin.image,
+          rank: coin.market_cap_rank,
+          symbol: coin.symbol,
+        }),
+      });
+    } else {
+      alert("Eğer takip listesine coin eklemek istiyorsanız lütfen giriş yapın.");
+    }
+  };
+
   return (
     <tr
       key={coin.id}
       className="h-20 overflow-hidden border-b text-center dark:border-white dark:border-opacity-10"
     >
-      <td>
-        <Star1 className={"h-3.5 w-3.5 cursor-pointer md:h-4 md:w-4"} />
+      <td className="cursor-pointer" onClick={saveCoin}>
+        {savedCoin ? (
+          <AiFillStar className={"h-3.5 w-3.5 cursor-pointer text-blue-500 md:h-4 md:w-4"} />
+        ) : (
+          <AiOutlineStar
+            onClick={() => deleteCoin(coin.id)}
+            className={"h-3.5 w-3.5 cursor-pointer md:h-4 md:w-4"}
+          />
+        )}
       </td>
       <td className="text-xs font-medium xs:text-sm sm:text-base">{coin.market_cap_rank}</td>
       <td>

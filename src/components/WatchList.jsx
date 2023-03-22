@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
+import { doc, onSnapshot, updateDoc } from "firebase/firestore";
+import { db } from "../firebase";
+import { UserAuth } from "../context/AuthContext";
 
 export default function WatchList() {
-  const [coins, setCoins] = React.useState([]);
+  const [coins, setCoins] = useState([]);
+  const { user } = UserAuth();
+
+  useEffect(() => {
+    onSnapshot(doc(db, "users", `${user?.email}`), (doc) => {
+      setCoins(doc.data()?.watchList);
+    });
+  }, [user?.email]);
+
+  const coinPath = doc(db, "users", `${user?.email}`);
+  const deleteCoin = async (passedid) => {
+    try {
+      const result = coins.filter((item) => item.id !== passedid);
+      await updateDoc(coinPath, {
+        watchList: result,
+      });
+    } catch (e) {
+      console.log(e.message);
+    }
+  };
   return (
     <div className="mx-auto my-5 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden  2xl:px-0">
       {coins.length === 0 ? (
@@ -18,7 +40,7 @@ export default function WatchList() {
               type="button"
               className="mx-auto  rounded-lg border border-blue-700 px-4 py-1.5 text-center text-xs font-semibold text-blue-700  transition-colors duration-200 ease-in-out  focus:outline-none focus:ring-2 focus:ring-blue-50 dark:text-white dark:hover:bg-blue-600/10 dark:focus:ring-blue-700"
             >
-              Kripto Paraları Görüntüle 
+              Kripto Paraları Görüntüle
             </button>
           </Link>
         </div>
