@@ -17,7 +17,6 @@ export default function SignUpPage() {
       navigate("/Account");
     } catch (e) {
       setError(e.message);
-      console.log(e.message);
     }
   };
 
@@ -32,7 +31,7 @@ export default function SignUpPage() {
         </p>
       </div>
       {error ? <p className="my-2 bg-red-300 p-4 text-xs">{error}</p> : null}
-      <form onSubmit={handleSubmit} className="mt-8 flex w-full max-w-lg flex-col">
+      <form onSubmit={handleSubmit} className=" mt-8 flex w-full max-w-lg flex-col">
         <div className="mb-4 flex flex-col">
           <label htmlFor="email" className="text-sm text-gray-900 dark:text-white">
             E-posta

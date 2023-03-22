@@ -51,7 +51,7 @@ header {
 #root {
   display: grid;
   grid-template-columns: 1fr min(100%) 1fr;
-  grid-template-rows: 1fr minmax(calc(100vh - 312px), auto) 240px;
+  grid-template-rows: 1fr minmax(calc(100vh - 280px), auto) 208px;
 }
 #root > * {
   grid-column: 2;

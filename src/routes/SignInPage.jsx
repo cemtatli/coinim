@@ -29,7 +29,7 @@ export default function SignInPage() {
           Coinim'e hoşgeldin 👋 <br /> Lütfen giriş yapmak için aşağıdaki bilgileri giriniz.
         </p>
       </div>
-      <form onSubmit={handleSubmit} className=" mt-10 flex w-full max-w-lg flex-col">
+      <form onSubmit={handleSubmit} className=" mt-8 flex w-full max-w-lg flex-col">
         <div className="mb-4 flex flex-col">
           <label htmlFor="email" className="text-sm text-gray-900 dark:text-white">
             E-posta

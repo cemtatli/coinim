@@ -38,7 +38,7 @@ export default function Header() {
                 to="/Account"
                 className="rounded-lg border border-blue-700 py-1.5 px-4 text-center text-xs font-semibold text-blue-700  transition-colors duration-200 ease-in-out  focus:outline-none focus:ring-2 focus:ring-blue-50 dark:text-white dark:hover:bg-blue-600/10 dark:focus:ring-blue-700 "
               >
-                Hesabım
+                Takip Listem
               </Link>
               <button
                 onClick={handleSignOut}
