@@ -20,17 +20,17 @@ export default function MobileMenu() {
       {/* Mobile Gorunum */}
       <button onClick={handleNav} className="block md:hidden">
         {nav ? (
-          <RiCloseFill size="20" className="text-black focus:animate-pulse dark:text-white" />
+          <RiCloseFill size="20" className="text-gray-900 focus:animate-pulse dark:text-white" />
         ) : (
-          <HambergerMenu size="24" className="text-black dark:text-white" />
+          <HambergerMenu size="24" className="text-gray-900 dark:text-white" />
         )}
       </button>
       {/* Mobile Menu */}
       <div
         className={
           nav
-            ? "mobile fixed left-0 top-18 z-20 flex w-full flex-col items-center gap-5 bg-zinc-50  duration-200 ease-in-out dark:bg-dark-primary md:hidden"
-            : "mobile fixed -left-full top-18 z-20 w-full bg-zinc-50 duration-200 ease-in-out dark:bg-dark-primary md:hidden"
+            ? "mobile-hscreen  fixed left-0 top-18 z-20 flex w-full flex-col items-center gap-5 bg-zinc-50  duration-200 ease-in-out dark:bg-dark-primary md:hidden"
+            : "mobile-hscreen  fixed -left-full top-18 z-20 w-full bg-zinc-50 duration-200 ease-in-out dark:bg-dark-primary md:hidden"
         }
       >
         <ul className="flex w-full flex-col">
@@ -67,7 +67,7 @@ export default function MobileMenu() {
                 >
                   <button
                     type="button"
-                    className="w-full max-w-[90%]  rounded-lg border border-blue-700 px-4 py-1.5 text-center text-xs font-semibold text-blue-700  transition-colors duration-200 ease-in-out  focus:outline-none focus:ring-2 focus:ring-blue-50 dark:text-white dark:hover:bg-blue-600/10 dark:focus:ring-blue-700 "
+                    className="h-8 w-full max-w-[90%] rounded-lg border border-blue-700 px-4 py-1.5 text-center text-xs font-semibold text-blue-700  transition-colors duration-200 ease-in-out  focus:outline-none focus:ring-2 focus:ring-blue-50 dark:text-white dark:hover:bg-blue-600/10 dark:focus:ring-blue-700 "
                   >
                     Hesabım'a git
                   </button>
@@ -81,7 +81,7 @@ export default function MobileMenu() {
                       logout();
                       navigate("/");
                     }}
-                    className="w-full max-w-[90%] rounded-lg bg-blue-700 px-4 py-1.5 text-center text-xs font-semibold text-white transition-colors duration-200 ease-in-out hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-50 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-700"
+                    className="h-8 w-full max-w-[90%] rounded-lg bg-blue-700 px-4 py-1.5 text-center text-xs font-semibold text-white transition-colors duration-200 ease-in-out hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-50 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-700"
                   >
                     Çıkış Yap
                   </button>
@@ -98,7 +98,7 @@ export default function MobileMenu() {
                 >
                   <button
                     type="button"
-                    className="w-full max-w-[90%]  rounded-lg border border-blue-700 px-4 py-1.5 text-center text-xs font-semibold text-blue-700  transition-colors duration-200 ease-in-out  focus:outline-none focus:ring-2 focus:ring-blue-50 dark:text-white dark:hover:bg-blue-600/10 dark:focus:ring-blue-700 "
+                    className="h-8 w-full  max-w-[90%] rounded-lg border border-blue-700 px-4 py-1.5 text-center text-xs font-semibold text-blue-700  transition-colors duration-200 ease-in-out  focus:outline-none focus:ring-2 focus:ring-blue-50 dark:text-white dark:hover:bg-blue-600/10 dark:focus:ring-blue-700 "
                   >
                     Oturum Aç
                   </button>
@@ -112,7 +112,7 @@ export default function MobileMenu() {
                 >
                   <button
                     type="button"
-                    className="w-full max-w-[90%] rounded-lg bg-blue-700 px-4 py-1.5 text-center text-xs font-semibold text-white transition-colors duration-200 ease-in-out hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-50 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-700"
+                    className="h-8 w-full max-w-[90%] rounded-lg bg-blue-700 px-4 py-1.5 text-center text-xs font-semibold text-white transition-colors duration-200 ease-in-out hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-50 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-700"
                   >
                     Kayıt Ol
                   </button>

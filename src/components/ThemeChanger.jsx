@@ -9,11 +9,11 @@ export default function ThemeChanger() {
     <>
       {theme === "dark" ? (
         <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-          <Sun1 size="16" variant="Bold" className="text-black  dark:text-white" />
+          <Sun1 size="16" variant="Bold" className="text-gray-900 dark:text-white" />
         </button>
       ) : (
         <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-          <Moon size="16" variant="Bold" className="text-black dark:text-white" />
+          <Moon size="16" variant="Bold" className="text-gray-900 dark:text-white" />
         </button>
       )}
     </>

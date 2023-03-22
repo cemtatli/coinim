@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-
 import { useParams } from "react-router-dom";
+
 import axios from "axios";
 import DOMPurify from "dompurify";
 import { Sparklines, SparklinesLine } from "react-sparklines";
@@ -17,7 +17,7 @@ export default function CoinPage() {
   }, [url]);
 
   return (
-    <div className="mx-auto mb-5 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
+    <div className="fluid">
       <div className="mt-5 mb-5 flex h-full w-full flex-col items-center justify-center gap-10 lg:gap-5">
         {/* IMG, SYMBOL & NAME */}
         <div className="flex w-full flex-col items-center gap-2 border-b border-blue-500 border-opacity-10 pb-5 dark:border-white dark:border-opacity-10">

@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import axios from "axios";
 
 import { ThemeProvider } from "./context/ThemeContext";
+import { AuthContextProvider } from "./context/AuthContext";
 
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -12,7 +13,6 @@ import SignIn from "./routes/SignInPage";
 import SignUp from "./routes/SignUpPage";
 import Account from "./routes/Account";
 import CoinPage from "./routes/CoinPage";
-import { AuthContextProvider } from "./context/AuthContext";
 
 function App() {
   const [coins, setCoins] = useState([]);
