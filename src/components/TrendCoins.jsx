@@ -16,48 +16,37 @@ export default function TrendCoins() {
       <h2 className="w-full text-start text-lg font-bold text-black dark:text-white md:text-xl">
         Trend Coinler
       </h2>
-      <div className="flex w-full items-center justify-between text-center ">
-        <div className="my-5 flex w-full flex-wrap items-center justify-center px-4 py-2 2xl:px-0.5">
-          <div className=" flex w-full flex-col items-center justify-center gap-4  lg:flex-row ">
-            {trending.map((coin) => {
-              return (
-                <div
-                  key={coin.item.id}
-                  className="flex w-full cursor-pointer flex-col items-center justify-center gap-2 rounded-lg bg-slate-100 p-4 dark:bg-gray-800/30"
-                >
-                  <img
-                    src={coin?.item.large}
-                    alt={coin?.item.name}
-                    className="h-6 w-6 rounded-full md:h-10 md:w-10"
-                  />
-                  <p className="text-sm font-semibold text-black dark:text-white">
-                    {coin.item?.name}
-                  </p>
+      <div className="my-5 grid w-full grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
+        {trending.map((coin) => (
+          <div
+            key={coin.item.id}
+            className="flex flex-col items-center justify-center rounded-lg bg-white p-5 font-medium shadow-md dark:bg-gray-800"
+          >
+            <img src={coin.item?.large} alt={coin.item?.name} className="h-10 w-10 rounded-full" />
+            <span className="my-1 text-sm font-medium text-black dark:text-white">
+              {coin.item?.name} <span className="text-xs">({coin.item?.symbol})</span>
+            </span>
 
-                  <p className="text-sm font-semibold text-black dark:text-white">
-                    {coin.item.symbol?.toUpperCase()}
-                  </p>
-                  <div className="flex items-center gap-2">
-                    <p className="text-sm text-black dark:text-white">
-                      {coin.item.price_btc?.toFixed(5).toLocaleString("tr-TR")}
-                    </p>
-                    <img
-                      aria-hidden="true"
-                      aria-disabled="true"
-                      className="h-3 w-3 select-none"
-                      src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579"
-                      alt="/"
-                    />
-                  </div>
-                  <p className="text-sm text-black dark:text-white">
-                    <span className="mr-2"> Sıralama:</span>
-                    {coin.item?.market_cap_rank}
-                  </p>
-                </div>
-              );
-            })}
+            <div className="mt-1.5 flex items-center gap-1 font-medium">
+              <p className="text-xs text-black dark:text-white">
+                {coin.item.price_btc?.toFixed(8).toLocaleString("tr-TR")}
+              </p>
+              <img
+                aria-hidden="true"
+                aria-disabled="true"
+                className="h-3 w-3 select-none"
+                src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579"
+                alt="/"
+              />
+            </div>
+            <div className="mt-1.5 flex flex-col items-center gap-2">
+              <p className=" text-xs text-black dark:text-white">
+                <span className="mr-1  font-medium"> Sıralama:</span>
+                {coin.item?.market_cap_rank}
+              </p>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
