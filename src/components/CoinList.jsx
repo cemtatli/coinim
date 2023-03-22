@@ -13,7 +13,7 @@ export default function CoinList({ coins }) {
       <table className="w-full border-collapse text-center ">
         <thead className="h-10 text-sm dark:text-white sm:text-base">
           <tr className="border-b px-4 dark:border-white dark:border-opacity-10">
-            <th></th> {/* Yildiz icin bosluk */}
+            <th></th>
             <th>#</th>
             <th>Ad</th>
             <th>Fiyat</th>
@@ -21,10 +21,10 @@ export default function CoinList({ coins }) {
               K/K<span className="text-sm"> (24sa)</span>
             </th>
             <th>
-              24saat <span className="text-sm">($)</span>
+              24saat <span className="text-sm">(%)</span>
             </th>
             <th className="hidden sm:table-cell">
-              Hacim<span className="text-sm"> (24sa)</span>
+              Hacim<span className="text-sm"> (24sa)</span>{" "}
             </th>
             <th className="w-50 hidden overflow-hidden px-4 xl:table-cell">Toplam Arz</th>
             <th className="hidden xl:table-cell">Toplam Market Hacmi</th>
@@ -40,7 +40,7 @@ export default function CoinList({ coins }) {
             .filter((value) => {
               if (SearchValue === "") {
                 return value;
-              } else if (value.name.toLowerCase().includes(SearchValue.toLowerCase())) {
+              } else if (value.name.toLowerCase().includes(SearchValue.trim("").toLowerCase())) {
                 return value;
               }
             })

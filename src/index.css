@@ -39,11 +39,20 @@ body {
 }
 
 .fluid {
-  @apply mx-auto my-10 flex h-full w-full max-w-[1440px] flex-col items-center justify-center px-5 2xl:px-0;
+  @apply mx-auto  flex h-full w-full max-w-[1440px] flex-col items-center justify-center px-5 2xl:px-0;
 }
 
 header {
   -webkit-backdrop-filter: blur(10px); /* Safari 6.1+ */
   backdrop-filter: blur(10px); /* Firefox 70+ */
   @apply bg-zinc-50/10 dark:bg-dark-primary/10; /* 10% opacity */
+}
+
+#root {
+  display: grid;
+  grid-template-columns: 1fr min(100%) 1fr;
+  grid-template-rows: 1fr minmax(calc(100vh - 312px), auto) 240px;
+}
+#root > * {
+  grid-column: 2;
 }

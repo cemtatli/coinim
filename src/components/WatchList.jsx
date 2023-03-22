@@ -30,15 +30,15 @@ export default function WatchList() {
     <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden 2xl:px-0">
       {coins.length === 0 ? (
         <div className=" flex w-full flex-col items-center justify-center gap-4 text-center">
-          <p className=" w-full text-start text-sm md:text-base">
+          <p className=" w-full text-start text-sm">
             Merhaba, favori kripto paralarınızı burada görebilirsiniz. Ancak görüyorum ki takip
             listende hiçbir kripto para yok. Takip listesine eklemek için kripto paralar sayfasına
             gidebilirsiniz.
           </p>
-          <Link to={"/"} className="flex w-full items-start">
+          <Link to={"/"} className=" flex w-full items-center justify-center">
             <button
               type="button"
-              className="mx-auto  rounded-lg border border-blue-700 px-4 py-1.5 text-center text-xs font-semibold text-blue-700  transition-colors duration-200 ease-in-out  focus:outline-none focus:ring-2 focus:ring-blue-50 dark:text-white dark:hover:bg-blue-600/10 dark:focus:ring-blue-700"
+              className="mx-auto mb-2  rounded-lg border border-blue-700 px-4 py-1.5 text-center text-xs font-semibold text-blue-700  transition-colors duration-200 ease-in-out  focus:outline-none focus:ring-2 focus:ring-blue-50 dark:text-white dark:hover:bg-blue-600/10 dark:focus:ring-blue-700"
             >
               Kripto Paraları Görüntüle
             </button>

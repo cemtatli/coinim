@@ -8,7 +8,7 @@ import { FaFacebookF, FaGithub, FaLink, FaLinkedinIn, FaTwitter } from "react-ic
 
 export default function Footer() {
   return (
-    <footer className="flex w-full flex-col items-center justify-center border-t border-dark-primary border-opacity-10 px-4 py-2 dark:border-white dark:border-opacity-5">
+    <footer className=" flex h-60 w-full flex-col items-center justify-center border-t border-dark-primary border-opacity-10  px-4 py-2 dark:border-white dark:border-opacity-5">
       {/* Bilgi */}
       <div className="flex w-full items-center justify-center py-4">
         <Link to="/" className="flex items-center gap-2">
@@ -19,82 +19,6 @@ export default function Footer() {
         </Link>
       </div>
 
-      {/* LINKS */}
-      <div className="  flex items-center justify-center gap-4 border-y border-white border-opacity-10 py-8 ">
-        <div className="flex flex-wrap items-center justify-center gap-5 ">
-          <Link to="/">
-            <p className="text-sm text-dark-primary hover:underline dark:text-white">Ürünler</p>
-          </Link>{" "}
-          <Link to="/">
-            <p className="text-sm text-dark-primary hover:underline dark:text-white">Kripto API</p>
-          </Link>
-          <Link to="/">
-            {" "}
-            <p className="text-sm text-dark-primary hover:underline dark:text-white">
-              Blockchain Gezgini
-            </p>{" "}
-          </Link>
-          <Link to="/">
-            <p className="text-sm text-dark-primary hover:underline dark:text-white">
-              Kripto Endeksleri
-            </p>
-          </Link>
-          <Link to="/">
-            <p className="text-sm text-dark-primary hover:underline dark:text-white">Doodle</p>
-          </Link>
-          <Link to="/">
-            <p className="text-sm text-dark-primary hover:underline dark:text-white">İş İlanları</p>
-          </Link>
-          <Link to="/">
-            <p className="text-sm text-dark-primary hover:underline dark:text-white">
-              Site Haritası
-            </p>
-          </Link>{" "}
-          <Link to="/">
-            <p className="text-sm text-dark-primary hover:underline dark:text-white">Şirket</p>{" "}
-          </Link>
-          <Link to="/">
-            <p className="text-sm text-dark-primary hover:underline dark:text-white">Hakkımızda</p>
-          </Link>
-          <Link to="/">
-            <p className="text-sm text-dark-primary hover:underline dark:text-white">
-              Kullanım Koşulları
-            </p>
-          </Link>
-          <Link to="/">
-            <p className="text-sm text-dark-primary hover:underline dark:text-white">
-              Gizlilik Politikası
-            </p>
-          </Link>
-          <Link to="/">
-            <p className="text-sm text-dark-primary hover:underline dark:text-white">
-              Community Rules
-            </p>
-          </Link>
-          <Link to="/">
-            <p className="text-sm text-dark-primary hover:underline dark:text-white">
-              Sorumluluk Reddi
-            </p>
-          </Link>
-          <Link to="/">
-            <p className="text-sm text-dark-primary hover:underline dark:text-white">Metodoloji</p>
-          </Link>
-          <Link to="/">
-            <p className="text-sm text-dark-primary hover:underline dark:text-white">Kariyer</p>
-          </Link>
-          <Link to="/">
-            <p className="text-sm text-dark-primary hover:underline dark:text-white">
-              Bize katılın!
-            </p>
-          </Link>
-          <Link to="/">
-            <p className="text-sm text-dark-primary hover:underline dark:text-white">İletişim</p>
-          </Link>
-          <Link to="/">
-            <p className="text-sm text-dark-primary hover:underline dark:text-white">Sözlük</p>
-          </Link>
-        </div>
-      </div>
       {/* SOCIAL MEDIA */}
       <div className="my-4 flex items-center justify-center gap-4">
         <div className="flex items-center justify-center gap-4 ">

@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import DOMPurify from "dompurify";
 import { Sparklines, SparklinesLine } from "react-sparklines";
+import { MdOutlineArrowDropUp, MdOutlineArrowDropDown } from "react-icons/md";
 
 export default function CoinPage() {
   const [coin, setCoin] = useState({});
@@ -51,7 +52,7 @@ export default function CoinPage() {
             <div className="flex w-full items-center justify-between">
               <p className="text-sm font-medium dark:text-white">Market Değeri </p>
               <p className="text-sm font-medium dark:text-white">
-                {coin.market_data?.market_cap?.usd.toLocaleString("tr-TR")} $
+                ${coin.market_data?.market_cap?.usd.toLocaleString("tr-TR")}
               </p>
             </div>
             <div className="flex w-full items-center justify-between">
@@ -100,13 +101,19 @@ export default function CoinPage() {
               <p className="text-sm font-medium dark:text-white">Değişim (24sa)</p>
               <p className="text-sm font-medium dark:text-white">
                 {coin.market_data?.price_change_percentage_24h > 0 ? (
-                  <p className="  text-green-500 dark:text-green-400">
-                    %{coin.market_data?.price_change_percentage_24h.toLocaleString("tr-TR")}
-                  </p>
+                  <div className="flex items-center justify-end">
+                    <MdOutlineArrowDropUp className="h-5 w-5 text-green-500" />
+                    <p className="  text-green-500 dark:text-green-400">
+                      {coin.market_data?.price_change_percentage_24h.toLocaleString("tr-TR")}
+                    </p>
+                  </div>
                 ) : (
-                  <p className="text-red-500 dark:text-red-500">
-                    %{coin.market_data?.price_change_percentage_24h.toLocaleString("tr-TR")}
-                  </p>
+                  <div className="flex items-center justify-end">
+                    <MdOutlineArrowDropDown className="h-5 w-5 text-red-500" />
+                    <p className="text-red-500 dark:text-red-500">
+                      {coin.market_data?.price_change_percentage_24h.toLocaleString("tr-TR")}%
+                    </p>
+                  </div>
                 )}
               </p>
             </div>
@@ -114,13 +121,19 @@ export default function CoinPage() {
               <p className="text-sm font-medium dark:text-white">Değişim (7g)</p>
               <p className="text-sm font-medium dark:text-white">
                 {coin.market_data?.price_change_percentage_7d > 0 ? (
-                  <p className="  text-green-500 dark:text-green-400">
-                    %{coin.market_data?.price_change_percentage_7d.toLocaleString("tr-TR")}
-                  </p>
+                  <div className="flex items-center justify-end">
+                    <MdOutlineArrowDropUp className="h-5 w-5 text-green-500" />
+                    <p className="  text-green-500 dark:text-green-400">
+                      {coin.market_data?.price_change_percentage_7d.toLocaleString("tr-TR")}%
+                    </p>
+                  </div>
                 ) : (
-                  <p className="text-red-500 dark:text-red-500">
-                    %{coin.market_data?.price_change_percentage_7d.toLocaleString("tr-TR")}
-                  </p>
+                  <div className="flex items-center justify-end">
+                    <MdOutlineArrowDropDown className="h-5 w-5 text-red-500" />
+                    <p className="text-red-500 dark:text-red-500">
+                      {coin.market_data?.price_change_percentage_7d.toLocaleString("tr-TR")}%
+                    </p>
+                  </div>
                 )}
               </p>
             </div>
@@ -128,13 +141,19 @@ export default function CoinPage() {
               <p className="text-sm font-medium dark:text-white">Değişim (30d)</p>
               <p className="text-sm font-medium dark:text-white">
                 {coin.market_data?.price_change_percentage_30d > 0 ? (
-                  <p className="  text-green-500 dark:text-green-400">
-                    %{coin.market_data?.price_change_percentage_30d.toLocaleString("tr-TR")}
-                  </p>
+                  <div className="flex items-center justify-end">
+                    <MdOutlineArrowDropUp className="h-5 w-5 text-green-500" />
+                    <p className="  text-green-500 dark:text-green-400">
+                      {coin.market_data?.price_change_percentage_30d.toLocaleString("tr-TR")}%
+                    </p>
+                  </div>
                 ) : (
-                  <p className="text-red-500 dark:text-red-500">
-                    %{coin.market_data?.price_change_percentage_30d.toLocaleString("tr-TR")}
-                  </p>
+                  <div className="flex items-center justify-end">
+                    <MdOutlineArrowDropDown className="h-5 w-5 text-red-500" />
+                    <p className="text-red-500 dark:text-red-500">
+                      {coin.market_data?.price_change_percentage_30d.toLocaleString("tr-TR")}%
+                    </p>
+                  </div>
                 )}
               </p>
             </div>
@@ -142,21 +161,26 @@ export default function CoinPage() {
               <p className="text-sm font-medium dark:text-white">Değişim (1y)</p>
               <p className="text-sm font-medium dark:text-white">
                 {coin.market_data?.price_change_percentage_1y > 0 ? (
-                  <p className="  text-green-500 dark:text-green-400">
-                    %{coin.market_data?.price_change_percentage_1y.toLocaleString("tr-TR")}
-                  </p>
+                  <div className="flex items-center justify-end">
+                    <MdOutlineArrowDropUp className="h-5 w-5 text-green-500" />
+                    <p className="  text-green-500 dark:text-green-400">
+                      {coin.market_data?.price_change_percentage_1y.toLocaleString("tr-TR")}%
+                    </p>
+                  </div>
                 ) : (
-                  <p className="text-red-500 dark:text-red-500">
-                    %{coin.market_data?.price_change_percentage_1y.toLocaleString("tr-TR")}
-                  </p>
+                  <div className="flex items-center justify-end">
+                    <MdOutlineArrowDropDown className="h-5 w-5 text-red-500" />
+                    <p className="text-red-500 dark:text-red-500">
+                      {coin.market_data?.price_change_percentage_1y.toLocaleString("tr-TR")}%
+                    </p>
+                  </div>
                 )}
               </p>
             </div>
-            <div className="flex w-full items-center justify-between"></div>
           </div>
         </div>
         {/* COIN CHART */}
-        <div className="flex w-full flex-1 items-center justify-center">
+        <div className="flex w-full flex-1 shrink-0 items-center justify-center">
           <Sparklines data={coin.market_data?.sparkline_7d?.price}>
             <SparklinesLine color="#3B82F6" />
           </Sparklines>
