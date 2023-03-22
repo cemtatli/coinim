@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 
-export default function SignUp() {
+export default function SignUpPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -27,7 +27,7 @@ export default function SignUp() {
         <h3 className="text-center text-3xl font-bold text-gray-800 dark:text-white">
           Hesap Oluştur
         </h3>
-        <p className="mt-2 text-center text-sm text-gray-500 dark:text-gray-400">
+        <p className="mt-2 text-center text-sm text-gray-500 dark:text-gray-300">
           Coinim'e hoşgeldin 👋 <br /> Lütfen kayıt olmak için aşağıdaki bilgileri giriniz.
         </p>
       </div>

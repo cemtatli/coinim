@@ -16,9 +16,9 @@ export default function WatchList() {
           <Link to={"/"} className="flex w-full items-start">
             <button
               type="button"
-              className="h-8 rounded-lg bg-blue-700 px-4 py-2 text-center text-xs font-semibold text-white transition-colors duration-200 ease-in-out hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-50 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-700"
+              className="mx-auto  rounded-lg border border-blue-700 px-4 py-1.5 text-center text-xs font-semibold text-blue-700  transition-colors duration-200 ease-in-out  focus:outline-none focus:ring-2 focus:ring-blue-50 dark:text-white dark:hover:bg-blue-600/10 dark:focus:ring-blue-700"
             >
-              Kripto Paraları Görüntüle
+              Kripto Paraları Görüntüle 
             </button>
           </Link>
         </div>

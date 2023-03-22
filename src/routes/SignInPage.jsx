@@ -1,21 +1,40 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { UserAuth } from "../context/AuthContext";
 
-export default function SignIn() {
+export default function SignInPage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const { signIn } = UserAuth();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    try {
+      await signIn(email, password);
+      navigate("/Account");
+    } catch (e) {
+      setError(e.message);
+      console.log(e.message);
+    }
+  };
   return (
     <div className="mx-auto my-24 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
       <div className="flex w-full max-w-[500px] flex-col items-center justify-center gap-2">
         <h3 className="text-center text-3xl font-bold text-gray-800 dark:text-white">Oturum Aç</h3>
-        <p className="mt-2 text-center text-sm text-gray-500 dark:text-gray-400">
+        <p className="mt-2 text-center text-sm text-gray-500 dark:text-gray-300">
           Coinim'e hoşgeldin 👋 <br /> Lütfen giriş yapmak için aşağıdaki bilgileri giriniz.
         </p>
       </div>
-      <form className="mt-8 flex w-full max-w-[500px] flex-col">
+      <form onSubmit={handleSubmit} className="mt-8 flex w-full max-w-[500px] flex-col">
         <div className="mb-4 flex flex-col">
           <label htmlFor="email" className="text-sm text-gray-600 dark:text-gray-400">
             E-posta
           </label>
           <input
+            onChange={(e) => setEmail(e.target.value)}
             type="email"
             id="email"
             name="email"
@@ -27,6 +46,7 @@ export default function SignIn() {
             Şifre
           </label>
           <input
+            onChange={(e) => setPassword(e.target.value)}
             type="password"
             id="password"
             name="password"
@@ -35,8 +55,6 @@ export default function SignIn() {
           />
 
           <div className="mt-4 flex flex-col items-center justify-between">
-
-
             <button
               type="submit"
               className="mt-4 h-12  w-full rounded-lg border border-transparent bg-blue-700 py-2 px-4 text-center text-sm font-medium leading-5 text-white transition-colors duration-200 ease-in-out hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-50 active:bg-blue-800"

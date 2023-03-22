@@ -8,8 +8,8 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 import Home from "./routes/Home";
-import SignIn from "./routes/SignIn";
-import SignUp from "./routes/SignUp";
+import SignIn from "./routes/SignInPage";
+import SignUp from "./routes/SignUpPage";
 import Account from "./routes/Account";
 import CoinPage from "./routes/CoinPage";
 import { AuthContextProvider } from "./context/AuthContext";
