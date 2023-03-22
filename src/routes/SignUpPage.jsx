@@ -22,8 +22,8 @@ export default function SignUpPage() {
   };
 
   return (
-    <div className=" mx-auto my-20 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
-      <div className="flex w-full max-w-[500px] flex-col items-center justify-center gap-2">
+    <div className="fluid">
+      <div className="flex w-full max-w-lg flex-col items-center justify-center gap-2">
         <h3 className="text-center text-3xl font-bold text-gray-900 dark:text-white">
           Hesap Oluştur
         </h3>
@@ -32,9 +32,9 @@ export default function SignUpPage() {
         </p>
       </div>
       {error ? <p className="my-2 bg-red-300 p-4 text-xs">{error}</p> : null}
-      <form onSubmit={handleSubmit} className="mt-8 flex w-full max-w-[500px] flex-col">
+      <form onSubmit={handleSubmit} className="mt-8 flex w-full max-w-lg flex-col">
         <div className="mb-4 flex flex-col">
-          <label htmlFor="email" className="text-sm text-gray-600 dark:text-gray-400">
+          <label htmlFor="email" className="text-sm text-gray-900 dark:text-white">
             E-posta
           </label>
           <input
@@ -43,11 +43,11 @@ export default function SignUpPage() {
             type="email"
             id="email"
             name="email"
-            placeholder="E-posta adresinizi giriniz"
+            placeholder="cem@coinim.com"
             className="mt-2 rounded-lg border border-gray-300 px-4 py-2 placeholder:text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
           />
 
-          <label htmlFor="password" className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+          <label htmlFor="password" className="mt-4 text-sm text-gray-900 dark:text-white">
             Şifre
           </label>
           <input
@@ -56,17 +56,17 @@ export default function SignUpPage() {
             type="password"
             id="password"
             name="password"
-            placeholder="Şifrenizi giriniz"
+            placeholder="********"
             className="mt-2 rounded-lg border border-gray-300 px-4 py-2 placeholder:text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
           />
-          <label htmlFor="password" className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+          <label htmlFor="password" className="mt-4 text-sm text-gray-900 dark:text-white">
             Referral ID (Optional)
           </label>
           <input
             type="text"
             id="text"
             name="text"
-            placeholder="Var ise giriniz"
+            placeholder="UXD4"
             className="mt-2 rounded-lg border border-gray-300 px-4 py-2 placeholder:text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
           />
         </div>
