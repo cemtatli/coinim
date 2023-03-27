@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 import { AiOutlineClose } from "react-icons/ai";
 import { doc, onSnapshot, updateDoc } from "firebase/firestore";
-import { db } from "../firebase";
-import { UserAuth } from "../context/AuthContext";
+import { db } from "@/firebase";
+import { UserAuth } from "@/context/AuthContext";
 
 export default function WatchList() {
   const [coins, setCoins] = useState([]);

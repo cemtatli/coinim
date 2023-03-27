@@ -99,7 +99,7 @@ export default function CoinPage() {
             </div>
             <div className="flex w-full items-center justify-between">
               <p className="text-sm font-medium dark:text-white">Değişim (24sa)</p>
-              <p className="text-sm font-medium dark:text-white">
+              <div className="text-sm font-medium dark:text-white">
                 {coin.market_data?.price_change_percentage_24h > 0 ? (
                   <div className="flex items-center justify-end">
                     <MdOutlineArrowDropUp className="h-5 w-5 text-green-500" />
@@ -115,11 +115,11 @@ export default function CoinPage() {
                     </p>
                   </div>
                 )}
-              </p>
+              </div>
             </div>
             <div className="flex w-full items-center justify-between">
               <p className="text-sm font-medium dark:text-white">Değişim (7g)</p>
-              <p className="text-sm font-medium dark:text-white">
+              <div className="text-sm font-medium dark:text-white">
                 {coin.market_data?.price_change_percentage_7d > 0 ? (
                   <div className="flex items-center justify-end">
                     <MdOutlineArrowDropUp className="h-5 w-5 text-green-500" />
@@ -135,11 +135,11 @@ export default function CoinPage() {
                     </p>
                   </div>
                 )}
-              </p>
+              </div>
             </div>
             <div className="flex w-full items-center justify-between">
               <p className="text-sm font-medium dark:text-white">Değişim (30d)</p>
-              <p className="text-sm font-medium dark:text-white">
+              <div className="text-sm font-medium dark:text-white">
                 {coin.market_data?.price_change_percentage_30d > 0 ? (
                   <div className="flex items-center justify-end">
                     <MdOutlineArrowDropUp className="h-5 w-5 text-green-500" />
@@ -155,11 +155,11 @@ export default function CoinPage() {
                     </p>
                   </div>
                 )}
-              </p>
+              </div>
             </div>
             <div className="flex w-full items-center justify-between">
               <p className="text-sm font-medium dark:text-white">Değişim (1y)</p>
-              <p className="text-sm font-medium dark:text-white">
+              <div className="text-sm font-medium dark:text-white">
                 {coin.market_data?.price_change_percentage_1y > 0 ? (
                   <div className="flex items-center justify-end">
                     <MdOutlineArrowDropUp className="h-5 w-5 text-green-500" />
@@ -175,7 +175,7 @@ export default function CoinPage() {
                     </p>
                   </div>
                 )}
-              </p>
+              </div>
             </div>
           </div>
         </div>

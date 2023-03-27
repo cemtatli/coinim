@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { UserAuth } from "../context/AuthContext";
+import { UserAuth } from "@/context/AuthContext";
 
 import MobileMenu from "./MobileMenu";
 import ThemeChanger from "./ThemeChanger";
 
-import CoinimLogo from "../assets/logo.png";
+import CoinimLogo from "@/assets/logo.png";
 
 export default function Header() {
   const { user, logout } = UserAuth();

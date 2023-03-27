@@ -1,4 +1,5 @@
 import React from "react";
+
 import { SearchNormal1 } from "iconsax-react";
 
 export default function SearchBox({ setSearchValue }) {

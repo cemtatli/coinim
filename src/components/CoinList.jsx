@@ -9,7 +9,7 @@ export default function CoinList({ coins }) {
     <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
       {/* Search Bar */}
       <SearchBox setSearchValue={setSearchValue} />
-      {/* Liste */}
+      {/* List */}
       <table className="w-full border-collapse text-center ">
         <thead className="h-10 text-sm dark:text-white sm:text-base">
           <tr className="border-b px-4 dark:border-white dark:border-opacity-10">

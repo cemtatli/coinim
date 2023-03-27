@@ -1,9 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import { UserAuth } from "../context/AuthContext";
-
-import WatchList from "../components/WatchList";
+import { UserAuth } from "@/context/AuthContext";
+import WatchList from "@/components/WatchList";
 
 export default function Account() {
   const { user, logout } = UserAuth();

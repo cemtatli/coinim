@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
+import { UserAuth } from "@/context/AuthContext";
 import ThemeChanger from "./ThemeChanger";
 import { HambergerMenu } from "iconsax-react";
 import { RiCloseFill } from "react-icons/ri";
-import { UserAuth } from "../context/AuthContext";
 
 export default function MobileMenu() {
   const { user, logout } = UserAuth();
@@ -17,7 +17,6 @@ export default function MobileMenu() {
 
   return (
     <>
-      {/* Mobile Gorunum */}
       <button onClick={handleNav} className="block md:hidden">
         {nav ? (
           <RiCloseFill size="20" className="text-gray-900 focus:animate-pulse dark:text-white" />

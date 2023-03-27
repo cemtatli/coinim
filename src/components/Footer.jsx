@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import ThemeChanger from "./ThemeChanger";
-
-import CoinimLogo from "../assets/logo.png";
+import CoinimLogo from "@/assets/logo.png";
 import { FaFacebookF, FaGithub, FaLink, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {

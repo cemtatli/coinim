@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { UserAuth } from "../context/AuthContext";
+
+import { UserAuth } from "@/context/AuthContext";
 import { AiFillEye } from "react-icons/ai";
 
 export default function SignInPage() {
