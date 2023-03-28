@@ -186,15 +186,19 @@ export default function CoinPage() {
           </Sparklines>
         </div>
         {/* COIN DESC */}
-        <div className="py-4">
-          <p className="mb-2 text-xl font-bold dark:text-white"> {coin.name} nedir ?</p>
-          <p
-            className="text-sm  dark:text-white"
-            dangerouslySetInnerHTML={{
-              __html: DOMPurify.sanitize(coin.description ? coin.description.en : ""),
-            }}
-          ></p>
-        </div>
+        {coin.description ? (
+          <div className="py-4">
+            <p className="mb-2 text-xl font-bold dark:text-white"> {coin.name} nedir ?</p>
+            <p
+              className="text-sm  dark:text-white"
+              dangerouslySetInnerHTML={{
+                __html: DOMPurify.sanitize(coin.description ? coin.description.en : ""),
+              }}
+            ></p>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

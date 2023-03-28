@@ -23,7 +23,7 @@ function App() {
     axios.get(url).then((res) => {
       setCoins(res.data);
     });
-  }, [url]);
+  }, []);
 
   return (
     <ThemeProvider>
