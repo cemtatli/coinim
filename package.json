@@ -15,8 +15,6 @@
     "caniuse-lite": "^1.0.30001397",
     "dompurify": "^3.0.1",
     "firebase": "^9.18.0",
-    "flowbite": "^1.6.4",
-    "flowbite-react": "^0.4.2",
     "iconsax-react": "^0.0.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

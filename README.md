@@ -44,7 +44,7 @@ npm start
 
 ## 📧 İletişim
 
-Coinim hakkında sorularınız varsa, [buradan](https://twitter.com/vaycem) bana ulaşabilirsiniz.
+Coinim hakkında sorularınız varsa, [buradan](https://twitter.com/vaycem) bana ulaşabilirsiniz. 
 
 ## 📝 Lisans
 
