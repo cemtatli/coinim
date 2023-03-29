@@ -40,10 +40,10 @@ export default function TrendCoins() {
               />
             </div>
             <div className="mt-1.5 flex flex-col items-center gap-2">
-              <p className=" text-xs text-black dark:text-white">
+              <div className=" text-xs text-black dark:text-white">
                 <p className="mr-1  font-medium"> Sıralama:</p>
                 {coin.item?.market_cap_rank}
-              </p>
+              </div>
             </div>
           </div>
         ))}

@@ -24,16 +24,16 @@ export default function CoinPage() {
         <div className="flex w-full flex-col items-center gap-2 border-b border-blue-500 border-opacity-10 pb-5 dark:border-white dark:border-opacity-10">
           <img src={coin.image?.large} alt={coin.name} className="h-24 w-24 md:h-32 md:w-32" />
           <div className="flex items-center justify-center gap-2">
-            <h1 className="text-xl font-bold dark:text-white md:text-2xl">{coin.name}</h1>
-            <p className="text-sm font-medium uppercase text-gray-500 md:text-sm">
+            <h2 className="text-xl font-bold dark:text-white md:text-2xl">{coin.name}</h2>
+            <span className="text-sm font-medium uppercase text-gray-500 md:text-sm">
               ({coin.symbol})
-            </p>
+            </span>
           </div>
           <div className="flex items-center justify-center gap-2 rounded-full ">
             <p className="text-lg font-medium dark:text-white">#{coin.market_cap_rank}</p>
           </div>
           <div className="flex w-full items-center justify-center">
-            <p className="text-xl font-medium dark:text-white">
+            <div className="text-xl font-medium dark:text-white">
               {coin.market_data?.current_price.usd > 0 ? (
                 <p className="  text-green-500 dark:text-green-400">
                   ${coin.market_data?.current_price.usd}
@@ -43,7 +43,7 @@ export default function CoinPage() {
                   ${coin.market_data?.current_price.usd}
                 </p>
               )}
-            </p>
+            </div>
           </div>
         </div>
         {/* COIN STATS */}
@@ -186,7 +186,7 @@ export default function CoinPage() {
           </Sparklines>
         </div>
         {/* COIN DESC */}
-        {coin.description ? (
+        {coin.description && (
           <div className="py-4">
             <p className="mb-2 text-xl font-bold dark:text-white"> {coin.name} nedir ?</p>
             <p
@@ -196,8 +196,6 @@ export default function CoinPage() {
               }}
             ></p>
           </div>
-        ) : (
-          ""
         )}
       </div>
     </div>
