@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import axios from "axios";
+
 
 import { ThemeProvider } from "./context/ThemeContext";
 import { AuthContextProvider } from "@/context/AuthContext";
@@ -15,23 +15,13 @@ import Account from "@/routes/Account";
 import CoinPage from "@/routes/CoinPage";
 
 function App() {
-  const [coins, setCoins] = useState([]);
-  const url =
-    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=true";
-
-  useEffect(() => {
-    axios.get(url).then((res) => {
-      setCoins(res.data);
-    });
-  }, []);
-
   return (
     <ThemeProvider>
       <AuthContextProvider>
         <Header />
         <main>
           <Routes>
-            <Route path="/" element={<Home coins={coins} />} />
+            <Route path="/" element={<Home />} />
             <Route path="/SignIn" element={<SignIn />} />
             <Route path="/SignUp" element={<SignUp />} />
             <Route path="/Account" element={<Account />} />
