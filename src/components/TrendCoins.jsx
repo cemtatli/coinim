@@ -16,7 +16,7 @@ export default function TrendCoins() {
       <h2 className="w-full text-start text-lg font-bold text-black dark:text-white md:text-xl">
         Trend Coinler
       </h2>
-      <div className="my-5 grid w-full grid-cols-2 gap-5 text-center md:grid-cols-3 lg:grid-cols-4">
+      <div className="my-5 grid w-full grid-cols-1 gap-4 text-center xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {trending.map((coin) => (
           <div
             key={coin.item.id}

@@ -4,19 +4,19 @@ import axios from "axios";
 export default function Exchanges() {
   const [Exchange, setExchange] = useState([]);
 
-  const url = "https://api.coingecko.com/api/v3/exchanges?per_page=8&page=1";
+  const url = "https://api.coingecko.com/api/v3/exchanges?per_page=16&page=1";
   useEffect(() => {
     axios.get(url).then((res) => {
       setExchange(res.data);
     });
   }, []);
   return (
-    <div className=" mx-auto mb-10 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
+    <div className="mx-auto mb-10 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
       <h2 className="w-full text-start text-lg font-bold text-black dark:text-white md:text-xl">
         Borsalar
       </h2>
       <div className="flex w-full items-center justify-between">
-        <div className="my-5 grid w-full grid-cols-2 gap-5 text-center md:grid-cols-3 lg:grid-cols-4">
+        <div className="my-5 grid w-full grid-cols-1 gap-4 text-center xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {Exchange.map((exchange) => {
             return (
               <div
@@ -36,7 +36,6 @@ export default function Exchanges() {
                 <p className=" text-xs text-black dark:text-white ">
                   {exchange.year_established}, {exchange.country}
                 </p>
-
                 <p className=" text-xs  text-black dark:text-white ">
                   <span>Güven Puanı: </span>
                   {exchange.trust_score}

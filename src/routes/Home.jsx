@@ -14,6 +14,7 @@ export default function Home() {
     axios.get(url).then((res) => {
       setCoins(res.data);
     });
+    /* console.log("render"); */
   }, []);
   return (
     <>
