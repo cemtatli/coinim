@@ -46,6 +46,4 @@ npm start
 
 Coinim hakkında sorularınız varsa, [buradan](https://twitter.com/vaycem) bana ulaşabilirsiniz. 
 
-## 📝 Lisans
 
-Coinim, MIT lisansı ile lisanslanmıştır.
