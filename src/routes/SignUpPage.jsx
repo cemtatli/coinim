@@ -31,7 +31,7 @@ export default function SignUpPage() {
           Coinim'e hoşgeldin 👋 <br /> Lütfen kayıt olmak için aşağıdaki bilgileri giriniz.
         </p>
       </div>
-      {error ? <p className="my-2 bg-red-300 p-4 text-xs">{error}</p> : null}
+      {error ? <p className="my-2 bg-red-300 p-4 text-xs">{error.message}</p> : null}
       <form onSubmit={handleSubmit} className=" mt-8 flex w-full max-w-lg flex-col">
         <div className="mb-4 flex flex-col">
           <label htmlFor="email" className="text-sm text-gray-900 dark:text-white">

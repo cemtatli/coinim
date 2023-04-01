@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
-
 
 import { ThemeProvider } from "./context/ThemeContext";
 import { AuthContextProvider } from "@/context/AuthContext";
@@ -19,6 +18,7 @@ function App() {
     <ThemeProvider>
       <AuthContextProvider>
         <Header />
+
         <main>
           <Routes>
             <Route path="/" element={<Home />} />

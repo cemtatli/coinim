@@ -8,16 +8,13 @@ import { UserAuth } from "../context/AuthContext";
 import { db } from "../firebase";
 import { arrayUnion, doc, updateDoc } from "firebase/firestore";
 
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
 export default function CoinItem({ coin }) {
   const [savedCoin, setSavedCoin] = useState(false);
   const { user } = UserAuth();
 
   const coinPath = doc(db, "users", `${user?.email}`);
   const saveCoin = async () => {
-    if (user?.email) {
+    if (user.email) {
       setSavedCoin(true);
       await updateDoc(coinPath, {
         watchList: arrayUnion({
@@ -41,7 +38,7 @@ export default function CoinItem({ coin }) {
       <td className="cursor-pointer" onClick={saveCoin}>
         {savedCoin ? (
           <AiFillStar
-            className={"h-3.5 w-3.5 cursor-pointer text-blue-500 md:h-[18px] md:w-[18px]"}
+            className={"h-3.5 w-3.5 cursor-pointer text-orange-400 md:h-[18px] md:w-[18px]"}
           />
         ) : (
           <AiOutlineStar className={"h-3.5 w-3.5 cursor-pointer md:h-[18px] md:w-[18px]"} />

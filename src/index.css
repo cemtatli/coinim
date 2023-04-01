@@ -9,7 +9,7 @@
 * {
   --sb-track-color: transparent;
   --sb-thumb-color: #014aa9;
-  --sb-size: 4px;
+  --sb-size: 2px;
   scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
 }
 
@@ -19,12 +19,12 @@
 
 ::-webkit-scrollbar-track {
   background: var(--sb-track-color);
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 /* Body */
@@ -39,13 +39,13 @@ body {
 }
 
 .fluid {
-  @apply mx-auto  flex h-full w-full max-w-[1440px] flex-col items-center justify-center px-5 2xl:px-0;
+  @apply mx-auto flex h-full w-full max-w-[1440px] flex-col items-center justify-center px-6 2xl:px-0;
 }
 
 header {
   -webkit-backdrop-filter: blur(10px); /* Safari 6.1+ */
   backdrop-filter: blur(10px); /* Firefox 70+ */
-  @apply bg-zinc-50/10 dark:bg-dark-primary/10; /* 10% opacity */
+  @apply bg-zinc-50/5 dark:bg-dark-primary/5; /* 5% opacity */
 }
 
 #root {

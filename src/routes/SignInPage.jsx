@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { UserAuth } from "@/context/AuthContext";
-import { AiFillEye } from "react-icons/ai";
 
 export default function SignInPage() {
   const [email, setEmail] = useState("");
@@ -19,7 +18,6 @@ export default function SignInPage() {
       navigate("/Account");
     } catch (e) {
       setError(e.message);
-      console.log(e.message);
     }
   };
   return (
