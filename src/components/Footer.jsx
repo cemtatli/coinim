@@ -6,14 +6,12 @@ import { FaFacebookF, FaGithub, FaLink, FaLinkedinIn, FaTwitter } from "react-ic
 
 export default function Footer() {
   return (
-    <footer className=" flex h-52 w-full flex-col items-center justify-center border-t border-dark-primary border-opacity-10  px-4 py-2  dark:border-white dark:border-opacity-5">
+    <footer className=" flex h-44 w-full flex-col items-center justify-center border-t border-dark-primary border-opacity-10  px-4 py-2  dark:border-white dark:border-opacity-5">
       {/* Bilgi */}
-      <div className="flex w-full items-center justify-center py-2">
-        <Link to="/" className="flex items-center gap-2">
+      <div className="mt-1 flex w-full items-center justify-center py-2 ">
+        <Link to="/" className="flex items-center gap-1">
           <img src={CoinimLogo} alt="Coinim Logo" className="h-8 w-8 md:h-8 md:w-8 " />
-          <span className="font-semibold text-blue-500 dark:text-white md:text-lg md:font-bold">
-            Coinim
-          </span>
+          <span className="font-semibold text-blue-500 dark:text-white md:text-lg md:font-bold">Coinim</span>
         </Link>
       </div>
       {/* SOCIAL MEDIA */}
@@ -48,9 +46,7 @@ export default function Footer() {
       </div>
       {/* HAKLARIMIZ SAKLIDIR */}
       <div className=" flex w-full items-center justify-center border-t border-dark-primary border-opacity-10 text-xs font-medium dark:border-white dark:border-opacity-5 ">
-        <p className="my-4 text-xs text-dark-primary dark:text-white sm:text-sm">
-          © 2023 Coinim. Tüm hakları saklıdır.
-        </p>
+        <p className="my-4 text-xs text-dark-primary dark:text-white sm:text-sm">© 2023 Coinim. Tüm hakları saklıdır.</p>
       </div>
     </footer>
   );

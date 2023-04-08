@@ -72,9 +72,7 @@ export default function SignInPage() {
               <p className="mt-4 flex gap-2 text-sm text-gray-900 dark:text-white">
                 Hesabın yok mu?{" "}
                 <Link to={"/SignUp"}>
-                  <a href="#" className="font-medium text-blue-500 hover:underline">
-                    Kayıt Ol
-                  </a>
+                  <span className="font-medium text-blue-500 hover:underline">Hesap Oluştur</span>
                 </Link>
               </p>
             </div>

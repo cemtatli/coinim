@@ -25,9 +25,7 @@ export default function CoinPage() {
           <img src={coin.image?.large} alt={coin.name} className="h-24 w-24 md:h-32 md:w-32" />
           <div className="flex items-center justify-center gap-2">
             <h2 className="text-xl font-bold dark:text-white md:text-2xl">{coin.name}</h2>
-            <span className="text-sm font-medium uppercase text-gray-500 md:text-sm">
-              ({coin.symbol})
-            </span>
+            <span className="text-sm font-medium uppercase text-gray-500 md:text-sm">({coin.symbol})</span>
           </div>
           <div className="flex items-center justify-center gap-2 rounded-full ">
             <p className="text-lg font-medium dark:text-white">#{coin.market_cap_rank}</p>
@@ -35,13 +33,9 @@ export default function CoinPage() {
           <div className="flex w-full items-center justify-center">
             <div className="text-xl font-medium dark:text-white">
               {coin.market_data?.current_price.usd > 0 ? (
-                <p className="  text-green-500 dark:text-green-400">
-                  ${coin.market_data?.current_price.usd}
-                </p>
+                <p className="  text-green-500 dark:text-green-400">${coin.market_data?.current_price.usd}</p>
               ) : (
-                <p className="text-red-500 dark:text-red-500">
-                  ${coin.market_data?.current_price.usd}
-                </p>
+                <p className="text-red-500 dark:text-red-500">${coin.market_data?.current_price.usd}</p>
               )}
             </div>
           </div>
@@ -51,34 +45,24 @@ export default function CoinPage() {
           <div className="flex w-full flex-col items-center justify-center gap-2">
             <div className="flex w-full items-center justify-between">
               <p className="text-sm font-medium dark:text-white">Market Değeri </p>
-              <p className="text-sm font-medium dark:text-white">
-                ${coin.market_data?.market_cap?.usd.toLocaleString("tr-TR")}
-              </p>
+              <p className="text-sm font-medium dark:text-white">${coin.market_data?.market_cap?.usd.toLocaleString("tr-TR")}</p>
             </div>
             <div className="flex w-full items-center justify-between">
               <p className="text-sm font-medium dark:text-white">Hacim(24sa)</p>
-              <p className="text-sm font-medium dark:text-white">
-                {coin.market_data?.total_volume.usd?.toLocaleString("tr-TR")}
-              </p>
+              <p className="text-sm font-medium dark:text-white">{coin.market_data?.total_volume.usd?.toLocaleString("tr-TR")}</p>
             </div>
             <div className="flex w-full items-center justify-between">
               <p className="text-sm font-medium dark:text-white">Dolaşımdaki Arz</p>
-              <p className="text-sm font-medium dark:text-white">
-                {coin.market_data?.circulating_supply?.toLocaleString("tr-TR")}
-              </p>
+              <p className="text-sm font-medium dark:text-white">{coin.market_data?.circulating_supply?.toLocaleString("tr-TR")}</p>
             </div>
             <div className="flex w-full items-center justify-between">
               <p className="text-sm font-medium dark:text-white">Toplam Arz</p>
-              <p className="text-sm font-medium dark:text-white">
-                {coin.market_data?.total_supply?.toLocaleString("tr-TR")}
-              </p>
+              <p className="text-sm font-medium dark:text-white">{coin.market_data?.total_supply?.toLocaleString("tr-TR")}</p>
             </div>
             <div className="flex w-full items-center justify-between">
               <p className="text-sm font-medium dark:text-white">Maksimum Arz</p>
               {coin.market_data?.max_supply ? (
-                <p className="text-sm font-medium dark:text-white">
-                  {coin.market_data?.max_supply?.toLocaleString("tr-TR")}
-                </p>
+                <p className="text-sm font-medium dark:text-white">{coin.market_data?.max_supply?.toLocaleString("tr-TR")}</p>
               ) : (
                 <p className="text-sm font-medium dark:text-white"> - </p>
               )}
@@ -87,15 +71,11 @@ export default function CoinPage() {
           <div className="flex w-full flex-col items-center justify-center gap-2">
             <div className="flex w-full items-center justify-between">
               <p className="text-sm font-medium dark:text-white">En Yüksek Değer (24h)</p>
-              <p className="text-sm font-medium dark:text-white">
-                ${coin.market_data?.high_24h.usd?.toLocaleString("tr-TR")}
-              </p>
+              <p className="text-sm font-medium dark:text-white">${coin.market_data?.high_24h.usd?.toLocaleString("tr-TR")}</p>
             </div>
             <div className="flex w-full items-center justify-between">
               <p className="text-sm font-medium dark:text-white">En Düşük Değer (24h)</p>
-              <p className="text-sm font-medium dark:text-white">
-                ${coin.market_data?.low_24h.usd?.toLocaleString("tr-TR")}
-              </p>
+              <p className="text-sm font-medium dark:text-white">${coin.market_data?.low_24h.usd?.toLocaleString("tr-TR")}</p>
             </div>
             <div className="flex w-full items-center justify-between">
               <p className="text-sm font-medium dark:text-white">Değişim (24sa)</p>
