@@ -1,13 +1,13 @@
 ## 🪙 Coinim: Piyasa Verileri ve Portföy Takibi
 
-Coinim bir kripto para piyasası veri API'sidir. 100'den fazla kripto para birimi için gerçek zamanlı ve tarihsel piyasa verileri sağlar.
+Coinim 100'den fazla kripto para birimi için gerçek zamanlı ve tarihsel piyasa verileri sağlar.
 Coinim'in ayrıca, kripto para birimi portföyünüzü izlemenizi sağlayan bir portföy takipçisi de vardır. Gerçek zamanlı ve tarihsel portföy değeri, kâr/zarar ve diğer portföy ölçümlerini sağlar.
 
 [🔗 Coinim'i test etmek için bu bağlantıyı kullanabilirsiniz](https://coinim.vercel.app/)
 
 ## 📊 Coinim API
 
-Coinim'in API'si, Coinim'in web sitesindeki verileri kullanır. Coinim'in web sitesi, CoinMarketCap, CoinGecko gibi diğer kripto para birimi veri kaynaklarından verileri toplar.
+Coinim'in API'si, Coinim'in web sitesindeki verileri kullanır. Coinim'in web sitesi, CoinGecko API kaynaklarından verileri toplar.
 
 [🔗 API'yi incelemek için bu bağlantıyı kullanabilirsiniz](https://www.coingecko.com/tr/api/documentation)
 
