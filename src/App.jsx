@@ -6,6 +6,7 @@ import { AuthContextProvider } from "@/context/AuthContext";
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Error404 from "@/components/Error404";
 
 import Home from "@/routes/Home";
 import SignIn from "@/routes/SignInPage";
@@ -28,6 +29,7 @@ function App() {
             <Route path="/coin/:coinId" element={<CoinPage />}>
               <Route path=":coinId" />
             </Route>
+            <Route path="*" element={<Error404 />}></Route>
           </Routes>
         </main>
         <Footer />
