@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { Sparklines, SparklinesLine } from "react-sparklines";
@@ -6,8 +6,8 @@ import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
 import { UserAuth } from "../context/AuthContext";
 import { db } from "../firebase";
-import { arrayUnion, doc, updateDoc } from "firebase/firestore";
-import { Toaster, toast } from "react-hot-toast";
+import { arrayUnion, doc, updateDoc, getDoc } from "firebase/firestore";
+import { toast } from "react-hot-toast";
 
 export default function CoinItem({ coin }) {
   const [savedCoin, setSavedCoin] = useState(false);
@@ -26,20 +26,35 @@ export default function CoinItem({ coin }) {
           symbol: coin.symbol,
         }),
       });
+      toast.success(`${coin.name} favorilere eklendi`);
     } else {
-      toast.error("Takip listenize coin eklemek için giriş yapmanız gerekmektedir.");
+      toast.error("Takip listenize coin eklemek için öncelikle giriş yapmanız gerekiyor.");
     }
   };
 
+  useEffect(() => {
+    const getSavedCoin = async () => {
+      if (user?.email) {
+        const docSnap = await getDoc(coinPath);
+        if (docSnap.exists()) {
+          const watchList = docSnap.data().watchList;
+          if (watchList.some((watchedCoin) => watchedCoin.id === coin.id)) {
+            setSavedCoin(true);
+          }
+        }
+      }
+    };
+    getSavedCoin();
+  }, [coin.id, coinPath, user?.email]);
+
   return (
     <>
-      <Toaster />
       <tr key={coin.id} className="h-20 overflow-hidden border-b text-center dark:border-white dark:border-opacity-10">
         <td className="cursor-pointer" onClick={saveCoin}>
           {savedCoin ? (
-            <AiFillStar className={"h-3.5 w-3.5 cursor-pointer text-orange-400 md:h-[18px] md:w-[18px]"} />
+            <AiFillStar className={"h-3.5 w-3.5 cursor-pointer text-orange-400 md:h-4 md:w-4"} />
           ) : (
-            <AiOutlineStar className={"h-3.5 w-3.5 cursor-pointer md:h-[18px] md:w-[18px]"} />
+            <AiOutlineStar className={"h-3.5 w-3.5 cursor-pointer md:h-4 md:w-4"} />
           )}
         </td>
         <td className="text-xs font-medium xs:text-sm sm:text-base">{coin.market_cap_rank}</td>

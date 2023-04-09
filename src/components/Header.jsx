@@ -4,7 +4,7 @@ import { UserAuth } from "@/context/AuthContext";
 
 import MobileMenu from "./MobileMenu";
 import ThemeChanger from "./ThemeChanger";
-
+  
 import CoinimLogo from "@/assets/logo.png";
 
 export default function Header() {
@@ -25,9 +25,7 @@ export default function Header() {
       <nav className="flex w-full max-w-[1440px] items-center justify-between">
         <Link to={"/"} className="flex items-center gap-2">
           <img src={CoinimLogo} alt="coinim" width={40} height={40} />
-          <span className="text-lg font-semibold text-blue-500 dark:text-white md:text-xl md:font-bold ">
-            Coinim
-          </span>
+          <span className="text-lg font-semibold text-blue-500 dark:text-white md:text-xl md:font-bold ">Coinim</span>
         </Link>
         <div className="hidden items-center gap-4 md:flex">
           <ThemeChanger />

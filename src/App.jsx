@@ -14,11 +14,13 @@ import SignIn from "@/routes/SignInPage";
 import SignUp from "@/routes/SignUpPage";
 import Account from "@/routes/Account";
 import CoinPage from "@/routes/CoinPage";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <ThemeProvider>
       <AuthContextProvider>
+        <Toaster />
         <Header />
         <main>
           <Routes>

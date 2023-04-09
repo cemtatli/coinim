@@ -62,11 +62,7 @@ export default function MobileMenu() {
             <>
               {" "}
               <li>
-                <Link
-                  onClick={handleNav}
-                  to={"/Account"}
-                  className="flex items-center justify-center"
-                >
+                <Link onClick={handleNav} to={"/Account"} className="flex items-center justify-center">
                   <button
                     type="button"
                     className="h-8 w-full max-w-[90%] rounded-lg border border-blue-700 px-4 py-1.5 text-center text-xs font-semibold text-blue-700  transition-colors duration-200 ease-in-out  focus:outline-none focus:ring-2 focus:ring-blue-50 dark:text-white dark:hover:bg-blue-600/10 dark:focus:ring-blue-700 "
@@ -93,11 +89,7 @@ export default function MobileMenu() {
           ) : (
             <>
               <li>
-                <Link
-                  onClick={handleNav}
-                  to={"/SignIn"}
-                  className="flex items-center justify-center"
-                >
+                <Link onClick={handleNav} to={"/SignIn"} className="flex items-center justify-center">
                   <button
                     type="button"
                     className="h-8 w-full  max-w-[90%] rounded-lg border border-blue-700 px-4 py-1.5 text-center text-xs font-semibold text-blue-700  transition-colors duration-200 ease-in-out  focus:outline-none focus:ring-2 focus:ring-blue-50 dark:text-white dark:hover:bg-blue-600/10 dark:focus:ring-blue-700 "
@@ -107,11 +99,7 @@ export default function MobileMenu() {
                 </Link>
               </li>
               <li>
-                <Link
-                  onClick={handleNav}
-                  to={"/SignUp"}
-                  className="flex items-center justify-center"
-                >
+                <Link onClick={handleNav} to={"/SignUp"} className="flex items-center justify-center">
                   <button
                     type="button"
                     className="h-8 w-full max-w-[90%] rounded-lg bg-blue-700 px-4 py-1.5 text-center text-xs font-semibold text-white transition-colors duration-200 ease-in-out hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-50 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-700"

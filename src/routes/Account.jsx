@@ -19,7 +19,7 @@ export default function Account() {
   if (user) {
     return (
       <div className="fluid ">
-        <div className="w-fullmax-w-lg my-5 flex h-full flex-col items-center justify-start gap-2  ">
+        <div className="my-5 flex h-full w-full max-w-lg flex-col items-center justify-start gap-2  ">
           <h3 className="text-center text-3xl font-bold text-gray-900 dark:text-white">Hesabım</h3>
           <div className="mt-2 flex w-full items-center justify-center text-center text-base text-gray-900 dark:text-white">
             <p>
@@ -27,9 +27,7 @@ export default function Account() {
             </p>
           </div>
           <div className="my-5 flex w-full flex-col items-center justify-center gap-4  text-gray-900 dark:text-white ">
-            <h2 className="w-full text-2xl font-bold text-gray-900 dark:text-white">
-              İzleme Listesi
-            </h2>
+            <h2 className="w-full text-2xl font-bold text-gray-900 dark:text-white">İzleme Listesi</h2>
             <WatchList />
           </div>
         </div>

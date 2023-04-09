@@ -5,6 +5,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { doc, onSnapshot, updateDoc } from "firebase/firestore";
 import { db } from "@/firebase";
 import { UserAuth } from "@/context/AuthContext";
+import { toast } from "react-hot-toast";
 
 export default function WatchList() {
   const [coins, setCoins] = useState([]);
@@ -17,24 +18,24 @@ export default function WatchList() {
   }, [user?.email]);
 
   const coinPath = doc(db, "users", `${user?.email}`);
-  const deleteCoin = async (passedid) => {
-    try {
-      const result = coins.filter((item) => item.id !== passedid);
-      await updateDoc(coinPath, {
-        watchList: result,
-      });
-    } catch (e) {
-      console.log(e.message);
-    }
-  };
+    const deleteCoin = async (passedid) => {
+      try {
+        const result = coins.filter((item) => item.id !== passedid);
+        await updateDoc(coinPath, {
+          watchList: result,
+        });
+        toast.success("Başarıyla kaldırıldı.");
+      } catch (e) {
+        toast.error("Kaldırma işlemi sırasında bir hata oluştu.");
+      }
+    };
   return (
     <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden 2xl:px-0">
-      {coins.length === 0 ? (
+      {coins?.length === 0 ? (
         <div className=" flex w-full flex-col items-center justify-center gap-4 text-center">
           <p className=" w-full text-start text-sm">
-            Merhaba, favori kripto paralarınızı burada görebilirsiniz. Ancak görüyorum ki takip
-            listende hiçbir kripto para yok. Takip listesine eklemek için kripto paralar sayfasına
-            gidebilirsiniz.
+            Merhaba, favori kripto paralarınızı burada görebilirsiniz. Ancak görüyorum ki takip listende hiçbir kripto para yok. Takip
+            listesine eklemek için kripto paralar sayfasına gidebilirsiniz.
           </p>
           <Link to={"/"} className=" flex w-full items-center justify-center">
             <button
@@ -56,33 +57,21 @@ export default function WatchList() {
           </thead>
           <tbody className="h-10 dark:text-white">
             {coins?.map((coin) => (
-              <tr
-                key={coin.id}
-                className="h-20 overflow-hidden border-b text-center dark:border-white dark:border-opacity-10"
-              >
+              <tr key={coin.id} className="h-20 overflow-hidden border-b text-center dark:border-white dark:border-opacity-10">
                 <td>{coin?.rank}</td>
                 <td>
                   <Link to={`/coin/${coin.id}`}>
                     <div className="mx-auto flex w-full max-w-[300px]  flex-row items-center justify-center gap-2 md:gap-4 ">
-                      <img
-                        src={coin.image}
-                        className={"h-6 w-6 xs:h-8 xs:w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 "}
-                        alt={coin.id}
-                      />
+                      <img src={coin.image} className={"h-6 w-6 xs:h-8 xs:w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 "} alt={coin.id} />
                       <span className="block overflow-hidden text-xs font-medium sm:text-sm  md:text-lg">
                         {coin.name}
-                        <span className="ml-1 text-xs uppercase text-black dark:text-white">
-                          ({coin.symbol})
-                        </span>
+                        <span className="ml-1 text-xs uppercase text-black dark:text-white">({coin.symbol})</span>
                       </span>
                     </div>
                   </Link>
                 </td>
                 <td>
-                  <AiOutlineClose
-                    onClick={() => deleteCoin(coin.id)}
-                    className="mx-auto h-3.5 w-3.5 cursor-pointer md:h-4 md:w-4"
-                  />
+                  <AiOutlineClose onClick={() => deleteCoin(coin.id)} className="mx-auto h-3.5 w-3.5 cursor-pointer md:h-4 md:w-4" />
                 </td>
               </tr>
             ))}

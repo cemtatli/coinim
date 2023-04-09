@@ -6,39 +6,26 @@ function ScrollToTop() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 500 && window.innerWidth < 768) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setIsVisible(window.pageYOffset > 1000 && window.innerWidth < 768);
     };
 
     window.addEventListener("scroll", toggleVisibility);
 
-    return () => {
-      window.removeEventListener("scroll", toggleVisibility);
-    };
+    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  return (
-    <>
-      {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-2.5 right-2.5 z-50  flex h-8 w-8 items-center justify-center rounded-full border bg-white p-2 dark:text-black md:hidden lg:block"
-        >
-          <ChevronUpIcon />
-        </button>
-      )}
-    </>
-  );
+  return isVisible ? (
+    <button
+      onClick={scrollToTop}
+      className="fixed bottom-4 right-4 z-50 flex h-8 w-8 items-center justify-center rounded-full border bg-white p-2 dark:text-black md:hidden lg:block"
+    >
+      <ChevronUpIcon />
+    </button>
+  ) : null;
 }
 
 export default ScrollToTop;
