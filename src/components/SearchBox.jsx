@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { SearchNormal1 } from "iconsax-react";
 
-export default function SearchBox() {
+export default function SearchBox({ setSearchValue }) {
   return (
     <>
       <div className="flex w-full">
