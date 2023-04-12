@@ -13,9 +13,7 @@ export default function TrendCoins() {
 
   return (
     <div className="mx-auto mt-10 flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
-      <h2 className="w-full text-start text-lg font-bold text-black dark:text-white md:text-xl">
-        Trend Coinler
-      </h2>
+      <h2 className="w-full text-start text-lg font-bold text-black dark:text-white md:text-xl">Trend Coinler</h2>
       <div className="my-5 grid w-full grid-cols-1 gap-4 text-center xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {trending.map((coin) => (
           <div
@@ -28,21 +26,22 @@ export default function TrendCoins() {
             </span>
 
             <div className="mt-1.5 flex items-center gap-1 font-medium">
-              <p className="text-xs text-black dark:text-white">
-                {coin.item.price_btc?.toFixed(8).toLocaleString("tr-TR")}
-              </p>
+              <p className="text-xs text-black dark:text-white">{coin.item.price_btc?.toFixed(8).toLocaleString("tr-TR")}</p>
               <img
                 aria-hidden="true"
                 aria-disabled="true"
+                title={coin.name}
                 className="h-3 w-3 select-none"
                 src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579"
-                alt="/"
+                alt={coin.name}
               />
             </div>
             <div className="mt-1.5 flex flex-col items-center gap-2">
-              <div className=" text-xs text-black dark:text-white">
-                <p className="mr-1  font-medium"> Sıralama:</p>
-                {coin.item?.market_cap_rank}
+              <div className="text-xs text-black dark:text-white">
+                <p className="mr-1 font-medium" title={`Sıralama: ${coin.item?.market_cap_rank}`}>
+                  {" "}
+                  Sıralama: {coin.item?.market_cap_rank}
+                </p>
               </div>
             </div>
           </div>

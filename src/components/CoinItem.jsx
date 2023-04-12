@@ -61,7 +61,7 @@ export default function CoinItem({ coin }) {
         <td>
           <Link to={`/coin/${coin.id}`}>
             <div className="mx-auto flex w-full max-w-[125px] flex-col items-center justify-center gap-2 md:max-w-[200px] md:flex-row md:gap-5 lg:justify-start lg:gap-2.5 ">
-              <img src={coin.image} className={"h-6 w-6 xs:h-8 xs:w-8 sm:h-10 sm:w-10"} alt={coin.id} />
+              <img src={coin.image} title={coin.name} className={"h-7 w-7 xs:h-8 xs:w-8 sm:h-10 sm:w-10"} alt={coin.id} />
               <span className="hidden overflow-hidden text-xs font-medium xs:block sm:text-sm md:w-full md:text-base">
                 {coin.name}
                 <span className="ml-1 text-xs uppercase text-black dark:text-white">({coin.symbol})</span>

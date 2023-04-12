@@ -14,6 +14,12 @@ export default function SignUpPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+
+    // Doğrulama
+    if (password.length < 6) {
+      return toast.error("Şifreniz en az 6 karakter olmalıdır.");
+    }
+
     try {
       await signUp(email, password);
       toast.success("Hesabınız başarıyla oluşturuldu.");
@@ -21,11 +27,10 @@ export default function SignUpPage() {
     } catch (e) {
       setError(e.message);
       toast.error(e.message);
-      if (e.code !== "auth/weak-password") {
-        navigate("/SignUp");
-      }
+      navigate("/SignUp");
     }
   };
+
   return (
     <div className="fluid">
       <div className="flex w-full max-w-lg flex-col items-center justify-center gap-2">
@@ -53,22 +58,13 @@ export default function SignUpPage() {
             Şifre
           </label>
           <input
+            min={6} // burada minimum 6 karakter belirtilmiş
             required
             onChange={(e) => setPassword(e.target.value)}
             type="password"
             id="password"
             name="password"
             placeholder="********"
-            className="mt-2 rounded-lg border border-gray-300 px-4 py-2 placeholder:text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
-          />
-          <label htmlFor="password" className="mt-4 text-sm text-gray-900 dark:text-white">
-            Referral ID (Optional)
-          </label>
-          <input
-            type="text"
-            id="text"
-            name="text"
-            placeholder="UXD4"
             className="mt-2 rounded-lg border border-gray-300 px-4 py-2 placeholder:text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
           />
         </div>

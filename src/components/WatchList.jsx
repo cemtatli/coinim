@@ -18,17 +18,17 @@ export default function WatchList() {
   }, [user?.email]);
 
   const coinPath = doc(db, "users", `${user?.email}`);
-    const deleteCoin = async (passedid) => {
-      try {
-        const result = coins.filter((item) => item.id !== passedid);
-        await updateDoc(coinPath, {
-          watchList: result,
-        });
-        toast.success("Başarıyla kaldırıldı.");
-      } catch (e) {
-        toast.error("Kaldırma işlemi sırasında bir hata oluştu.");
-      }
-    };
+  const deleteCoin = async (passedid) => {
+    try {
+      const result = coins.filter((item) => item.id !== passedid);
+      await updateDoc(coinPath, {
+        watchList: result,
+      });
+      toast.success("Başarıyla kaldırıldı.");
+    } catch (e) {
+      toast.error("Kaldırma işlemi sırasında bir hata oluştu.");
+    }
+  };
   return (
     <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden 2xl:px-0">
       {coins?.length === 0 ? (
@@ -71,7 +71,10 @@ export default function WatchList() {
                   </Link>
                 </td>
                 <td>
-                  <AiOutlineClose onClick={() => deleteCoin(coin.id)} className="mx-auto h-3.5 w-3.5 cursor-pointer md:h-4 md:w-4" />
+                  <AiOutlineClose
+                    onClick={() => deleteCoin(coin.id)}
+                    className="mx-auto h-3.5 w-3.5 cursor-pointer rounded-full hover:text-red-500  md:h-4 md:w-4"
+                  />
                 </td>
               </tr>
             ))}
