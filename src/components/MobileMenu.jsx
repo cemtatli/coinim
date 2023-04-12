@@ -49,11 +49,8 @@ export default function MobileMenu() {
               GitHub <span>👋</span>
             </Link>
           </li>
-          <li
-            onClick={handleNav}
-            className="flex cursor-pointer items-center gap-2 border-b border-dark-primary border-opacity-10 px-4 py-2.5 text-sm font-medium transition-colors hover:bg-dark-primary/5 dark:border-white dark:border-opacity-10 dark:text-white dark:hover:bg-blue-100/5 dark:hover:transition-colors"
-          >
-            <ThemeChanger />
+          <li className="flex cursor-pointer items-center  gap-2 border-b border-dark-primary border-opacity-10 px-4 py-2.5 text-sm font-medium transition-colors hover:bg-dark-primary/5 dark:border-white dark:border-opacity-10 dark:text-white dark:hover:bg-blue-100/5 dark:hover:transition-colors">
+            <ThemeChanger /> Tema Değiştir
           </li>
         </ul>
         <ul className="flex w-full flex-col gap-2.5">
