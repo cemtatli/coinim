@@ -4,7 +4,7 @@ import { UserAuth } from "@/context/AuthContext";
 
 import MobileMenu from "./MobileMenu";
 import ThemeChanger from "./ThemeChanger";
-  
+
 import CoinimLogo from "@/assets/logo.png";
 
 export default function Header() {

@@ -8,10 +8,12 @@ import { UserAuth } from "../context/AuthContext";
 import { db } from "../firebase";
 import { arrayUnion, doc, updateDoc, getDoc } from "firebase/firestore";
 import { toast } from "react-hot-toast";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 export default function CoinItem({ coin }) {
   const [savedCoin, setSavedCoin] = useState(false);
   const { user } = UserAuth();
+  const [animationParent] = useAutoAnimate();
 
   const coinPath = doc(db, "users", `${user?.email}`);
   const saveCoin = async () => {
@@ -50,17 +52,17 @@ export default function CoinItem({ coin }) {
   return (
     <>
       <tr key={coin.id} className="h-20 overflow-hidden border-b text-center dark:border-white dark:border-opacity-10">
-        <td className="cursor-pointer" onClick={saveCoin}>
+        <td className="cursor-pointer" onClick={saveCoin} ref={animationParent}>
           {savedCoin ? (
             <AiFillStar className={"h-3.5 w-3.5 cursor-pointer text-orange-400 md:h-4 md:w-4"} />
           ) : (
-            <AiOutlineStar className={"h-3.5 w-3.5 cursor-pointer md:h-4 md:w-4"} />
+            <AiOutlineStar className={"h-3.5 w-3.5 cursor-pointer text-blue-600 dark:text-white md:h-4 md:w-4"} />
           )}
         </td>
         <td className="text-xs font-medium xs:text-sm sm:text-base">{coin.market_cap_rank}</td>
         <td>
           <Link to={`/coin/${coin.id}`}>
-            <div className="mx-auto flex w-full max-w-[125px] flex-col items-center justify-center gap-2 md:max-w-[200px] md:flex-row md:gap-5 lg:justify-start lg:gap-2.5 ">
+            <div className="mx-auto flex w-full max-w-[150px] flex-col items-center justify-center gap-2 md:max-w-[225px] md:flex-row md:gap-5 lg:justify-start lg:gap-2.5 ">
               <img src={coin.image} title={coin.name} className={"h-7 w-7 xs:h-8 xs:w-8 sm:h-10 sm:w-10"} alt={coin.id} />
               <span className="hidden overflow-hidden text-xs font-medium xs:block sm:text-sm md:w-full md:text-base">
                 {coin.name}

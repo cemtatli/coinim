@@ -6,10 +6,12 @@ import { doc, onSnapshot, updateDoc } from "firebase/firestore";
 import { db } from "@/firebase";
 import { UserAuth } from "@/context/AuthContext";
 import { toast } from "react-hot-toast";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 export default function WatchList() {
   const [coins, setCoins] = useState([]);
   const { user } = UserAuth();
+  const [animationParent] = useAutoAnimate();
 
   useEffect(() => {
     onSnapshot(doc(db, "users", `${user?.email}`), (doc) => {
@@ -32,7 +34,7 @@ export default function WatchList() {
   return (
     <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden 2xl:px-0">
       {coins?.length === 0 ? (
-        <div className=" flex w-full flex-col items-center justify-center gap-4 text-center">
+        <div className="flex w-full flex-col items-center justify-center gap-4 text-center">
           <p className=" w-full text-start text-sm">
             Merhaba, favori kripto paralarınızı burada görebilirsiniz. Ancak görüyorum ki takip listende hiçbir kripto para yok. Takip
             listesine eklemek için kripto paralar sayfasına gidebilirsiniz.
@@ -40,14 +42,14 @@ export default function WatchList() {
           <Link to={"/"} className=" flex w-full items-center justify-center">
             <button
               type="button"
-              className="mx-auto mb-2  rounded-lg border border-blue-700 px-4 py-1.5 text-center text-xs font-semibold text-blue-700  transition-colors duration-200 ease-in-out  focus:outline-none focus:ring-2 focus:ring-blue-50 dark:text-white dark:hover:bg-blue-600/10 dark:focus:ring-blue-700"
+              className="mx-auto mb-2 rounded-lg border border-blue-700 px-4 py-1.5 text-center text-xs font-semibold text-blue-700  transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-50 dark:text-white dark:hover:bg-blue-600/10 dark:focus:ring-blue-700"
             >
               Kripto Paraları Görüntüle
             </button>
           </Link>
         </div>
       ) : (
-        <table className="w-full border-collapse text-center">
+        <table className="w-full border-collapse text-center" ref={animationParent}>
           <thead className="h-10 text-sm dark:text-white sm:text-base">
             <tr className="border-b px-4 dark:border-white dark:border-opacity-10">
               <th className="text-center">Sıralama (#)</th>
@@ -61,12 +63,10 @@ export default function WatchList() {
                 <td>{coin?.rank}</td>
                 <td>
                   <Link to={`/coin/${coin.id}`}>
-                    <div className="mx-auto flex w-full max-w-[300px]  flex-row items-center justify-center gap-2 md:gap-4 ">
+                    <div className="mx-auto flex w-full max-w-[300px] flex-1  flex-row items-center justify-start gap-2 md:gap-4 ">
                       <img src={coin.image} className={"h-6 w-6 xs:h-8 xs:w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 "} alt={coin.id} />
-                      <span className="block overflow-hidden text-xs font-medium sm:text-sm  md:text-lg">
-                        {coin.name}
-                        <span className="ml-1 text-xs uppercase text-black dark:text-white">({coin.symbol})</span>
-                      </span>
+                      <div className="hidden overflow-hidden text-xs  font-medium sm:block sm:text-sm md:text-lg">{coin.name}</div>
+                      <div className="ml-1 block text-xs uppercase text-black dark:text-white">({coin.symbol})</div>
                     </div>
                   </Link>
                 </td>

@@ -1,21 +1,22 @@
 import React, { useContext } from "react";
-
 import { ThemeContext } from "@/context/ThemeContext";
-import { Moon, Sun1 } from "iconsax-react";
+import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 
 export default function ThemeChanger() {
   const { theme, setTheme } = useContext(ThemeContext);
+
   return (
-    <>
-      {theme === "dark" ? (
-        <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-          <Sun1 size="16" variant="Bold" className="text-gray-900 dark:text-white" />
-        </button>
-      ) : (
-        <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-          <Moon size="16" variant="Bold" className="text-gray-900 dark:text-white" />
-        </button>
-      )}
-    </>
+    <button
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      className="relative inline-flex h-5 w-10 items-center justify-center rounded-full bg-gray-100 ring-2 ring-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white dark:bg-gray-200 "
+    >
+      <span
+        className={`absolute inset-y-0 left-0 flex h-5 w-5 transform items-center justify-center rounded-full bg-white shadow-md transition-all duration-300 ${
+          theme === "light" ? "translate-x-5 rotate-45 " : "translate-x-0"
+        }`}
+      >
+        {theme === "dark" ? <MoonIcon width={12} className=" text-blue-500" /> : <SunIcon width={14} className=" text-orange-400" />}
+      </span>
+    </button>
   );
 }
