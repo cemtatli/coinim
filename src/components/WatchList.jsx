@@ -51,7 +51,7 @@ export default function WatchList() {
           </Link>
         </div>
       ) : (
-        <table className="w-full border-collapse  bg-gray-100 text-center">
+        <table className="w-full border-collapse  text-center">
           <thead className="h-10 text-sm dark:text-white ">
             <tr className="border-b px-4 dark:border-white dark:border-opacity-10">
               <th className="hidden text-center sm:table-cell">Sıralama (#)</th>

@@ -16,8 +16,7 @@ Coinim, kripto para birimi piyasası verileri ve portföy takibi için bir araç
 
 - Gerçek zamanlı ve tarihsel kripto para birimi piyasa verileri listeleme,
 - Gerçek zamanlı ve tarihsel kripto para birimi portföy değerini izleme,
-- Kripto para birimi portföyünüzü takip etme,
-- Kripto para birimi portföyünüzü kaydetme
+- Kripto para birimi portföyünüzü takip etme ve kaydetme
 
 ## 🧰 Kullanılan Teknolojiler
 
