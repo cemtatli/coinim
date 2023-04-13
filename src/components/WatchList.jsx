@@ -75,19 +75,19 @@ export default function WatchList() {
                     </div>
                   </Link>
                 </td>
-                <td className="text-xs font-medium xs:text-sm">${coin?.price.toFixed(2).toLocaleString("tr-TR")}</td>
+                <td className="text-xs font-medium xs:text-sm">${coin.price.toLocaleString("tr-TR")}</td>
                 <td className="hidden text-xs font-medium xs:text-sm md:table-cell">
-                  {coin?.change24 > 0 ? (
-                    <p className="  text-green-500 dark:text-green-400">{coin?.change24.toFixed(2).toLocaleString("tr-TR")}$</p>
+                  {coin.change24 > 0 ? (
+                    <p className="  text-green-500 dark:text-green-400">{coin.change24.toFixed(2).toLocaleString("tr-TR")}$</p>
                   ) : (
-                    <p className="text-red-500 dark:text-red-500">{coin?.change24.toFixed(2)}$</p>
+                    <p className="text-red-500 dark:text-red-500">{coin.change24.toFixed(2)}$</p>
                   )}
                 </td>
                 <td className="hidden text-xs font-medium xs:text-sm lg:table-cell ">
-                  {coin?.percentage24 > 0 ? (
-                    <p className="  text-green-500 dark:text-green-400">{coin?.percentage24.toFixed(2).toLocaleString("tr-TR")}%</p>
+                  {coin.percentage24 > 0 ? (
+                    <p className="text-green-500 dark:text-green-400">{coin.percentage24.toFixed(2).toLocaleString("tr-TR")}%</p>
                   ) : (
-                    <p className="text-red-500 dark:text-red-500">{coin?.percentage24.toFixed(2)}%</p>
+                    <p className="text-red-500 dark:text-red-500">{coin.percentage24.toFixed(2)}%</p>
                   )}
                 </td>
                 <td>
