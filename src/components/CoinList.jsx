@@ -1,7 +1,7 @@
 import React from "react";
 
-import CoinItem from "./CoinItem";
 import SearchBox from "./SearchBox";
+import CoinData from "./CoinData";
 
 export default function CoinList({ coins }) {
   const [SearchValue, setSearchValue] = React.useState("");
@@ -45,7 +45,7 @@ export default function CoinList({ coins }) {
               }
             })
             .map((coin) => {
-              return <CoinItem coin={coin} key={coin.id} />;
+              return <CoinData coin={coin} key={coin.id} />;
             })}
         </tbody>
       </table>

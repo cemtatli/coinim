@@ -10,7 +10,7 @@ import { arrayUnion, doc, updateDoc, getDoc } from "firebase/firestore";
 import { toast } from "react-hot-toast";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
-export default function CoinItem({ coin }) {
+export default function CoinData({ coin }) {
   const [savedCoin, setSavedCoin] = useState(false);
   const { user } = UserAuth();
   const [animationParent] = useAutoAnimate();
@@ -26,6 +26,9 @@ export default function CoinItem({ coin }) {
           image: coin.image,
           rank: coin.market_cap_rank,
           symbol: coin.symbol,
+          price: coin.current_price,
+          change24: coin.price_change_24h,
+          percentage24: coin.price_change_percentage_24h,
         }),
       });
       toast.success(`${coin.name} favorilere eklendi`);
@@ -54,9 +57,9 @@ export default function CoinItem({ coin }) {
       <tr key={coin.id} className="h-20 overflow-hidden border-b text-center dark:border-white dark:border-opacity-10">
         <td className="cursor-pointer" onClick={saveCoin} ref={animationParent}>
           {savedCoin ? (
-            <AiFillStar className={"h-3.5 w-3.5 cursor-pointer text-orange-400 md:h-4 md:w-4"} />
+            <AiFillStar className="h-3.5 w-3.5 cursor-pointer text-orange-400 md:h-4 md:w-4" />
           ) : (
-            <AiOutlineStar className={"h-3.5 w-3.5 cursor-pointer text-blue-600 dark:text-white md:h-4 md:w-4"} />
+            <AiOutlineStar className="h-3.5 w-3.5 cursor-pointer text-blue-600 dark:text-white md:h-4 md:w-4" />
           )}
         </td>
         <td className="text-xs font-medium xs:text-sm sm:text-base">{coin.market_cap_rank}</td>

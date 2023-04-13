@@ -13,7 +13,7 @@ import Home from "@/routes/Home";
 import SignIn from "@/routes/SignInPage";
 import SignUp from "@/routes/SignUpPage";
 import Account from "@/routes/Account";
-import CoinPage from "@/routes/CoinPage";
+import CoinDetails from "@/routes/CoinDetails";
 import { Toaster } from "react-hot-toast";
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
             <Route path="/SignIn" element={<SignIn />} />
             <Route path="/SignUp" element={<SignUp />} />
             <Route path="/Account" element={<Account />} />
-            <Route path="/coin/:coinId" element={<CoinPage />}>
+            <Route path="/coin/:coinId" element={<CoinDetails />}>
               <Route path=":coinId" />
             </Route>
             <Route path="*" element={<Error404 />}></Route>

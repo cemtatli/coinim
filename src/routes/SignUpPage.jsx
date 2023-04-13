@@ -14,12 +14,9 @@ export default function SignUpPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-
-    // Doğrulama
     if (password.length < 6) {
       return toast.error("Şifreniz en az 6 karakter olmalıdır.");
     }
-
     try {
       await signUp(email, password);
       toast.success("Hesabınız başarıyla oluşturuldu.");
@@ -53,7 +50,6 @@ export default function SignUpPage() {
             placeholder="cem@coinim.com"
             className="mt-2 rounded-lg border border-gray-300 px-4 py-2 placeholder:text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
           />
-
           <label htmlFor="password" className="mt-4 text-sm text-gray-900 dark:text-white">
             Şifre
           </label>

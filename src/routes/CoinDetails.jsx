@@ -6,7 +6,7 @@ import DOMPurify from "dompurify";
 import { Sparklines, SparklinesLine } from "react-sparklines";
 import { MdOutlineArrowDropUp, MdOutlineArrowDropDown } from "react-icons/md";
 
-export default function CoinPage() {
+export default function CoinDetails() {
   const [coin, setCoin] = useState({});
   const params = useParams();
   const url = `https://api.coingecko.com/api/v3/coins/${params.coinId}?localization=false&sparkline=true`;

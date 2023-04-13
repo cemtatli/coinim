@@ -19,7 +19,7 @@ export default function Account() {
   if (user) {
     return (
       <div className="fluid ">
-        <div className="my-5 flex h-full w-full max-w-5xl flex-col items-center justify-start gap-2 ">
+        <div className="my-5 flex h-full w-full  flex-col items-center justify-start gap-2 ">
           <h3 className="text-center text-3xl font-bold text-gray-900 dark:text-white">Hesabım</h3>
           <div className="mt-2 flex w-full items-center justify-center text-center text-base text-gray-900 dark:text-white">
             <p>

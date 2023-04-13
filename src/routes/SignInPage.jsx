@@ -44,11 +44,9 @@ export default function SignInPage() {
             placeholder="cem@coinim.com"
             className="mt-2 rounded-lg border border-gray-300 px-4 py-2 placeholder:text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
           />
-
           <label htmlFor="password" className="mt-4 text-sm text-gray-900 dark:text-white">
             Şifre
           </label>
-
           <input
             onChange={(e) => setPassword(e.target.value)}
             type="password"
@@ -57,7 +55,6 @@ export default function SignInPage() {
             placeholder="********"
             className="relative mt-2 rounded-lg border border-gray-300 px-4 py-2 placeholder:text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
           />
-
           <div className="mt-4 flex flex-col items-center justify-between">
             <button
               type="submit"
@@ -65,7 +62,6 @@ export default function SignInPage() {
             >
               Oturum Aç
             </button>
-
             <p className="mt-4 flex gap-2 text-sm text-gray-900 dark:text-white">
               Hesabın yok mu?{" "}
               <Link to={"/SignUp"}>
