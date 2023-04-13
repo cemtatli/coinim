@@ -1,13 +1,12 @@
 ## 🪙 Coinim: Piyasa Verileri ve Portföy Takibi
 
-Coinim 100'den fazla kripto para birimi için gerçek zamanlı ve tarihsel piyasa verileri sağlar.
-Coinim'in ayrıca, kripto para birimi portföyünüzü izlemenizi sağlayan bir portföy takipçisi de vardır. Gerçek zamanlı ve tarihsel portföy değeri, kâr/zarar ve diğer portföy ölçümlerini sağlar.
+Coinim, 100'den fazla kripto para birimi için gerçek zamanlı ve tarihsel piyasa verileri sunan bir web aracıdır. Ayrıca, kripto para birimi portföyünüzü izlemenizi sağlayan bir portföy takipçisi de vardır. Gerçek zamanlı ve tarihsel portföy değeri, kâr/zarar ve diğer portföy ölçümlerini de görüntüleyebilirsiniz.
 
 [🔗 Coinim'i test etmek için bu bağlantıyı kullanabilirsiniz](https://coinim.vercel.app/)
 
 ## 📊 Coinim API
 
-Coinim'in API'si, Coinim'in web sitesindeki verileri kullanır. Coinim'in web sitesi, CoinGecko API kaynaklarından verileri toplar.
+Coinim'in web sitesindeki verileri CoinGecko API kaynaklarından toplar.
 
 [🔗 API'yi incelemek için bu bağlantıyı kullanabilirsiniz](https://www.coingecko.com/tr/api/documentation)
 
@@ -26,7 +25,7 @@ Coinim, React, React-Router, Tailwind CSS, Axios, Firebase gibi teknolojileri ku
 
 ## 🚀 Çalıştırmak İçin
 
-Coinim'i çalıştırmak için bilgisayarınızda Node.js ve Git kurulu olmalıdır. Ayrıca Coinim'in Firebase'de kullanılan veritabanı ayarlarını kendiniz yapmanız gerekmektedir. Coinim'in Firebase ayarlarını yapmak için [buraya](https://firebase.google.com/docs/web/setup) bakabilirsiniz.
+Coinim'i çalıştırmak için bilgisayarınızda Node.js ve Git kurulu olmalıdır. Ayrıca Coinim'in Firebase'de kullanılan veritabanı ayarlarını kendiniz yapmanız gerekmektedir. Firebase ayarlarını yapmak için [buraya](https://firebase.google.com/docs/web/setup) bakabilirsiniz.
 
 ```bash
 # Projeyi klonla
@@ -44,6 +43,4 @@ npm start
 
 ## 📧 İletişim
 
-Coinim hakkında sorularınız varsa, [buradan](https://twitter.com/vaycem) bana ulaşabilirsiniz. 
-
-
+Coinim hakkında sorularınız varsa, [buradan](https://twitter.com/vaycem) bana ulaşabilirsiniz.
