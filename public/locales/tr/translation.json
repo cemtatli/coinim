@@ -15,7 +15,9 @@
     "passwordLabel": "Şifre",
     "signInButton": "Oturum Aç",
     "noAccount": "Hesabın yok mu?",
-    "createAccount": "Hesap Oluştur"
+    "createAccount": "Hesap Oluştur",
+    "successMessage": "Başarıyla giriş yapıldı",
+    "errorMessage": "Girilen bilgiler yanlış veya böyle bir kullanıcı yok."
   },
   "SignUpPage": {
     "title": "Hesap Oluştur",
@@ -24,7 +26,9 @@
     "passwordLabel": "Şifre",
     "signUpButton": "Hesap Oluştur",
     "haveAccount": "Zaten mevcut hesabınız var mı?",
-    "signIn": "Oturum Aç"
+    "signIn": "Oturum Aç",
+    "accountCreatedSuccess": "Hesap başarıyla oluşturuldu.",
+    "passwordLengthError": "Şifreniz en az 6 karakter uzunluğunda olmalıdır."
   },
   "MobileMenu": {
     "home": "Anasayfa",
@@ -50,8 +54,9 @@
       "remove": "Kaldır"
     }
   },
+  "Footer": "© 2023 Coinim. Tüm hakları saklıdır.",
   "coinData": {
-    "saveCoinSuccess": "{coinName} favorilere başarıyla eklendi.",
+    "saveCoinSuccess": " favorilere başarıyla eklendi.",
     "saveCoinError": "Takip listenize coin eklemek için öncelikle giriş yapmanız gerekiyor."
   },
   "searchPlaceholder": "Arama yapın",
@@ -64,6 +69,27 @@
     "volume24h": "Hacim (24sa)",
     "totalSupply": "Toplam Arz",
     "marketCap": "Toplam Market Hacmi",
+    "atl": "ATL",
+    "ath": "ATH",
+    "chart": "Değişim (7 gün)"
+  },
+  "CoinDetail": {
+    "rank": "#",
+    "name": "Ad",
+    "price": "Fiyat",
+    "circulatingSupply": "Dolaşımdaki Arz",
+    "maxSupply": "Dolaşımdaki Arz",
+    "change24h": "Değişim (Günlük)",
+    "change7d": "Değişim (Haftalık)",
+    "change30d": "Değişim (Aylık)",
+    "change1y": "Değişim (Yıllık)",
+    "high24h": "En Yüksek Değer (24h)",
+    "low24h": "En Düşük Değer (24h)",
+    "percentage24h": "24saat (%)",
+    "volume24h": "Hacim (Günlük)",
+    "totalSupply": "Toplam Arz",
+    "marketCap": "Toplam Market Hacmi",
+    "whatis": " nedir ?",
     "atl": "ATL",
     "ath": "ATH",
     "chart": "Değişim (7 gün)"

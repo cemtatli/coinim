@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import CoinimLogo from "@/assets/logo.png";
 import { FaFacebookF, FaGithub, FaLink, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className=" flex h-44 w-full flex-col items-center justify-center border-t border-dark-primary border-opacity-10  px-4 py-2  dark:border-white dark:border-opacity-5">
       {/* Bilgi */}
@@ -46,7 +48,7 @@ export default function Footer() {
       </div>
       {/* HAKLARIMIZ SAKLIDIR */}
       <div className=" flex w-full items-center justify-center border-t border-dark-primary border-opacity-10 text-xs font-medium dark:border-white dark:border-opacity-5 ">
-        <p className="my-4 text-xs text-dark-primary dark:text-white sm:text-sm">© 2023 Coinim. Tüm hakları saklıdır.</p>
+        <p className="my-4 text-xs text-dark-primary dark:text-white sm:text-sm"> {t("Footer")}</p>
       </div>
     </footer>
   );

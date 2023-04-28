@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "@/context/ThemeContext";
-import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
+import { GrBitcoin } from "react-icons/all";
 
 export default function ThemeChanger() {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -12,10 +12,10 @@ export default function ThemeChanger() {
     >
       <span
         className={`absolute inset-y-0 left-0 flex h-5 w-5 transform items-center justify-center rounded-full bg-white shadow-md transition-all duration-300 ${
-          theme === "light" ? "translate-x-5 rotate-45 " : "translate-x-0"
+          theme === "light" ? "translate-x-5" : "translate-x-0"
         }`}
       >
-        {theme === "dark" ? <MoonIcon width={12} className=" text-blue-500" /> : <SunIcon width={14} className=" text-orange-400" />}
+        {theme === "dark" ? <GrBitcoin width={20} className=" text-orange-500" /> : <GrBitcoin width={20} className=" text-blue-600" />}
       </span>
     </button>
   );

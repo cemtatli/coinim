@@ -62,7 +62,6 @@ export default function MobileMenu() {
         <ul className="flex w-full flex-col gap-2.5">
           {user ? (
             <>
-              {" "}
               <li>
                 <Link onClick={handleNav} to={"/Account"} className="flex items-center justify-center">
                   <button

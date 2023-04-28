@@ -15,7 +15,9 @@
     "passwordLabel": "Password",
     "signInButton": "Sign In",
     "noAccount": "Don't have an account?",
-    "createAccount": "Create an Account"
+    "createAccount": "Create an Account",
+    "successMessage": "Successfully logged in",
+    "errorMessage": "The entered information is incorrect or there is no such user."
   },
   "SignUpPage": {
     "title": "Sign Up",
@@ -24,12 +26,14 @@
     "passwordLabel": "Password",
     "signUpButton": "Sign Up",
     "haveAccount": "Already have an account?",
-    "signIn": "Sign In"
+    "signIn": "Sign In",
+    "accountCreatedSuccess": "Account created successfully.",
+    "passwordLengthError": "Your password must be at least 6 characters long."
   },
   "MobileMenu": {
-    "home": "Home",
-    "twitter": "Twitter 👋",
-    "github": "GitHub 👋",
+    "home": "Homepage",
+    "twitter": "Twitter Account 👋",
+    "github": "GitHub Account👋",
     "themeChanger": "Change Theme",
     "watchlist": "My Watchlist",
     "signOut": "Sign Out",
@@ -51,19 +55,41 @@
     }
   },
   "coinData": {
-    "saveCoinSuccess": "{coinName} has been successfully added to favorites.",
-    "saveCoinError": "You need to log in first to add a coin to your watchlist."
+    "saveCoinSuccess": " has been successfully added to favorites.",
+    "saveCoinError": "You need to sign in first to add a coin to your watchlist."
   },
   "searchPlaceholder": "Search coins...",
+  "Footer": "© 2023 Coinim. All rights reserved.",
   "tableHeaders": {
     "rank": "#",
-    "name": "Name",
+    "name": "Coin Name",
     "price": "Price",
     "change24h": "Change (24h)",
     "percentage24h": "24h (%)",
     "volume24h": "Volume (24h)",
     "totalSupply": "Total Supply",
     "marketCap": "Market Cap",
+    "atl": "ATL",
+    "ath": "ATH",
+    "chart": "Chart (7 days)"
+  },
+  "CoinDetail": {
+    "rank": "#",
+    "name": "Coin Name",
+    "price": "Price",
+    "circulatingSupply": "Circulating Supply",
+    "maxSupply": "Maximum Supply",
+    "change24h": "Change (24h)",
+    "high24h": "High 24h",
+    "low24h": "Low 24h",
+    "change7d": "Week Change (7days)",
+    "change30d": "Monthly Change (30days)",
+    "change1y": "Yearly Change (365days)",
+    "percentage24h": "24h (%)",
+    "volume24h": "Volume (24h)",
+    "totalSupply": "Total Supply",
+    "marketCap": "Market Cap",
+    "whatis": "What is",
     "atl": "ATL",
     "ath": "ATH",
     "chart": "Chart (7 days)"

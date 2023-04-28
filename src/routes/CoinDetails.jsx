@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import axios from "axios";
 import DOMPurify from "dompurify";
@@ -8,6 +9,9 @@ import { MdOutlineArrowDropUp, MdOutlineArrowDropDown } from "react-icons/md";
 
 export default function CoinDetails() {
   const [coin, setCoin] = useState({});
+  const { t, i18n } = useTranslation();
+  const activeLanguage = i18n.language;
+
   const params = useParams();
   const url = `https://api.coingecko.com/api/v3/coins/${params.coinId}?localization=false&sparkline=true`;
 
@@ -44,23 +48,23 @@ export default function CoinDetails() {
         <div className="flex w-full flex-col items-center justify-center gap-2">
           <div className="flex w-full flex-col items-center justify-center gap-2">
             <div className="flex w-full items-center justify-between">
-              <p className="text-sm font-medium dark:text-white">Market Değeri </p>
+              <p className="text-sm font-medium dark:text-white">{t("CoinDetail.marketCap")}</p>
               <p className="text-sm font-medium dark:text-white">${coin.market_data?.market_cap?.usd.toLocaleString("tr-TR")}</p>
             </div>
             <div className="flex w-full items-center justify-between">
-              <p className="text-sm font-medium dark:text-white">Hacim(24sa)</p>
+              <p className="text-sm font-medium dark:text-white">{t("CoinDetail.change24h")}</p>
               <p className="text-sm font-medium dark:text-white">{coin.market_data?.total_volume.usd?.toLocaleString("tr-TR")}</p>
             </div>
             <div className="flex w-full items-center justify-between">
-              <p className="text-sm font-medium dark:text-white">Dolaşımdaki Arz</p>
+              <p className="text-sm font-medium dark:text-white">{t("CoinDetail.circulatingSupply")}</p>
               <p className="text-sm font-medium dark:text-white">{coin.market_data?.circulating_supply?.toLocaleString("tr-TR")}</p>
             </div>
             <div className="flex w-full items-center justify-between">
-              <p className="text-sm font-medium dark:text-white">Toplam Arz</p>
+              <p className="text-sm font-medium dark:text-white">{t("CoinDetail.totalSupply")}</p>
               <p className="text-sm font-medium dark:text-white">{coin.market_data?.total_supply?.toLocaleString("tr-TR")}</p>
             </div>
             <div className="flex w-full items-center justify-between">
-              <p className="text-sm font-medium dark:text-white">Maksimum Arz</p>
+              <p className="text-sm font-medium dark:text-white">{t("CoinDetail.maxSupply")}</p>
               {coin.market_data?.max_supply ? (
                 <p className="text-sm font-medium dark:text-white">{coin.market_data?.max_supply?.toLocaleString("tr-TR")}</p>
               ) : (
@@ -70,15 +74,15 @@ export default function CoinDetails() {
           </div>
           <div className="flex w-full flex-col items-center justify-center gap-2">
             <div className="flex w-full items-center justify-between">
-              <p className="text-sm font-medium dark:text-white">En Yüksek Değer (24h)</p>
+              <p className="text-sm font-medium dark:text-white">{t("CoinDetail.high24h")}</p>
               <p className="text-sm font-medium dark:text-white">${coin.market_data?.high_24h.usd?.toLocaleString("tr-TR")}</p>
             </div>
             <div className="flex w-full items-center justify-between">
-              <p className="text-sm font-medium dark:text-white">En Düşük Değer (24h)</p>
+              <p className="text-sm font-medium dark:text-white">{t("CoinDetail.low24h")}</p>
               <p className="text-sm font-medium dark:text-white">${coin.market_data?.low_24h.usd?.toLocaleString("tr-TR")}</p>
             </div>
             <div className="flex w-full items-center justify-between">
-              <p className="text-sm font-medium dark:text-white">Değişim (24sa)</p>
+              <p className="text-sm font-medium dark:text-white">{t("CoinDetail.change24h")}</p>
               <div className="text-sm font-medium dark:text-white">
                 {coin.market_data?.price_change_percentage_24h > 0 ? (
                   <div className="flex items-center justify-end">
@@ -98,7 +102,7 @@ export default function CoinDetails() {
               </div>
             </div>
             <div className="flex w-full items-center justify-between">
-              <p className="text-sm font-medium dark:text-white">Değişim (7g)</p>
+              <p className="text-sm font-medium dark:text-white">{t("CoinDetail.change7d")}</p>
               <div className="text-sm font-medium dark:text-white">
                 {coin.market_data?.price_change_percentage_7d > 0 ? (
                   <div className="flex items-center justify-end">
@@ -118,7 +122,7 @@ export default function CoinDetails() {
               </div>
             </div>
             <div className="flex w-full items-center justify-between">
-              <p className="text-sm font-medium dark:text-white">Değişim (30d)</p>
+              <p className="text-sm font-medium dark:text-white">{t("CoinDetail.change30d")}</p>
               <div className="text-sm font-medium dark:text-white">
                 {coin.market_data?.price_change_percentage_30d > 0 ? (
                   <div className="flex items-center justify-end">
@@ -138,7 +142,7 @@ export default function CoinDetails() {
               </div>
             </div>
             <div className="flex w-full items-center justify-between">
-              <p className="text-sm font-medium dark:text-white">Değişim (1y)</p>
+              <p className="text-sm font-medium dark:text-white">{t("CoinDetail.change1y")}</p>
               <div className="text-sm font-medium dark:text-white">
                 {coin.market_data?.price_change_percentage_1y > 0 ? (
                   <div className="flex items-center justify-end">
@@ -168,7 +172,17 @@ export default function CoinDetails() {
         {/* COIN DESC */}
         {coin.description && (
           <div className="py-4">
-            <p className="mb-2 text-xl font-bold dark:text-white"> {coin.name} nedir ?</p>
+            <p className="mb-2 text-xl font-bold dark:text-white">
+              {activeLanguage === "tr" ? (
+                <>
+                  {coin.name} {t("CoinDetail.whatis")}
+                </>
+              ) : (
+                <>
+                  {t("CoinDetail.whatis")} {coin.name} ?
+                </>
+              )}
+            </p>
             <p
               className="text-sm  dark:text-white"
               dangerouslySetInnerHTML={{

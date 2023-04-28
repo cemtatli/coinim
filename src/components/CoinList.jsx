@@ -13,7 +13,7 @@ export default function CoinList({ coins }) {
       <SearchBox setSearchValue={setSearchValue} />
       {/* Table List */}
       <table className="w-full border-collapse text-center ">
-        <thead className="h-10 text-sm dark:text-white sm:text-base">
+        <thead className="h-10 text-sm font-normal dark:text-white">
           <tr className="border-b px-4 dark:border-white dark:border-opacity-10">
             <th></th>
             <th> {t("tableHeaders.rank")}</th>

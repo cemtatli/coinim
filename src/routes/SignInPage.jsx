@@ -22,7 +22,7 @@ export default function SignInPage() {
       navigate("/Account");
     } catch (e) {
       setError(e.message);
-      toast.error(e.message);
+      toast.error(t("SignInPage.errorMessage"));
     }
   };
 

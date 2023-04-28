@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import { useTranslation } from "react-i18next";
 import { Sparklines, SparklinesLine } from "react-sparklines";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
@@ -9,7 +9,6 @@ import { db } from "../firebase";
 import { arrayUnion, doc, updateDoc, getDoc } from "firebase/firestore";
 import { toast } from "react-hot-toast";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
-import { useTranslation } from "react-i18next";
 
 export default function CoinData({ coin }) {
   const [savedCoin, setSavedCoin] = useState(false);
@@ -33,9 +32,9 @@ export default function CoinData({ coin }) {
           percentage24: coin.price_change_percentage_24h,
         }),
       });
-      toast.success(t("coinData.saveCoinSuccess", { coinName: coin.name })); // Dil çevirisi için t() kullanın
+      toast.success(`${coin.name}` + t("coinData.saveCoinSuccess"));
     } else {
-      toast.error(t("coinData.saveCoinError")); // Dil çevirisi için t() kullanın
+      toast.error(t("coinData.saveCoinError"));
     }
   };
 
