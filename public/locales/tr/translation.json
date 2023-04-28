@@ -1,0 +1,71 @@
+{
+  "Coin": "Ad",
+  "appTitle": "Coinim",
+  "myAccount": "Takip Listem",
+  "signOut": "Çıkış Yap",
+  "signIn": "Oturum Aç",
+  "signUp": "Kayıt Ol",
+  "title": "Hesabım",
+  "welcome": "Hoşgeldin,",
+  "watchlistTitle": "İzleme Listesi",
+  "SignInPage": {
+    "title": "Oturum Aç",
+    "welcomeText": "Coinim'e hoşgeldin 👋 Lütfen giriş yapmak için aşağıdaki bilgileri giriniz.",
+    "emailLabel": "E-posta",
+    "passwordLabel": "Şifre",
+    "signInButton": "Oturum Aç",
+    "noAccount": "Hesabın yok mu?",
+    "createAccount": "Hesap Oluştur"
+  },
+  "SignUpPage": {
+    "title": "Hesap Oluştur",
+    "welcomeText": "Coinim'e hoşgeldin 👋 Lütfen kayıt olmak için aşağıdaki bilgileri giriniz.",
+    "emailLabel": "E-posta",
+    "passwordLabel": "Şifre",
+    "signUpButton": "Hesap Oluştur",
+    "haveAccount": "Zaten mevcut hesabınız var mı?",
+    "signIn": "Oturum Aç"
+  },
+  "MobileMenu": {
+    "home": "Anasayfa",
+    "twitter": "Twitter 👋",
+    "github": "GitHub 👋",
+    "themeChanger": "Tema Değiştir",
+    "watchlist": "Takip Listem",
+    "signOut": "Çıkış Yap",
+    "signIn": "Oturum Aç",
+    "signUp": "Kayıt Ol"
+  },
+  "watchList": {
+    "emptyListMessage": "Merhaba, favori kripto paralarınızı burada görebilirsiniz. Ancak görüyorum ki takip listende hiçbir kripto para yok. Takip listesine eklemek için kripto paralar sayfasına gidebilirsiniz.",
+    "viewCoinsButton": "Kripto Paraları Görüntüle",
+    "successMessage": "Başarıyla kaldırıldı.",
+    "errorMessage": "Kaldırma işlemi sırasında bir hata oluştu.",
+    "columns": {
+      "rank": "Sıralama (#)",
+      "name": "Ad",
+      "price": "Fiyat",
+      "change24h": "Günlük Değişim ($)",
+      "percentage24h": "Günlük Değişim (%)",
+      "remove": "Kaldır"
+    }
+  },
+  "coinData": {
+    "saveCoinSuccess": "{coinName} favorilere başarıyla eklendi.",
+    "saveCoinError": "Takip listenize coin eklemek için öncelikle giriş yapmanız gerekiyor."
+  },
+  "searchPlaceholder": "Arama yapın",
+  "tableHeaders": {
+    "rank": "#",
+    "name": "Ad",
+    "price": "Fiyat",
+    "change24h": "Değişim (24sa)",
+    "percentage24h": "24saat (%)",
+    "volume24h": "Hacim (24sa)",
+    "totalSupply": "Toplam Arz",
+    "marketCap": "Toplam Market Hacmi",
+    "atl": "ATL",
+    "ath": "ATH",
+    "chart": "Değişim (7 gün)"
+  }
+}

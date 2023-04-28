@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast, Toaster } from "react-hot-toast";
+import { useTranslation } from "react-i18next";
 
 import { UserAuth } from "@/context/AuthContext";
 
@@ -10,16 +11,17 @@ export default function SignUpPage() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const { signUp } = UserAuth();
+  const { t } = useTranslation();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     if (password.length < 6) {
-      return toast.error("Şifreniz en az 6 karakter olmalıdır.");
+      return toast.error(t("SignUpPage.passwordLengthError"));
     }
     try {
       await signUp(email, password);
-      toast.success("Hesabınız başarıyla oluşturuldu.");
+      toast.success(t("SignUpPage.accountCreatedSuccess"));
       navigate("/Account");
     } catch (e) {
       setError(e.message);
@@ -31,15 +33,13 @@ export default function SignUpPage() {
   return (
     <div className="fluid">
       <div className="flex w-full max-w-lg flex-col items-center justify-center gap-2">
-        <h3 className="text-center text-3xl font-bold text-gray-900 dark:text-white">Hesap Oluştur</h3>
-        <p className="mt-2 text-center text-sm text-gray-500 dark:text-gray-300">
-          Coinim'e hoşgeldin 👋 <br /> Lütfen kayıt olmak için aşağıdaki bilgileri giriniz.
-        </p>
+        <h3 className="text-center text-3xl font-bold text-gray-900 dark:text-white">{t("SignUpPage.title")}</h3>
+        <p className="mt-2 text-center text-sm text-gray-500 dark:text-gray-300">{t("SignUpPage.welcomeText")}</p>
       </div>
       <form onSubmit={handleSubmit} className=" mt-8 flex w-full max-w-lg flex-col">
         <div className="mb-4 flex flex-col">
           <label htmlFor="email" className="text-sm text-gray-900 dark:text-white">
-            E-posta
+            {t("SignUpPage.emailLabel")}
           </label>
           <input
             required
@@ -51,10 +51,10 @@ export default function SignUpPage() {
             className="mt-2 rounded-lg border border-gray-300 px-4 py-2 placeholder:text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
           />
           <label htmlFor="password" className="mt-4 text-sm text-gray-900 dark:text-white">
-            Şifre
+            {t("SignUpPage.passwordLabel")}
           </label>
           <input
-            min={6} // burada minimum 6 karakter belirtilmiş
+            min={6}
             required
             onChange={(e) => setPassword(e.target.value)}
             type="password"
@@ -68,12 +68,12 @@ export default function SignUpPage() {
           type="submit"
           className="mt-4 h-12 w-full rounded-lg border border-transparent bg-blue-700 py-2 px-4 text-center text-sm font-medium leading-5 text-white transition-colors duration-200 ease-in-out hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-50 active:bg-blue-800"
         >
-          Hesap Oluştur
+          {t("SignUpPage.signUpButton")}
         </button>
-        <p className="mt-4 flex items-center justify-center gap-2  text-sm text-gray-900 dark:text-white">
-          Zaten mevcut hesabınız var mı?
+        <p className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-900 dark:text-white">
+          {t("SignUpPage.haveAccount")}
           <Link to={"/SignIn"}>
-            <span className="font-medium text-blue-500 hover:underline">Oturum Aç</span>
+            <span className="font-medium text-blue-500 hover:underline">{t("SignUpPage.signIn")}</span>
           </Link>
         </p>
       </form>

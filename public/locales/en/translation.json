@@ -1,0 +1,71 @@
+{
+  "Coin": "Coin",
+  "appTitle": "Coinim",
+  "myAccount": "My Account",
+  "signOut": "Sign Out",
+  "signIn": "Sign In",
+  "signUp": "Sign Up",
+  "title": "My Account",
+  "welcome": "Welcome,",
+  "watchlistTitle": "Watchlist",
+  "SignInPage": {
+    "title": "Sign In",
+    "welcomeText": "Welcome to Coinim 👋 Please enter the following information to sign in.",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "signInButton": "Sign In",
+    "noAccount": "Don't have an account?",
+    "createAccount": "Create an Account"
+  },
+  "SignUpPage": {
+    "title": "Sign Up",
+    "welcomeText": "Welcome to Coinim 👋 Please enter the following information to create an account.",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "signUpButton": "Sign Up",
+    "haveAccount": "Already have an account?",
+    "signIn": "Sign In"
+  },
+  "MobileMenu": {
+    "home": "Home",
+    "twitter": "Twitter 👋",
+    "github": "GitHub 👋",
+    "themeChanger": "Change Theme",
+    "watchlist": "My Watchlist",
+    "signOut": "Sign Out",
+    "signIn": "Sign In",
+    "signUp": "Sign Up"
+  },
+  "watchList": {
+    "emptyListMessage": "Hello, you can see your favorite cryptocurrencies here. However, I see that there are no cryptocurrencies in your watch list. You can go to the cryptocurrencies page to add to your watch list.",
+    "viewCoinsButton": "View Cryptocurrencies",
+    "successMessage": "Successfully removed.",
+    "errorMessage": "An error occurred while removing.",
+    "columns": {
+      "rank": "Rank (#)",
+      "name": "Name",
+      "price": "Price",
+      "change24h": "24h Change ($)",
+      "percentage24h": "24h Change ($)",
+      "remove": "Remove"
+    }
+  },
+  "coinData": {
+    "saveCoinSuccess": "{coinName} has been successfully added to favorites.",
+    "saveCoinError": "You need to log in first to add a coin to your watchlist."
+  },
+  "searchPlaceholder": "Search coins...",
+  "tableHeaders": {
+    "rank": "#",
+    "name": "Name",
+    "price": "Price",
+    "change24h": "Change (24h)",
+    "percentage24h": "24h (%)",
+    "volume24h": "Volume (24h)",
+    "totalSupply": "Total Supply",
+    "marketCap": "Market Cap",
+    "atl": "ATL",
+    "ath": "ATH",
+    "chart": "Chart (7 days)"
+  }
+}

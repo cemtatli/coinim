@@ -9,11 +9,13 @@ import { db } from "../firebase";
 import { arrayUnion, doc, updateDoc, getDoc } from "firebase/firestore";
 import { toast } from "react-hot-toast";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import { useTranslation } from "react-i18next";
 
 export default function CoinData({ coin }) {
   const [savedCoin, setSavedCoin] = useState(false);
   const { user } = UserAuth();
   const [animationParent] = useAutoAnimate();
+  const { t } = useTranslation();
 
   const coinPath = doc(db, "users", `${user?.email}`);
   const saveCoin = async () => {
@@ -31,9 +33,9 @@ export default function CoinData({ coin }) {
           percentage24: coin.price_change_percentage_24h,
         }),
       });
-      toast.success(`${coin.name} favorilere eklendi`);
+      toast.success(t("coinData.saveCoinSuccess", { coinName: coin.name })); // Dil çevirisi için t() kullanın
     } else {
-      toast.error("Takip listenize coin eklemek için öncelikle giriş yapmanız gerekiyor.");
+      toast.error(t("coinData.saveCoinError")); // Dil çevirisi için t() kullanın
     }
   };
 

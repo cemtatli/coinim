@@ -1,10 +1,12 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import SearchBox from "./SearchBox";
 import CoinData from "./CoinData";
 
 export default function CoinList({ coins }) {
   const [SearchValue, setSearchValue] = React.useState("");
+  const { t } = useTranslation();
   return (
     <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
       {/* Search Bar */}
@@ -14,25 +16,17 @@ export default function CoinList({ coins }) {
         <thead className="h-10 text-sm dark:text-white sm:text-base">
           <tr className="border-b px-4 dark:border-white dark:border-opacity-10">
             <th></th>
-            <th>#</th>
-            <th>Ad</th>
-            <th>Fiyat</th>
-            <th className="hidden xxs:table-cell">
-              K/K<span className="text-sm"> (24sa)</span>
-            </th>
-            <th>
-              24saat <span className="text-sm">(%)</span>
-            </th>
-            <th className="hidden sm:table-cell">
-              Hacim<span className="text-sm"> (24sa)</span>{" "}
-            </th>
-            <th className="w-50 hidden overflow-hidden px-4 xl:table-cell">Toplam Arz</th>
-            <th className="hidden xl:table-cell">Toplam Market Hacmi</th>
-            <th className="hidden 2xl:table-cell"> ATL</th>
-            <th className="hidden 2xl:table-cell">ATH</th>
-            <th className="hidden lg:table-cell">
-              Grafik <span className="text-sm">(7 gün)</span>
-            </th>
+            <th> {t("tableHeaders.rank")}</th>
+            <th>{t("tableHeaders.name")}</th>
+            <th>{t("tableHeaders.price")}</th>
+            <th className="hidden xxs:table-cell">{t("tableHeaders.change24h")}</th>
+            <th>{t("tableHeaders.percentage24h")}</th>
+            <th className="hidden sm:table-cell">{t("tableHeaders.volume24h")}</th>
+            <th className="w-50 hidden overflow-hidden px-4 xl:table-cell">{t("tableHeaders.totalSupply")}</th>
+            <th className="hidden xl:table-cell">{t("tableHeaders.marketCap")}</th>
+            <th className="hidden 2xl:table-cell"> {t("tableHeaders.atl")}</th>
+            <th className="hidden 2xl:table-cell">{t("tableHeaders.ath")}</th>
+            <th className="hidden lg:table-cell">{t("tableHeaders.chart")}</th>
           </tr>
         </thead>
         <tbody className="dark:text-white">
