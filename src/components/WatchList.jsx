@@ -31,10 +31,6 @@ export default function WatchList() {
       toast.error(t("watchList.errorMessage"));
     }
   };
-
-  {
-    console.log(coins);
-  }
   return (
     <div className="fluid">
       {coins?.length === 0 ? (

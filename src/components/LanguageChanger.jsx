@@ -14,7 +14,7 @@ const LanguageChanger = () => {
   return (
     <div>
       <button
-        className="flex items-center gap-2 rounded-lg py-1.5 text-center text-sm  transition-colors duration-200 ease-in-out focus:outline-none dark:text-white "
+        className="flex items-center gap-2 rounded-lg py-1.5 text-center text-xs  transition-colors duration-200 ease-in-out focus:outline-none dark:text-white "
         onClick={toggleLanguage}
       >
         {i18n.language === "tr" ? (
@@ -23,8 +23,8 @@ const LanguageChanger = () => {
               countryCode="TR"
               svg
               style={{
-                width: "1rem",
-                height: "1rem",
+                width: "1.2rem",
+                height: "1.2rem",
               }}
               title="TR"
             />
@@ -36,8 +36,8 @@ const LanguageChanger = () => {
               countryCode="US"
               svg
               style={{
-                width: "1rem",
-                height: "1rem",
+                width: "1.2rem",
+                height: "1.2rem",
               }}
               title="US"
             />

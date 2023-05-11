@@ -7,6 +7,7 @@ import ThemeChanger from "./ThemeChanger";
 import { HambergerMenu } from "iconsax-react";
 import { RiCloseFill } from "react-icons/ri";
 import LanguageChanger from "./LanguageChanger";
+import theme from "@material-tailwind/react/theme";
 
 export default function MobileMenu() {
   const { t } = useTranslation();

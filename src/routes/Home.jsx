@@ -4,6 +4,7 @@ import axios from "axios";
 import CoinList from "@/components/CoinList";
 import TrendCoins from "@/components/TrendCoins";
 import Exchanges from "@/components/Exchanges";
+import { Helmet } from "react-helmet";
 
 export default function Home() {
   const [coins, setCoins] = useState([]);
@@ -17,6 +18,9 @@ export default function Home() {
   }, []);
   return (
     <>
+      <Helmet>
+        <title>Coinim | Kripto Para Fiyatları, Grafikler ve Piyasa Değerleri</title>
+      </Helmet>
       <CoinList coins={coins} />
       <TrendCoins />
       <Exchanges />

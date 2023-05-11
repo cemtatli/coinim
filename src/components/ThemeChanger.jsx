@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "@/context/ThemeContext";
-import { GrBitcoin } from "react-icons/all";
+import { TbBrandCoinbase } from "react-icons/tb";
 
 export default function ThemeChanger() {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -15,7 +15,11 @@ export default function ThemeChanger() {
           theme === "light" ? "translate-x-5" : "translate-x-0"
         }`}
       >
-        {theme === "dark" ? <GrBitcoin width={20} className=" text-orange-500" /> : <GrBitcoin width={20} className=" text-blue-600" />}
+        {theme === "dark" ? (
+          <TbBrandCoinbase width={16} className=" text-blue-600" />
+        ) : (
+          <TbBrandCoinbase width={16} className=" text-blue-600" />
+        )}
       </span>
     </button>
   );

@@ -6,6 +6,7 @@ import axios from "axios";
 import DOMPurify from "dompurify";
 import { Sparklines, SparklinesLine } from "react-sparklines";
 import { MdOutlineArrowDropUp, MdOutlineArrowDropDown } from "react-icons/md";
+import { Helmet } from "react-helmet";
 
 export default function CoinDetails() {
   const [coin, setCoin] = useState({});
@@ -23,6 +24,9 @@ export default function CoinDetails() {
 
   return (
     <div className="fluid">
+      <Helmet>
+        ( <title>Coinim | {`${coin.name} $${coin.market_data?.current_price.usd}`} </title> )
+      </Helmet>
       <div className="mt-5 mb-5 flex h-full w-full flex-col items-center justify-center gap-10 lg:gap-5">
         {/* IMG, SYMBOL & NAME */}
         <div className="flex w-full flex-col items-center gap-2 border-b border-blue-500 border-opacity-10 pb-5 dark:border-white dark:border-opacity-10">
