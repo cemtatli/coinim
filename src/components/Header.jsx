@@ -32,8 +32,8 @@ export default function Header() {
         </Link>
 
         <div className="hidden items-center gap-4 md:flex">
-          <ThemeChanger />
           <LanguageChanger />
+          <ThemeChanger />
 
           {user?.email ? (
             <div className="flex items-center gap-2">

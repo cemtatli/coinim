@@ -8,7 +8,7 @@ export default function CoinList({ coins }) {
   const [SearchValue, setSearchValue] = React.useState("");
   const { t } = useTranslation();
   return (
-    <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
+    <div className="mx-auto flex w-full max-w-screen-2xl flex-col items-center justify-center overflow-hidden px-5 2xl:px-0">
       {/* Search Bar */}
       <SearchBox setSearchValue={setSearchValue} />
       {/* Table List */}

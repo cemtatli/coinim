@@ -7,7 +7,6 @@ import ThemeChanger from "./ThemeChanger";
 import { HambergerMenu } from "iconsax-react";
 import { RiCloseFill } from "react-icons/ri";
 import LanguageChanger from "./LanguageChanger";
-import theme from "@material-tailwind/react/theme";
 
 export default function MobileMenu() {
   const { t } = useTranslation();
@@ -53,10 +52,10 @@ export default function MobileMenu() {
               {t("MobileMenu.github")}
             </Link>
           </li>
-          <li className="flex cursor-pointer items-center  gap-2 border-b border-dark-primary border-opacity-10 px-4 py-2.5 text-sm font-medium transition-colors hover:bg-dark-primary/5 dark:border-white dark:border-opacity-10 dark:text-white dark:hover:bg-blue-100/5 dark:hover:transition-colors">
+          <li className="flex cursor-pointer items-center gap-2 border-b border-dark-primary border-opacity-10 px-4 py-2.5 text-sm font-medium transition-colors hover:bg-dark-primary/5 dark:border-white dark:border-opacity-10 dark:text-white dark:hover:bg-blue-100/5 dark:hover:transition-colors">
             <ThemeChanger /> {t("MobileMenu.themeChanger")}
           </li>
-          <li className="flex cursor-pointer items-center  gap-2 border-b border-dark-primary border-opacity-10 px-4 py-2.5 text-sm font-medium transition-colors hover:bg-dark-primary/5 dark:border-white dark:border-opacity-10 dark:text-white dark:hover:bg-blue-100/5 dark:hover:transition-colors">
+          <li className="flex cursor-pointer items-center gap-2 border-b border-dark-primary border-opacity-10 px-4 py-2.5 text-sm font-medium transition-colors hover:bg-dark-primary/5 dark:border-white dark:border-opacity-10 dark:text-white dark:hover:bg-blue-100/5 dark:hover:transition-colors">
             <LanguageChanger />
           </li>
         </ul>

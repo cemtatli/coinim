@@ -1,0 +1,97 @@
+{
+  "Coin": "코인",
+  "appTitle": "코인임",
+  "myAccount": "내 계정",
+  "signOut": "로그아웃",
+  "signIn": "로그인",
+  "signUp": "가입하기",
+  "title": "내 계정",
+  "welcome": "환영합니다,",
+  "watchlistTitle": "관심 목록",
+  "SignInPage": {
+    "title": "로그인",
+    "welcomeText": "코인임에 오신 것을 환영합니다 👋 로그인하려면 아래 정보를 입력하세요.",
+    "emailLabel": "이메일",
+    "passwordLabel": "비밀번호",
+    "signInButton": "로그인",
+    "noAccount": "계정이 없으신가요?",
+    "createAccount": "계정 만들기",
+    "successMessage": "성공적으로 로그인되었습니다",
+    "errorMessage": "입력한 정보가 잘못되었거나 해당 사용자가 없습니다."
+  },
+  "SignUpPage": {
+    "title": "계정 만들기",
+    "welcomeText": "코인임에 오신 것을 환영합니다 👋 가입하려면 아래 정보를 입력하세요.",
+    "emailLabel": "이메일",
+    "passwordLabel": "비밀번호",
+    "signUpButton": "가입하기",
+    "haveAccount": "이미 계정이 있으신가요?",
+    "signIn": "로그인",
+    "accountCreatedSuccess": "계정이 성공적으로 생성되었습니다.",
+    "passwordLengthError": "비밀번호는 최소 6자 이상이어야 합니다."
+  },
+  "MobileMenu": {
+    "home": "홈",
+    "twitter": "트위터 👋",
+    "github": "깃허브 👋",
+    "themeChanger": "테마 변경",
+    "watchlist": "관심 목록",
+    "signOut": "로그아웃",
+    "signIn": "로그인",
+    "signUp": "가입하기"
+  },
+  "watchList": {
+    "emptyListMessage": "안녕하세요, 여기서 좋아하는 암호화폐를 볼 수 있습니다. 하지만 관심 목록에 암호화폐가 없습니다. 관심 목록에 추가하려면 암호화폐 페이지로 이동하십시오.",
+    "viewCoinsButton": "암호화폐 보기",
+    "successMessage": "성공적으로 제거되었습니다.",
+    "errorMessage": "제거 중에 오류가 발생했습니다.",
+    "columns": {
+      "rank": "순위 (#)",
+      "name": "이름",
+      "price": "가격",
+      "change24h": "변동 (24시간)",
+      "percentage24h": "변동률 (24시간)",
+      "remove": "제거"
+    }
+  },
+  "Footer": "© 2023 코인임. 판권 소유.",
+  "coinData": {
+    "saveCoinSuccess": " 즐겨찾기에 성공적으로 추가되었습니다.",
+    "saveCoinError": "관심 목록에 코인을 추가하려면 먼저 로그인하셔야 합니다."
+  },
+  "searchPlaceholder": "검색",
+  "tableHeaders": {
+    "rank": "#",
+    "name": "이름",
+    "price": "가격",
+    "change24h": "변동 (24시간)",
+    "percentage24h": "변동률 (24시간)",
+    "volume24h": "거래량 (24시간)",
+    "totalSupply": "총 공급량",
+    "marketCap": "시가 총액",
+    "atl": "역대 최저가 (ATL)",
+    "ath": "역대 최고가 (ATH)",
+    "chart": "변동 그래프 (7일)"
+  },
+  "CoinDetail": {
+    "rank": "#",
+    "name": "이름",
+    "price": "가격",
+    "circulatingSupply": "유통 공급량",
+    "maxSupply": "최대 공급량",
+    "change24h": "변동 (24시간)",
+    "change7d": "변동 (7일)",
+    "change30d": "변동 (30일)",
+    "change1y": "변동 (1년)",
+    "high24h": "최고가 (24시간)",
+    "low24h": "최저가 (24시간)",
+    "percentage24h": "변동률 (24시간)",
+    "volume24h": "거래량 (24시간)",
+    "totalSupply": "총 공급량",
+    "marketCap": "시가 총액",
+    "whatis": "은 무엇인가요?",
+    "atl": "역대 최저가 (ATL)",
+    "ath": "역대 최고가 (ATH)",
+    "chart": "변동 그래프 (7일)"
+  }
+}

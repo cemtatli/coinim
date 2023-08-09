@@ -1,0 +1,97 @@
+{
+  "Coin": "Münze",
+  "appTitle": "Coinim",
+  "myAccount": "Meine Liste",
+  "signOut": "Abmelden",
+  "signIn": "Anmelden",
+  "signUp": "Registrieren",
+  "title": "Mein Konto",
+  "welcome": "Willkommen,",
+  "watchlistTitle": "Beobachtungsliste",
+  "SignInPage": {
+    "title": "Anmelden",
+    "welcomeText": "Willkommen bei Coinim 👋 Bitte geben Sie unten Ihre Informationen ein, um sich anzumelden.",
+    "emailLabel": "E-Mail",
+    "passwordLabel": "Passwort",
+    "signInButton": "Anmelden",
+    "noAccount": "Kein Konto?",
+    "createAccount": "Konto erstellen",
+    "successMessage": "Erfolgreich angemeldet",
+    "errorMessage": "Die eingegebenen Informationen sind falsch oder es existiert kein solcher Benutzer."
+  },
+  "SignUpPage": {
+    "title": "Konto erstellen",
+    "welcomeText": "Willkommen bei Coinim 👋 Bitte geben Sie unten Ihre Informationen ein, um sich zu registrieren.",
+    "emailLabel": "E-Mail",
+    "passwordLabel": "Passwort",
+    "signUpButton": "Konto erstellen",
+    "haveAccount": "Haben Sie bereits ein Konto?",
+    "signIn": "Anmelden",
+    "accountCreatedSuccess": "Konto erfolgreich erstellt.",
+    "passwordLengthError": "Ihr Passwort muss mindestens 6 Zeichen lang sein."
+  },
+  "MobileMenu": {
+    "home": "Startseite",
+    "twitter": "Twitter 👋",
+    "github": "GitHub 👋",
+    "themeChanger": "Design ändern",
+    "watchlist": "Beobachtungsliste",
+    "signOut": "Abmelden",
+    "signIn": "Anmelden",
+    "signUp": "Registrieren"
+  },
+  "watchList": {
+    "emptyListMessage": "Hallo, hier können Sie Ihre Lieblingskryptowährungen sehen. Aber ich sehe, dass sich keine Kryptowährung in Ihrer Beobachtungsliste befindet. Sie können auf die Seite der Kryptowährungen gehen, um sie zur Beobachtungsliste hinzuzufügen.",
+    "viewCoinsButton": "Kryptowährungen anzeigen",
+    "successMessage": "Erfolgreich entfernt.",
+    "errorMessage": "Es ist ein Fehler beim Entfernen aufgetreten.",
+    "columns": {
+      "rank": "Rang (#)",
+      "name": "Name",
+      "price": "Preis",
+      "change24h": "Veränderung (24 Std.)",
+      "percentage24h": "Veränderung (24 Std.) (%)",
+      "remove": "Entfernen"
+    }
+  },
+  "Footer": "© 2023 Coinim. Alle Rechte vorbehalten.",
+  "coinData": {
+    "saveCoinSuccess": " erfolgreich zu Favoriten hinzugefügt.",
+    "saveCoinError": "Um eine Münze zur Beobachtungsliste hinzuzufügen, müssen Sie sich zuerst anmelden."
+  },
+  "searchPlaceholder": "Suche",
+  "tableHeaders": {
+    "rank": "#",
+    "name": "Name",
+    "price": "Preis",
+    "change24h": "Veränderung (24 Std.)",
+    "percentage24h": "Veränderung (24 Std.) (%)",
+    "volume24h": "Volumen (24 Std.)",
+    "totalSupply": "Gesamtangebot",
+    "marketCap": "Marktkapitalisierung",
+    "atl": "ATL",
+    "ath": "ATH",
+    "chart": "Veränderung (7 Tage)"
+  },
+  "CoinDetail": {
+    "rank": "#",
+    "name": "Name",
+    "price": "Preis",
+    "circulatingSupply": "Im Umlauf befindliches Angebot",
+    "maxSupply": "Maximales Angebot",
+    "change24h": "Veränderung (24 Std.)",
+    "change7d": "Veränderung (7 Tage)",
+    "change30d": "Veränderung (30 Tage)",
+    "change1y": "Veränderung (1 Jahr)",
+    "high24h": "Höchster Wert (24 Std.)",
+    "low24h": "Niedrigster Wert (24 Std.)",
+    "percentage24h": "Veränderung (24 Std.) (%)",
+    "volume24h": "Volumen (24 Std.)",
+    "totalSupply": "Gesamtangebot",
+    "marketCap": "Marktkapitalisierung",
+    "whatis": " was ist das?",
+    "atl": "ATL",
+    "ath": "ATH",
+    "chart": "Veränderung (7 Tage)"
+  }
+}
