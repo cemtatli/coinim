@@ -75,28 +75,28 @@ export default function CoinData({ coin }) {
             </div>
           </Link>
         </td>
-        <td className="text-xs font-medium xs:text-sm">${coin.current_price.toFixed(2)}</td>
+        <td className="text-xs font-medium xs:text-sm">${coin.current_price?.toFixed(2) || "-"}</td>
         <td className="hidden text-xs font-medium xxs:table-cell xs:text-sm ">
           {coin.price_change_percentage_24h > 0 ? (
-            <p className="  text-green-500 dark:text-green-400">{coin.price_change_24h.toFixed(2).toLocaleString("tr-TR")}$</p>
+            <p className="  text-green-500 dark:text-green-400">{coin.price_change_24h?.toFixed(2)?.toLocaleString("tr-TR") || "-"}$</p>
           ) : (
-            <p className="text-red-500 dark:text-red-500">{coin.price_change_24h.toFixed(2)}$</p>
+            <p className="text-red-500 dark:text-red-500">{coin.price_change_24h?.toFixed(2) || "-"}$</p>
           )}
         </td>
         <td className="text-xs font-medium  xs:text-sm ">
           {coin.price_change_percentage_24h > 0 ? (
-            <p className="  text-green-500 dark:text-green-400">{coin.price_change_percentage_24h.toFixed(2).toLocaleString("tr-TR")}%</p>
+            <p className="  text-green-500 dark:text-green-400">{coin.price_change_percentage_24h?.toFixed(2)?.toLocaleString("tr-TR") || "-"}%</p>
           ) : (
-            <p className="text-red-500  dark:text-red-500">{coin.price_change_percentage_24h.toFixed(2)}%</p>
+            <p className="text-red-500  dark:text-red-500">{coin.price_change_percentage_24h?.toFixed(2) || "-"}%</p>
           )}
         </td>
 
-        <td className="hidden text-sm font-medium sm:table-cell">${coin.total_volume.toLocaleString("tr-TR")}</td>
+        <td className="hidden text-sm font-medium sm:table-cell">${coin.total_volume?.toLocaleString("tr-TR") || "-"}</td>
 
         <td className="hidden max-w-[80px] text-sm font-medium xl:table-cell">{coin.total_supply ? coin.total_supply : "-"}</td>
-        <td className="hidden text-sm font-medium xl:table-cell">${coin.market_cap.toLocaleString("tr-TR")}</td>
-        <td className="hidden text-sm font-medium 2xl:table-cell">${coin.atl.toFixed(2)}</td>
-        <td className="hidden text-sm font-medium 2xl:table-cell">${coin.ath.toFixed(2)}</td>
+        <td className="hidden text-sm font-medium xl:table-cell">${coin.market_cap?.toLocaleString("tr-TR") || "-"}</td>
+        <td className="hidden text-sm font-medium 2xl:table-cell">${coin.atl?.toFixed(2) || "-"}</td>
+        <td className="hidden text-sm font-medium 2xl:table-cell">${coin.ath?.toFixed(2) || "-"}</td>
         <td className="hidden pl-2 text-sm font-medium lg:table-cell lg:w-[200px]">
           <Sparklines data={coin.sparkline_in_7d.price}>
             <SparklinesLine color="#3B82F5" />
